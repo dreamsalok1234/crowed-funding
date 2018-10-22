@@ -1,0 +1,170 @@
+<div class="Properties-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="all-propti">
+          <h2>All Properties</h2>
+          <p>These properties have been subject to a rigorous selection process and are available exclusively as an
+            investment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="properties-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li>
+            <h2>1'619</h2>
+            <p>Inspected properties</p>
+          </li>
+          <li>
+            <h2>187</h2>
+            <p>Inspected properties</p>
+          </li>
+          <li>
+            <h2>15%</h2>
+            <p>Inspected properties that have our <br>requirements (since 2015)</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="high-tech-bg">
+  <div class="container">
+    <div class="row">
+      <ul class="high_tech">
+        <li *ngFor="let propertyItem of propertyList">
+          <img src="{{propertyItem.imageData[0].mediaUrl || '../../assets/images/root/Bitmap.png'}}">
+            <h2>{{propertyItem.name}}</h2>
+            <h3>{{propertyItem.location}}</h3>
+            <h4>0% financed<span>CHF {{propertyItem.purchasePrice}}.- remaining</span></h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                style="width: 0%;">
+
+              </div>
+            </div>
+            <div class="purchase_tx">
+              <p>Total purchase price<span>CHF {{propertyItem.purchasePrice}}.-</span></p>
+              <p>Mortgage<span>{{propertyItem.mortgageInterestPer}}%</span></p>
+              <p>Mortgage term<span>{{propertyItem.mortgageYear}} years</span></p>
+              <p>Expected return on equity<span>{{propertyItem.returnEquityPer}}%</span></p>
+              <p>Minimum investment <span>CHF {{propertyItem.minInvestPrice}}.-</span></p>
+              <a [routerLink]="['/property/'+propertyItem.slug]">View Information</a>
+            </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="Request-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h2>Request a free <br>consultants</h2>
+        <p>Aenean lacinia bibendum nulla sed consecteturd <br>ligula porta felis euismod semper ac cursus <br>commodo.</p>
+      </div>
+      <div class="col-md-7">
+        <form method="post">
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="Name" value="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="Email" value="" />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <select class="form-control disc-bt" id="exampleFormControlSelect1">
+                  <option>I would like to discuss</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+
+                </select>
+                <span class="se-bt"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+              </div>
+
+              <div class="form-group">
+                <textarea name="email" class="form-control" placeholder="Message" style="width: 100%; height: 150px;"></textarea>
+              </div>
+              <div class="form_sambit">
+                <a href="#">submit now</a>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="customers-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2>What our customers saysing?</h2>
+          <p>Aenean lacinia bibendum nulla sed consecteturd ligula porta felis euismod semper.<br> Fusce dapibus,
+            tellus ac cursus commodo.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../assets/images/root/volo1.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Rosinante Vole</h3>
+            <span>SEO Marketer</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../assets/images/root/volo2.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Paul Zanker</h3>
+            <span>Forex Exchange</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../assets/images/root/volo3.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Will Dogtooh</h3>
+            <span>Business Investment</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../assets/images/root/volo4.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Zin Nguyen</h3>
+            <span>Forex Exchange</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

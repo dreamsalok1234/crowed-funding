@@ -1,0 +1,263 @@
+<div class="management">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li>
+            <h2>£115.4m</h2>
+            <h3>Assets under managem</h3>
+            <span>71.2% Since Mar 2017</span>
+          </li>
+          <li>
+            <h2>£21.3m</h2>
+            <h3>Capital returned to investors</h3>
+            <span>70.8% Since Mar 2017</span>
+          </li>
+          <li>
+            <h2>£3.1m</h2>
+            <h3>Rental income returned to investors</h3>
+            <span>144.1% Since Mar 2017</span>
+          </li>
+        </ul>
+        <h4>Figures in green represent a net change in the displayed figures up to 31 March 2018</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="between-chrat">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Between 1997 and 2016, Swiss property prices have grown by 11.65% per year on average.</h2>
+        <p>This is compared to the FTSE All Share index which has delivered 3.03% p.a. on average over the last 20
+          years to the end of 2016.2 We believe that property should form a part of everyone's investment portfolio,
+          which is why we give you the control to select investments tailored to your goals. By investing in a variety
+          of properties instead of one, you could diversify your portfolio, reduce your level of risk and increase your
+          returns over time.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="pi_chart">
+          <img src="../../assets/images/root/pi-chrat.png">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <h3>A <span>£10,000</span> investment in Swiss property twenty years ago would be worth <span>£23,308 </span>today.</h3>
+        <div class="get_now">
+          <a href="#">Get Started Now</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="how-it-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2>How it Works</h2>
+        </div>
+        <ul>
+          <li>
+            <img src="../../assets/images/root/web.svg">
+            <h2>Register <br>now for free</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout.</p>
+          </li>
+          <li>
+            <img src="../../assets/images/root/web.svg">
+            <h2>Choose <br>your property</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout.</p>
+          </li>
+          <li>
+            <img src="../../assets/images/root/web.svg">
+            <h2>Become a <br>registered co-owner</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout.</p>
+          </li>
+          <li>
+            <img src="../../assets/images/root/web.svg">
+            <h2>Generate <br>monthly income</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="invest">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="invest_bt">
+          <div class="asset_bx">
+            <h2>Invest in multiple asset classes</h2>
+            <p>We’ve solved a property investor’s biggest problem: diversification. At a click, you can choose from
+              over 100 investments across the SWISS.</p>
+          </div>
+          <div class="asset_bt">
+            <a href="#">All Properties</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <ul class="high_tech">
+          <li *ngFor="let propertyItem of propertyList">
+            <img src="{{propertyItem.imageData[0].mediaUrl || '../../assets/images/root/Bitmap.png'}}">
+            <h2>{{propertyItem.name}}</h2>
+            <h3>{{propertyItem.location}}</h3>
+            <h4>0% financed<span>CHF {{propertyItem.purchasePrice}}.- remaining</span></h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                style="width: 0%;">
+
+              </div>
+            </div>
+            <div class="purchase_tx">
+              <p>Total purchase price<span>CHF {{propertyItem.purchasePrice}}.-</span></p>
+              <p>Mortgage<span>{{propertyItem.mortgageInterestPer}}%</span></p>
+              <p>Mortgage term<span>{{propertyItem.mortgageYear}} years</span></p>
+              <p>Expected return on equity<span>{{propertyItem.returnEquityPer}}%</span></p>
+              <p>Minimum investment <span>CHF {{propertyItem.minInvestPrice}}.-</span></p>
+              <a [routerLink]="['/property/'+propertyItem.slug]">View Information</a>
+            </div>
+          </li>
+          <!-- <li>
+            <img src="../../assets/images/root/Bitmap2.png">
+            <h2>High tech at Switzerland's water vault</h2>
+            <h3>342 Nicolas Groves Apt. 207</h3>
+            <h4>16% financed<span>CHF 5'370'000.- remaining</span></h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                style="width: 60%;">
+
+              </div>
+            </div>
+            <div class="purchase_tx">
+              <p>Total purchase price<span>CHF 13'840'000.-</span></p>
+              <p>Mortgage<span>55%</span></p>
+              <p>Mortgage term<span>5 years</span></p>
+              <p>Expected return on equity<span>5.6%</span></p>
+              <p>Minimum investment <span>CHF 100'000.-</span></p>
+              <a [routerLink]="['/videos']">View Information</a>
+            </div>
+          </li>
+          <li>
+            <img src="../../assets/images/root/Bitmap3.png">
+            <h2>High tech at Switzerland's water vault</h2>
+            <h3>342 Nicolas Groves Apt. 207</h3>
+            <h4>16% financed<span>CHF 5'370'000.- remaining</span></h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                style="width: 60%;">
+
+              </div>
+            </div>
+            <div class="purchase_tx">
+              <p>Total purchase price<span>CHF 13'840'000.-</span></p>
+              <p>Mortgage<span>55%</span></p>
+              <p>Mortgage term<span>5 years</span></p>
+              <p>Expected return on equity<span>5.6%</span></p>
+              <p>Minimum investment <span>CHF 100'000.-</span></p>
+              <a [routerLink]="['/videos']">View Information</a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="investment">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2>Investment safeguards</h2>
+          <p>We take our responsibilities seriously to give you the upmost trust in our business model and our
+            business.</p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <ul class="inve_catagrey">
+          <li>
+            <img src="../../assets/images/root/inves1.svg">
+            <h2>Your investments are ring-fenced</h2>
+            <p>And are separated from the assets and liabilities of Property Partner</p>
+            <span>Show More</span>
+          </li>
+          <li>
+            <img src="../../assets/images/root/inves2.svg">
+            <h2>Compensation Scheme (FSCS)</h2>
+            <p>Protects the funds in your Property Partner account.</p>
+            <span>Show More</span>
+          </li>
+          <li>
+            <img src="../../assets/images/root/inves3.svg">
+            <h2>Financial Conduct Authority</h2>
+            <p>is the body that authorises and regulates Property Partner.</p>
+            <span>Show More</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="customers-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2>What our customers saysing?</h2>
+          <p>Aenean lacinia bibendum nulla sed consecteturd ligula porta felis euismod semper.<br> Fusce dapibus,
+            tellus ac cursus commodo.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../../assets/images/root/volo1.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Rosinante Vole</h3>
+            <span>SEO Marketer</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../../assets/images/root/volo2.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Paul Zanker</h3>
+            <span>Forex Exchange</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../../assets/images/root/volo3.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Will Dogtooh</h3>
+            <span>Business Investment</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rosinate-bx">
+          <img src="../../assets/images/root/volo4.png">
+          <div class="seo-bx">
+            <p>Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Fusce
+              dapibus, tellus ac cursus.</p>
+            <h3>Zin Nguyen</h3>
+            <span>Forex Exchange</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

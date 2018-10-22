@@ -1,0 +1,145 @@
+
+
+/*********contact-banner*********/
+.contact-banner {
+    background-image: url('../../../assets/images/root/contact-banner.png');
+    height: 320px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-banner h2 {
+    text-align: center;
+    width: 100%;
+    padding-top: 130px;
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: 60px;
+}
+.contact-form h2 {
+    padding-top: 60px;
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 40px;
+}
+
+.contact-form p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 45px;
+}
+
+.contact-form ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.contact-form li {
+    font-size: 16px;
+    color: #4fde8b;
+    font-family: "Open Sans";
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: flex;
+}
+.contact-form li:nth-child(2) {
+    margin: 0;
+    display: flex;
+}
+.contact-form li:nth-child(4) {
+    margin: 0;
+    display: flex;
+}
+
+.contact-form span {
+    padding-right: 10px;
+}
+
+.contact-form a {
+    font-size: 16px;
+    color: #4fde8b;
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-decoration: none;
+}
+.form-contact .form-control {
+    border: 0;
+    border-radius: 0;
+    padding-left: 0;
+    border-bottom: 1px solid #dbdbdb;
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    box-shadow: none
+}
+
+.form-contact .form-group {
+    margin-bottom: 25px;
+}
+
+.form-contact a {
+    border-radius: 5px;
+    background-image: linear-gradient(134deg, #54e490 0%, #36bf70 100%);
+    padding: 18px 166px;
+    border: none;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 480px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.contact-form {
+    display: flex;
+}
+
+.contact-left2 {
+    padding-left: 134px;
+    padding-right: 40px;
+    width: 50%;
+}
+.map {
+    width: 50%;
+}
+.map iframe {
+    width: 100%;
+}
+.max-contact {
+    padding-left: 44px;
+}
+.form-contact {
+    max-width: 480px;
+}
+.form-contact .form-control:focus {
+    box-shadow: none;
+	border-bottom: 1px solid #4ddb89;
+}
+
+
+
+.form-contact ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #727272 !important;
+font-family: "Open Sans";
+font-size: 18px;
+}
+.form-contact ::-moz-placeholder { /* Firefox 19+ */
+	color: #727272 !important;
+font-family: "Open Sans";
+font-size: 18px;
+}
+.form-contact :-ms-input-placeholder { /* IE 10+ */
+	color: #727272 !important;
+font-family: "Open Sans";
+font-size: 18px;
+}
+.form-contact :-moz-placeholder { /* Firefox 18- */
+	color: #727272 !important;
+font-family: "Open Sans";
+font-size: 18px;
+}

@@ -1,0 +1,194 @@
+<div class="man-video" *ngIf = "propertyItem">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="video-title">
+          <h2>{{propertyDeatils.name}}</h2>
+          <p>{{propertyDeatils.shortDesc}}</p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="ImageSlider" *ngFor="let example of examples; let i = index;">          
+          <ngx-gallery [options]="example.options" [images]="example.images"></ngx-gallery>
+          <options-viewer [options]="example.options"></options-viewer>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="description-bg" *ngIf = "propertyItem">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="descri_left">
+          <h2>Description</h2>
+          <h3>Summary:</h3>
+          <ul class="summary_icon" *ngIf =" propertyDeatils.summaryData.length > 0">
+            <li *ngFor="let summaryItem of propertyDeatils.summaryData"><span><i class="fa fa-circle" aria-hidden="true"></i></span>{{summaryItem.summeryDesc}}</li>
+           <!--  <li><span><i class="fa fa-circle" aria-hidden="true"></i></span>Location near centre</li>
+            <li><span><i class="fa fa-circle" aria-hidden="true"></i></span>Economically strong location of
+              Schaffhausen</li>
+            <li><span><i class="fa fa-circle" aria-hidden="true"></i></span>Expected return on equity of 6%</li> -->
+          </ul>
+          <h3>Your property:</h3>
+          <p>{{propertyDeatils.desc}}</p>
+          <h3>Location benefits:</h3>
+          <p>{{propertyDeatils.benefitsDesc}}</p>
+          <div class="shore-bt">
+            <a href="#">Show More<span><i class="fa fa-sort-desc" aria-hidden="true"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="pros-mont">
+          <label>0%</label>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="645" aria-valuemin="0" aria-valuemax="100"
+              style="width: 0%;">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+          <h4>CHF 0.- of total CHF {{propertyDeatils.purchasePrice}}.- already invested</h4>
+          <div class="expend-bxx">
+            <p>Expected return on equity <span>{{propertyDeatils.returnEquityPer}}% annually</span></p>
+            <p>Distribution frequency <span>Monthly</span></p>
+            <p>Purchase price <span>CHF {{propertyDeatils.purchasePrice}}.-</span></p>
+            <p>Mortgage <span>{{propertyDeatils.mortgageInterestPer}}% / {{propertyDeatils.mortgageYear}} years</span></p>
+            <p>Mortgage partner <span></span></p>
+            <p>Number of co-owners <span>0 investors</span></p>
+            <p>Additional security <span>{{propertyDeatils.additionalSecurity}}</span></p>
+          </div>
+          <h2>{{propertyDeatils.additionalSecurity}}<span>Min {{propertyDeatils.minInvestPrice}}.- Max {{propertyDeatils.maxInvestPrice}}.-</span></h2>
+          <div class="bg-gra">
+            <h5>{{propertyDeatils.purchasePrice}}</h5>
+          </div>
+          <h6>Share of property ownership<span>100/5246</span></h6>
+          <div class="reqvest-bt8">
+            <a href="javascript:0" (click)="RequestDocement()">Request Investment Documents</a>
+          </div>
+          <h3>You are not commiting to invest just yet.</h3>
+        </div>
+      </div>
+      <ul class="condition-bg">
+        <li *ngIf ="propertyDeatils.categoryName">
+          <h2>Property</h2>
+          <h3>{{propertyDeatils.categoryName}}</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.conditionName">
+          <h2>Condition</h2>
+          <h3>{{propertyDeatils.conditionName}}</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.location">
+          <h2>Location</h2>
+          <h3>{{propertyDeatils.location}}</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.unitRoomOffer">
+          <h2>Units / room offer</h2>
+          <h3>{{propertyDeatils.unitRoomOffer}}</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.purchasePrice">
+          <h2>Purchase price</h2>
+          <h3>CHF {{propertyDeatils.purchasePrice}}</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.mortgageAmount">
+          <h2>Mortgage</h2>
+          <h3>CHF {{propertyDeatils.mortgageAmount}}- {{propertyDeatils.mortgageYear}} years</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.returnEquityPer">
+          <h2>Required equity capital</h2>
+          <h3>CHF {{propertyDeatils.returnEquityPer}}.-</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.plotArea">
+          <h2>Plot area / rental space</h2>
+          <h3>{{propertyDeatils.plotArea}}</h3>
+        </li>
+        <li *ngIf ="propertyDeatils.constructionYear">
+          <h2>Year of construction / renovations</h2>
+          <h3>{{propertyDeatils.constructionYear}} / {{propertyDeatils.constructionYear}}</h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="document-bg" *ngIf = "propertyItem">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="document-left">
+          <h2><span><img src="../assets/images/root/investment.png"></span>Documents</h2>
+          <h3 *ngFor ="let document of propertyDeatils.fileData">{{document.fileName}}<span><i class="fa fa-download" aria-hidden="true"></i></span></h3>
+          <!-- <h3>Grundbuchauszug.pdf<span><i class="fa fa-download" aria-hidden="true"></i></span></h3>
+          <h3>Katasterplan.pdf<span><i class="fa fa-download" aria-hidden="true"></i></span></h3>
+          <h3>Mieterspiegel.pdf<span><i class="fa fa-download" aria-hidden="true"></i></span></h3>
+          <h3>szenarioanalyzerschaffhausen.xlsx<span><i class="fa fa-download" aria-hidden="true"></i></span></h3>
+          <h3>Marktwertschaetzung.pdf<span><i class="fa fa-download" aria-hidden="true"></i></span></h3> -->
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="invasment-right" *ngIf ="propertyDeatils.investmentCondition || false">
+          <h2><span><img src="../assets/images/root/docoment.png"></span>Investment conditions</h2>
+          <accordion>
+            <accordion-group heading="Restrictions & investment parameters">
+              <p>Restrictions & investment parameters</p>
+            </accordion-group>
+            <accordion-group heading="Procedure">
+              <p>Procedure</p>
+            </accordion-group>
+            <accordion-group heading=" Legal structure">
+              <p> Legal structure</p>
+            </accordion-group>
+            <accordion-group heading="Compensation & costs">
+              <p>Compensation & costs</p>
+            </accordion-group>
+            <accordion-group heading=" Borrowed capital">
+              <p>Borrowed capital</p>
+            </accordion-group>
+            <accordion-group heading=" Sell shares / terminate investment">
+              <p> Sell shares / terminate investment</p>
+            </accordion-group>
+          </accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="investment" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2>Investment safeguards</h2>
+          <p>We take our responsibilities seriously to give you the upmost trust in our business model and our
+            business.</p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <ul class="inve_catagrey">
+          <li>
+            <img src="../assets/images/root/inves1.png">
+            <h2>Your investments are ring-fenced</h2>
+            <p>And are separated from the assets and liabilities of Property Partner</p>
+            <span>Show More</span>
+          </li>
+          <li>
+            <img src="../assets/images/root/inves2.png">
+            <h2>Compensation Scheme (FSCS)</h2>
+            <p>Protects the funds in your Property Partner account.</p>
+            <span>Show More</span>
+          </li>
+          <li>
+            <img src="../assets/images/root/inves3.png">
+            <h2>Financial Conduct Authority</h2>
+            <p>is the body that authorises and regulates Property Partner.</p>
+            <span>Show More</span>
+          </li>
+        </ul>
+        <div class="get_now invest10">
+          <a href="#">Invest Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

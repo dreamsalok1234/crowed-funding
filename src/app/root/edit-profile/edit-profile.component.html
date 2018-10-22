@@ -1,0 +1,113 @@
+<div class="edit_profile">
+<div class="container">
+  <h2>Edit Profile</h2>
+  <hr>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-3">
+      <div class="text-center">
+        <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+        <h6>Upload a different photo...</h6>
+
+        <input type="file" class="form-control">
+      </div>
+    </div>
+
+    <!-- edit form column -->
+    <div class="col-md-9 personal-info">
+      <h3>Personal info</h3>
+
+      <form class="form-horizontal" role="form" (ngSubmit)="f.form.valid && updateProfile()" #f="ngForm">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="col-lg-12 control-label">First name:</label>
+              <div class="col-lg-12">
+                <input type="text" id="first_name" pattern="[a-zA-Z][a-zA-Z ]+"  [(ngModel)]="model.firstName" name="firstName" #firstName="ngModel" class="form-control" placeholder="First Name" required autofocus>
+				<div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+					<div [hidden]="!firstName.hasError('required')">First Name is required</div>
+					<div [hidden]="!firstName.hasError('pattern')">Only alphabetsallowed</div>
+				</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="col-lg-12 control-label">Last name:</label>
+              <div class="col-lg-12">
+                <input type="text" id="last_name" pattern="[a-zA-Z][a-zA-Z ]+"  [(ngModel)]="model.lastName" name="lastName" #lastName="ngModel" class="form-control" placeholder="Last Name" required autofocus>
+				<div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+					<div [hidden]="!lastName.hasError('required')">Last Name is required</div>
+					<div [hidden]="!lastName.hasError('pattern')">Only alphabetsallowed</div>
+				</div>
+              </div>
+            </div>
+          </div>    
+          <div class="col-md-4">
+			<div class="form-group">
+              <label class="col-lg-12 control-label">City:</label>
+              <div class="col-lg-12">
+                <input type="text" id="city" [(ngModel)]="model.city" name="city" #city="ngModel" class="form-control" placeholder="City Name">
+				
+              </div>
+            </div>
+          </div>
+        </div>
+		<div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="col-lg-12 control-label">Address:</label>
+              <div class="col-lg-12">
+                <input class="form-control" type="text" id="address" [(ngModel)]="model.address" name="address" #address="ngModel" class="form-control" placeholder="Address">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="col-lg-12 control-label">State:</label>
+              <div class="col-lg-12">
+                <input class="form-control" type="text" id="state" [(ngModel)]="model.state" name="state" #state="ngModel" class="form-control" placeholder="State">
+              </div>
+            </div>
+          </div>    
+		  <div class="col-md-4">
+			<div class="form-group">
+				<label class="col-lg-12 control-label">Country:</label>
+				<div class="col-lg-12">
+				  <input class="form-control" type="text"  id="country" [(ngModel)]="model.country" name="country" #country="ngModel" class="form-control" placeholder="country">
+				</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="col-lg-12 control-label">Email:</label>
+              <div class="col-lg-12">
+                <input class="form-control" type="text" value="" name="email" #email = "ngModel" [(ngModel)]="model.email"  disabled>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="col-md-12 control-label">Phone:</label>
+              <div class="col-md-12">
+                <input type="text" id="inputPhone" class="form-control" placeholder="Phone Number" [(ngModel)]="model.phoneNumber" name="phoneNumber" #phoneNumber="ngModel">
+              </div>
+            </div>
+          </div>
+		  
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="col-md-12 control-label"></label>
+              <div class="col-md-12">
+                <input type="submit" class="btn btn-primary btn-round" value="Save Changes">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

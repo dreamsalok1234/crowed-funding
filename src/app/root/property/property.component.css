@@ -1,0 +1,471 @@
+
+/*********video********/
+div#gallery {
+    width: 100% !important;
+    max-width: 100% !important;
+	height:609px !important;
+}
+
+.ug-slider-wrapper .ug-button-videoplay.ug-type-square {
+    width: 100px;
+    background-image: url(../../../assets/images/root/play-button-round.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100px;
+}
+.ug-thumbs-strip {
+    left: 0 !important;
+    width: 100% !important;
+}
+.man-video {background-color: #fafafa;padding-top: 85px;padding-bottom:  60px;}
+
+.video-title h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 40px;
+}
+
+.video-title p {color: #727272;font-family: Ubuntu;font-size: 18px;line-height: 24px;margin-bottom:  40px;}
+.description-bg {
+    padding-top: 47px;
+}
+
+.descri_left h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 40px;
+    margin-bottom: 36px;
+}
+.shore-bt a {
+    color: #4ddb89;
+    font-family: "Open Sans";
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.shore-bt span {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+
+.descri_left h3 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 24px;
+}
+
+.summary_icon li {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+}
+
+.summary_icon span {
+    color: #4ddb89;
+    font-size: 11px;
+    padding-right: 10px;
+}
+
+ul.summary_icon {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-bottom: 40px;
+}
+
+.descri_left p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+.pros-mont {
+    border: 1px solid #dbdbdb;
+    padding: 36px 21px 20px 21px;
+}
+
+.pros-mont label {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 45px;
+}
+
+.pros-mont .progress {
+    height: 9px;
+    border-radius: 0;
+    margin-bottom: 18px;
+}
+
+.pros-mont .progress-bar {
+    background-color: #29333d;
+}
+
+.pros-mont h4 {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 15px;
+    margin-bottom: 27px;
+}
+
+.expend-bxx p {
+    color: #727272;
+    font-size: 16px;
+    line-height: 45px;  /* Text style for "Expected r" */
+    font-family: "Open Sans";
+    border-bottom: 1px dashed #dbdbdb;
+    margin-bottom: 0px;
+}
+
+.expend-bxx span {/* Text style for "6% annuall" */
+    color: #262626;
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-align: right;
+    float: right;
+}
+
+
+.pros-mont h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 22px;
+    margin-bottom: 22px;
+    margin-top: 40px;
+}
+
+.pros-mont span {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 15px;
+    float: right;
+}
+
+.bg-gra {border-radius: 5px;border: 1px solid #dbdbdb;background-color: #fafafa;padding: 15px;}
+.pros-mont h6 {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 36px;
+}
+
+.pros-mont h6 span {
+    color: #262626;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+}
+.reqvest-bt {
+    text-align: center;
+}
+
+.reqvest-bt a {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-image: linear-gradient(134deg, #54e490 0%, #36bf70 100%);
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 20px 45px;
+}
+
+
+
+.reqvest-bt8 {padding-bottom: 20px;}
+
+.reqvest-bt8 a {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-image: linear-gradient(134deg, #54e490 0%, #36bf70 100%);
+    padding: 20px 41px;
+    display: block;
+}
+
+.pros-mont h3 {
+    color: #969696;
+    font-family: "Open Sans";
+    font-size: 14px;
+    text-align: center;
+}
+
+/**********condition-bg**********/
+ul.condition-bg {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.condition-bg li {
+    width: 31%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin: 15px 11px;
+    padding: 24px;
+    text-align: center;
+}
+
+.condition-bg h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 22px;
+}
+
+.condition-bg h3 {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+/* .condition-bg li:last-child {
+    margin: 0;
+} */
+
+
+/*********document-bg******/
+.document-bg {
+    background-color: #fafafa;
+    padding-top: 56px;
+    margin-top: 69px;
+    padding-bottom: 70px;
+}
+
+.document-bg h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.document-bg span {
+    padding-right: 12px;
+    float: right;
+}
+
+.document-left img {}
+
+.document-bg h3 {
+    border-top: 1px solid #dbdbdb;
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    padding: 20px;
+    padding-left: 0;
+    margin-bottom: 0px;
+}
+
+.invasment-right .card {
+    border: 0;
+    background-color: transparent;
+        margin: 0;
+    box-shadow: none;
+}
+
+.invasment-right .card-header {
+    border-top: 1px solid #dbdbdb;
+    background-color: transparent;
+    padding: 0;
+    border-bottom: 0;
+}
+
+.invasment-right h5.mb-0 {border: 0; display: block; margin: 0}
+
+.invasment-right a {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    padding: 20px;
+    padding-left: 0;
+    border: 0;
+}
+
+.invasment-right span {
+    float: right;
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px
+}
+
+.invasment-right a.btn.btn-link.collapsed {
+    display: flex;
+    justify-content: space-between;
+    padding: 17.1px;
+    padding-left: 0;
+}
+.invasment-right .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.invasment-right .btn-link:hover {
+    color: #817c7c;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+	text-decoration:none;
+}
+.get_now.invest10 {
+    text-align: center;
+    padding-top: 46px;
+}
+.invest10 a {
+    padding: 18px 66px;
+}
+
+.title {
+    text-align:  center;
+}
+
+.title h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 45px;
+}
+/********investment********/
+.investment {
+    padding-top: 80px;
+    padding-bottom: 73px;
+}
+.title p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+ul.inve_catagrey {
+    padding:  0;
+    margin:  0;
+    list-style:  none;
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    padding-top:  50px;
+}
+
+.inve_catagrey li {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    width: 33%;
+    margin: 0 30px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 295px;
+}
+
+.inve_catagrey h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 14px;
+    margin-bottom: 11px;
+}
+
+.inve_catagrey p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.inve_catagrey span {
+    color: #53e28f;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+
+.inve_catagrey li:last-child {
+    margin:  0;
+}
+
+
+.panel .panel-heading.card-header .panel-title{
+    display: flex;
+    justify-content: space-between;
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    text-decoration: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.panel-group .card-body p{
+     color: #000;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+.panel-group .card-header .accordion-toggle{
+    width: 100%
+}
+.panel-group accordion-group{position: relative;}
+.panel-group accordion-group:after {
+    position: absolute;
+    content: "\f107";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 25px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #727272;
+    transition: all 0.5s;
+    transform-origin: center
+}
+.panel-group accordion-group.panel-open:after{
+    transform: rotate(180deg); transition: all 0.5s;  transform-origin: center
+}
+.panel-group .panel{background: transparent;box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    border:0;}
+.panel-group .panel.card {
+    margin-bottom: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    border:0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 17px 0;
+    cursor: pointer;
+}
+.panel-group accordion-group:first-child .panel.card{padding: 17px 0;border-top: 1px solid rgba(0,0,0,.125);}
+.panel-group .card {
+    background-color:  transparent;
+    border:  0; padding: 0
+}
+.panel-body{padding-left: 0}
+.panel-group .card-header {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+        border: 0;
+}
+ngx-gallery{
+    width: 100%!important;
+    height: 700px!important;
+}

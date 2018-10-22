@@ -1,0 +1,410 @@
+.title {
+    text-align:  center;
+}
+
+.title h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 45px;
+}
+.title p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+/**********about***********/
+.about_nav a {
+    color: #727272 !important;
+    font-family: Ubuntu;
+    font-size: 16px;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+a.btn.btn-light.signupBtn2.about-bt {
+    border-radius: 5px;
+    border: 1px solid #b5b5b5;
+    color: #727272 !important;
+}
+
+
+.about-banner {
+    background-image:  url('../../../assets/images/root/about-banner.png');
+    height: 626px;
+    background-position:  center;
+    background-size:  cover;
+    padding-top:  184px;
+    text-align:  center;
+}
+
+.kreislnvest-bx {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 38px;
+    padding-bottom: 38px;
+    max-width: 943px;
+    margin: 0 auto;
+}
+
+.kreislnvest-bx h2 {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 50px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom:  20px;
+}
+
+.kreislnvest-bx p {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 24px;
+    padding: 26px;
+    padding-bottom:  0;
+}
+
+/*******tabing*********/
+.tabing .tab-slider--tabs .tab-slider--trigger{
+    border:  0;
+    color: #262626;
+    font-family: "Open Sans";
+    font-size: 18px;
+    padding-top: 13px;
+    display: inline-block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+.tabing .tab-slider--tabs .tab-slider--trigger.active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-image: linear-gradient(134deg, #54e490 0%, #36bf70 100%);
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 18px;
+    padding: 16px 26px;
+    border: 0;
+    color: #fff !important;
+}
+.tab-slider--container{padding: 0 15px}
+.sem-title {
+    margin-top: 25px;
+}
+.tab-slider--body{padding-top: 25px}
+.Innovation_bg {
+    background-color: #fafafa;
+    box-shadow: 0 0 17px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom:  20px;
+}
+
+.tabing .tab-slider--tabs{
+    border: 0;
+    padding-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+.tabing {
+    padding-top:  25px;
+}
+.Innovation_bg h2 {
+    text-align:  center;
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 30px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom:  22px;
+    margin-bottom: 30px;
+}
+
+.Innovation_bg p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom:  35px;
+}
+.tab_content {
+    display: flex;
+    justify-content: center;
+}
+.tab_box {
+    width: 574px;
+    margin:  0 50px;
+    margin-left:  0;
+}
+
+.tab_box:last-child {
+    margin:  0;
+}
+
+/************our-team*********/
+.our-team {
+    padding-top: 80px;
+}
+
+ul.team_list {
+    padding:  0;
+    margin:  0;
+    list-style:  none;
+    display:  flex;
+    justify-content: center;
+    align-items:  center;
+    flex-wrap:  wrap;
+    text-align:  center;
+}
+
+.team_list li {
+    width: 20%;
+    height: 275px;
+}
+
+.team_list h2 {
+    color: #262626;
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: 500;
+    padding-top:  20px;
+    margin: 0px;
+}
+
+.team_list p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+.our-team .title {
+    padding-bottom: 85px;
+}
+/********bottom-cx******/
+.our-team.bottom-cx {
+    border-top: 1px solid #dbdbdb;
+    padding-bottom: 68px;
+}
+.bottom-cx .get_now {
+    text-align:  center;
+}
+
+.bottom-cx a {
+    margin:  0;
+}
+
+
+/*********partners_bg*******/
+.partners_bg {
+    background-image: url(../../../assets/images/root/about-banner2.png);
+    background-size: cover;
+    background-position: center;
+    height: 460px;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+}
+.partners_bg h2 {
+    text-align:  center;
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: 40px;
+    margin-bottom:  36px;
+}
+
+.partners_bg ul {
+    padding:  0;
+    margin:  0;
+    list-style:  none;
+    display:  flex;
+    flex-wrap:  wrap;
+    justify-content:  center;
+    align-items:  center;
+}
+
+.partners_bg li {
+    width: 20%;
+}
+
+.partners_bg img {
+    width:  100%;
+}
+
+/**********Properties-banner-page*******/
+
+.Properties-banner {
+    background-image: url(../../../assets/images/root/Properties-banner.png);
+    background-size: cover;
+    background-position: center;
+	height: 323px;
+}
+.all-propti {
+    padding-top:  110px;
+    text-align:  center;
+}
+
+.all-propti h2 {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.all-propti p {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+.properties-box {
+    padding-top:  56px;
+}
+
+.properties-box ul {
+    padding:  0;
+    margin:  0;
+    list-style: none;
+    display:  flex;
+    text-align:  center;
+    align-items:  center;
+    justify-content:  center;
+}
+
+.properties-box li {
+    width: 33%;
+    height: 177px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 0 30px;
+    margin-left:  0;
+    padding:  50px;
+}
+
+.properties-box h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.properties-box p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 15px;
+}
+
+.properties-box li:last-child {
+    margin:  0;
+}
+
+/***********high-tech-bg*********/
+.high-tech-bg {
+    padding-top: 50px;
+}
+.high-tech-bg ul.high_tech {
+    flex-wrap:  wrap;
+}
+
+.high-tech-bg .high_tech li {
+    width: 31%;
+    margin-bottom: 30px;
+    height: 634px;
+}
+
+.high-tech-bg .high_tech li:nth-child(3) {
+    margin:  0;
+}
+
+.high-tech-bg .high_tech li:nth-child(6) {
+    margin:  0;
+}
+
+.high-tech-bg .high_tech li:nth-child(9) {
+    margin:  0;
+}
+
+/**********Request-bg********/
+.Request-bg {
+    background-image:  url('../../../assets/images/root/Properties-banner2.png');
+    height: 480px;
+    background-size:  cover;
+    background-position:  center;
+    padding-top:  65px;
+}
+
+.Request-bg h2 {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 60px;
+    font-weight: 500;
+    padding-top: 50px;
+}
+
+.Request-bg p {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+
+.Request-bg .form-control {
+    border: 1px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0;
+    height: 50px !important;
+    color: #fff;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+}
+.form_sambit a {
+    background-image: linear-gradient(134deg, #54e490 0%, #36bf70 100%);
+    padding: 10px 30px;
+    display:  inline-block;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius:  5px;
+    text-decoration:  none;
+}
+
+
+
+/**********customers-bg********/
+.customers-bg {
+    background-color: #fafafa;
+    padding-top:  94px;
+    padding-bottom:  96px;
+}
+
+.customers-bg .title {
+    padding-bottom:  55px;
+}
+
+.rosinate-bx {
+    box-shadow: 0 8px 17px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    display:  flex;
+    margin-bottom: 30px;
+    justify-content:  center;
+    align-items:  center;
+}
+
+.seo-bx {
+    padding: 11px;
+    padding-left: 25px;
+}
+
+.seo-bx p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 15px;
+    margin-bottom:  0;
+}
+
+.seo-bx h3 {
+    font-family: "Ubuntu";
+    font-size: 14px;
+    font-weight: 500;
+    margin:  0;
+    padding-top: 16px;
+}
+
+.seo-bx span {
+    color: #41cd7c;
+    font-family: Ubuntu;
+    font-size: 12px;
+}

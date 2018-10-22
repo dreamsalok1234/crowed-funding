@@ -1,0 +1,377 @@
+/*********Business***********/
+
+.Business-banner {
+    background-image:  url('../../../assets/images/root/vider_banner.png');
+    height: 823px;
+    background-size:  cover;
+    padding-top: 130px;
+    position:  relative;
+}
+
+.overview {
+    box-shadow: 0 0 21px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    width: 784px;
+    height: 563px;
+    padding-top: 150px;
+    padding-left: 107px;
+    padding-right:  108px;
+    padding-bottom:  81px;
+    position:  absolute;
+    left: -150px;
+}
+
+.overview h2 {
+    color: #262626;
+    font-family: "Ubuntu";
+    font-size: 60px;
+    font-weight: 500;
+    text-align:  center;
+    position:  relative;
+    padding-bottom:  30px;
+}
+
+.overview p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 20px;
+    line-height: 31px;
+    text-align:  center;
+}
+
+.overview h2:before {
+    content:  "";
+    display:  inline-block;
+    width:  50px;
+    height: 2px;
+    background-color: #4ddb89;
+    bottom: 17px;
+    left:  0;
+    right:  0;
+    margin:  0 auto;
+    text-align:  center;
+    position:  absolute;
+}
+
+.overview-img {
+    position: absolute;
+    left: 117px;
+    top: 215px;
+}
+
+.overview-img h2 {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 80px;
+    font-weight: 500;
+    width: 650px;
+    height: 138px;
+    border: 5px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+/*********Kreis-bg********/
+.Kreis-bg {
+    background-color: #fafafa;
+    padding-top:  90px;
+    text-align:  center;
+    width:  100%;
+    padding-bottom:  50px;
+}
+
+.Kreis-bg h2 {
+    margin:  0 auto;
+    margin-bottom:  44px;
+    color: #262626;
+    font-family: "Ubuntu";
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.video-img {
+    display:  block;
+    margin:  0 auto;
+    margin-bottom: 44px;
+}
+
+.video-img img {
+    width:  100%;
+}
+
+.Kreis-bg .get_now {
+    text-align:  center;
+    margin:  0 auto;
+}
+
+.Kreis-bg p {
+    margin-bottom:  55px;
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.Kreis-bg .get_now a {
+    margin-bottom:  0px;
+}
+/**********macro-chart************/
+.macro-chart {
+    padding-top: 114px;
+    padding-bottom: 70px;
+}
+.macro-chart h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 30px;
+    padding-bottom: 16px;
+    margin-bottom:  0;
+}
+
+.macro-chart h4 {
+    color: #727272;
+    font-size: 18px;  /* Text style for "The realit" */
+    font-family: "Open Sans";
+}
+
+.macro-chart h5 {
+    font-size: 20px;
+      /* Text style for "" */
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-weight: 600;
+    padding-bottom: 18px;
+    margin-bottom:  0px;
+}
+
+.macro-chart p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin-bottom: 23px;
+    text-align:  left;
+}
+/******Concept-bg*********/
+.cont-br {
+    text-align:  center;
+    position:  relative;
+    padding-top:  59px;
+}
+
+.cont-br h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 40px;
+}
+
+.cont-br p {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+
+.cont-br:after {
+    content:  "";
+    display:  inline-block;
+    position:  absolute;
+    width:  100%;
+    height:  1px;
+    background-color: #dbdbdb;
+    left:  0;
+    right:  0;
+    margin:  0 auto;
+    top:  0;
+}
+
+.owens-bg {
+    padding-top:  67px;
+}
+
+.owens-bg img {
+    width:  100%;
+}
+
+.Concept-bg {
+    padding-bottom:  60px;
+}
+/***********Frequently************/
+.Frequently {
+    background-color: #fafafa;
+    padding-top:  60px;
+    padding-bottom:  68px;
+}
+.Frequently .tab-slider--trigger{
+    padding: 13px 26px;
+    border: 0;
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.Frequently .tab-slider--trigger.active{
+    background-image: unset;
+    color: #42ce7d!important;
+    box-shadow: none;
+    padding: 13px 26px;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.Frequently .tab-slider--tabs{
+    width: 323px;
+    height: 55px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.Frequently .tab-slider--tabs .tab-slider--trigger:nth-child(2):after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background-color: #dbdbdb;
+    width: 2px;
+    height: 27px;
+    top: 13px;
+    left: 0;
+}
+.Frequently .tab-slider--tabs .tab-slider--trigger:nth-child(2):before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background-color: #dbdbdb;
+    width: 2px;
+    height: 27px;
+    top: 13px;
+    right: 0;
+}
+.Frequently .tab-slider--tabs .tab-slider--trigger:nth-child(2) {
+    position:relative;
+}
+
+/*******************/
+
+
+.panel .panel-heading.card-header .panel-title{
+    display: flex;
+    justify-content: space-between;
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    text-decoration: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.panel-group .card-body p{
+     color: #000;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+.panel-group .card-header .accordion-toggle{
+    width: 100%
+}
+.panel-group accordion-group{position: relative;}
+.panel-group accordion-group:after {
+    position: absolute;
+    content: "\f107";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 30px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #727272;
+    transition: all 0.5s;
+    transform-origin: center
+}
+.panel-group accordion-group.panel-open:after{
+    transform: rotate(180deg); transition: all 0.5s;  transform-origin: center
+}
+.panel-group .panel{background: transparent;box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    border:0;}
+.panel-group .panel.card {
+    margin-bottom: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    border:0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 17px 0;
+    
+}
+.panel-group accordion-group:first-child .panel.card{padding: 17px 0;border-top: 1px solid rgba(0,0,0,.125);}
+.panel-body{padding-left: 0}
+.panel-group .card-header {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+        border: 0;
+        cursor: pointer;
+}
+/*********benefit-bg*********/
+.benefit-bg {
+    padding-top: 68px;
+    padding-bottom: 88px;
+}
+.benefit-bg h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 30px;
+    margin-bottom:  32px;
+}
+
+.benefit-bg p {
+      /* Text style for "THE SUM OF" */
+      font-family: "Open Sans";
+      color: #727272;
+      font-size: 18px;
+      margin-bottom:  36px;
+}
+
+.benefit-bg span {
+    color: #727272;
+    font-size: 18px;  /* Text style for "Kreis is a" */
+    font-family: "Open Sans";  /* Text style for "THE SUM OF" */
+    font-weight: 600;
+}
+ul.check-icon {
+    padding:  0;
+    margin:  0;
+    list-style: none;
+}
+
+.check-icon li {
+    color: #727272 !important;
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.check-icon strong {
+    color: #42ce7d;
+    font-size: 18px;
+    padding-right: 10px;
+}
+.title {
+    text-align:  center;
+}
+
+.title h2 {
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 45px;
+}

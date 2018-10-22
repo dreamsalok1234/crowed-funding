@@ -1,0 +1,208 @@
+<app-card [title]="'Hemant Rawat'">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="tab-slider--nav">
+        <ul class="tab-slider--tabs">
+          <li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">My
+            Profile</li>
+          <li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">Edit
+            Profile</li>
+        </ul>
+      </div>
+      <div class="tab-slider--container" [ngSwitch]="viewMode">
+        <div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+          <!-- Category Name card start -->
+        <div class="container emp-profile">
+          <h2>About</h2>
+          <hr>
+          <form method="post">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="profile-img">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+                    alt="" />
+                  <div class="file btn btn-lg btn-primary">
+                    Change Photo
+                    <input type="file" name="file" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="profile-head">                   
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home"
+                        aria-selected="true">About</a>
+                    </li>                   
+                  </ul>
+                </div>
+                <div class="tab-content profile-tab" id="myTabContent">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>User Name</label>
+                    </div>
+                    <div class="col-md-9">
+                      <p>Kshiti123</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Full Name</label>
+                    </div>
+                    <div class="col-md-9">
+                      <p>Kshiti Ghelani</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Email</label>
+                    </div>
+                    <div class="col-md-9">
+                      <p>kshitighelani@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Phone</label>
+                    </div>
+                    <div class="col-md-9">
+                      <p>123 456 7890</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Company</label>
+                    </div>
+                    <div class="col-md-9">
+                      <p>Information Technology</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </form>
+        </div>
+        </div>
+        <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+          <!-- Category Name card start -->
+          <div class="container">
+            <h2>Edit Profile</h2>
+            <hr>
+            <div class="row">
+              <!-- left column -->
+              <div class="col-md-3">
+                <div class="text-center">
+                  <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+                  <h6>Upload a different photo...</h6>
+
+                  <input type="file" class="form-control">
+                </div>
+              </div>
+
+              <!-- edit form column -->
+              <div class="col-md-9 personal-info">
+                <h3>Personal info</h3>
+
+                <form class="form-horizontal" role="form">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-lg-12 control-label">First name:</label>
+                        <div class="col-lg-12">
+                          <input class="form-control" type="text" value="Jane">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-lg-12 control-label">Last name:</label>
+                        <div class="col-lg-12">
+                          <input class="form-control" type="text" value="Bishop">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-lg-12 control-label">Company:</label>
+                        <div class="col-lg-12">
+                          <input class="form-control" type="text" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-lg-12 control-label">Email:</label>
+                        <div class="col-lg-12">
+                          <input class="form-control" type="text" value="janesemail@gmail.com">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-lg-12 control-label">Time Zone:</label>
+                        <div class="col-lg-12">
+                          <div class="ui-select">
+                            <select id="user_time_zone" class="form-control">
+                              <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                              <option value="Alaska">(GMT-09:00) Alaska</option>
+                              <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                              <option value="Arizona">(GMT-07:00) Arizona</option>
+                              <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp;
+                                Canada)</option>
+                              <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central
+                                Time
+                                (US &amp;
+                                Canada)</option>
+                              <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                              <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-md-12 control-label">Username:</label>
+                        <div class="col-md-12">
+                          <input class="form-control" type="text" value="Username">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-md-12 control-label">Password:</label>
+                        <div class="col-md-12">
+                          <input class="form-control" type="password" value="99999999999999">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-md-12 control-label">Confirm password:</label>
+                        <div class="col-md-12">
+                          <input class="form-control" type="password" value="999999999999999">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="col-md-12 control-label"></label>
+                        <div class="col-md-12">
+                          <input type="button" class="btn btn-primary btn-round" value="Save Changes">                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-card>

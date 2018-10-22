@@ -1,0 +1,242 @@
+<div class="header" [ngClass]="headerOne">
+  <nav class="navbar navbar-expand-lg navbar-light menu5 bg-blue">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/home']">
+        <img src="../../assets/images/root/logo.svg" width="" height="" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav " >
+          <li class="nav-item" [routerLinkActive]="['active']" *ngFor="let navItem of navItems.getAll()">
+            <a class="nav-link" (click)="changeHeadeer(navItem.state);" [routerLink]="['/',navItem.state]">{{ navItem.name }}</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto" [hidden] ="SignUpArea">
+          <li class="nav-item last-item">
+            <a class="btn btn-light signupBtn2" id="signupBtn2" (click)="ShowLoginPopUP(logincontent)">Log In</a>
+          </li>
+          <li class="nav-item last-item">
+            <a class="btn btn-light signupBtn" (click)="open(content)">Get Started</a>
+          </li>
+        </ul>
+		<div class="btn-group login_button" dropdown [hidden] ="profileArea">
+          <button id="button-basic" dropdownToggle type="button" class="btn loggedIn dropdown-toggle" aria-controls="dropdown-basic">
+            <img src="../../assets/images/root/Oval.png" width="45" height="45">{{ userName }}<span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+            <li role="menuitem"><a class="dropdown-item" href="javascript:" [routerLink]="['/edit-profile']">Edit Profile</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="javascript:" [routerLink]="['/change-password']">Change Password</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="javascript:"(click)="logout()">Logout</a></li>            
+          </ul>
+        </div>
+		
+		
+      </div>
+    </div>
+  </nav>
+  <div class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>KreisInvest</h2>
+          <h3>The Property Crowdfunding Platform</h3>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare
+            vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+          <div class="get_now">
+            <a href="#">Get Started Now</a>
+            <a [routerLink]="['/properties']">View Properties</a>
+          </div>
+          <h4>Capital at risk: please read Key Risks before investing.<span onclick="lightbox_open();">Watch Video<i
+                class="fa fa-play" aria-hidden="true"></i></span></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #content let-modal>
+<div class="login-model register-mod">
+  <h5 class="card-title text-center">Register for Free</h5>
+  <p class="card-p text-center">Register now to get access to all the information, to invest,get<br>updates
+    on new properties and get invited to workshops and events</p>
+  <form class="form-signin" name="form" (ngSubmit)="f.form.valid && signUp()" #f="ngForm">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-label-group">
+          <input type="text" id="first_name" pattern="[a-zA-Z][a-zA-Z ]+"  [(ngModel)]="model.first_name" name="first_name" #first_name="ngModel" class="form-control" placeholder="First Name" required autofocus>
+			<div [hidden]="first_name.valid || first_name.pristine" class="alert alert-danger">
+				<div [hidden]="!first_name.hasError('required')">First Name is required</div>
+				<div [hidden]="!first_name.hasError('pattern')">Only alphabetsallowed</div>
+			</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-label-group">
+          <input type="text" id="last_name" pattern="[a-zA-Z][a-zA-Z ]+"  [(ngModel)]="model.last_name" name="last_name" #last_name="ngModel" class="form-control" placeholder="Last Name" required autofocus>
+			<div [hidden]="last_name.valid || last_name.pristine" class="alert alert-danger">
+				<div [hidden]="!last_name.hasError('required')">Last Name is required</div>
+				<div [hidden]="!last_name.hasError('pattern')">Only alphabetsallowed</div>
+			</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-label-group">
+          <input type="text" id="inputPhone" class="form-control" placeholder="Phone Number" [(ngModel)]="model.phone" name="phone" #phone="ngModel">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-label-group">
+			<input type="text" class="form-control" id="emailaddress" required   [(ngModel)]="model.email" name="email"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel" placeholder ="Email Address">
+			<div [hidden]="email.valid || email.pristine"
+				 class="alert alert-danger">
+			  <div [hidden]="!email.hasError('required')">Email is required</div>
+			  <div [hidden]="!email.hasError('pattern')">Email format should be <small><b>joe@abc.com</b></small></div>
+			</div>		  
+			<div [hidden]="emailExist">Email Already Exists</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-label-group">
+			<input type="password" class="form-control" id="password"  required [(ngModel)]="model.password" name="password" placeholder="Password" #password="ngModel">
+			<div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+				Password is required
+			</div>
+        </div>
+      </div>
+	  <div class="col-md-12">
+        <div class="form-label-group">
+			<input type="password" class="form-control" id="cpassword" Equalvalidate="password"  required [(ngModel)]="model.cpassword" name="cpassword" placeholder="Confirm Password" #cpassword="ngModel">
+			<div [hidden]="cpassword.valid || cpassword.pristine" class="alert alert-danger">
+				Password and confirm password missmatched
+			</div>
+        </div>
+      </div>
+      <div class="col-md-12">        
+        <button class="btn" [disabled]="loading" type="submit">Register</button>		
+      </div>
+    </div>
+  </form>
+  <h2 class="creative-log">Already Registered?<a href="javascript:" class="heid1" data-action="myModal" (click) ="ShowLoginPopUP(logincontent)">Login
+      here</a></h2>
+</div>
+</ng-template>
+<ng-template #logincontent let-modal>
+<div class="login-model register-mod">
+  <h5 class="card-title text-center">Login Here</h5>
+  <p class="card-p text-center">Login Here</p>
+  <form class="form-signin" name="form" (ngSubmit)="f.form.valid && loginForm()" #f="ngForm">
+    <div class="row">      
+      <div class="col-md-12">
+        <div class="form-label-group">
+			<input type="text" class="form-control" id="emailaddress" required   [(ngModel)]="model.email" name="email"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel" placeholder ="Email Address">
+			<div [hidden]="email.valid || email.pristine"
+				 class="alert alert-danger">
+			  <div [hidden]="!email.hasError('required')">Email is required</div>
+			  <div [hidden]="!email.hasError('pattern')">Email format should be <small><b>joe@abc.com</b></small></div>
+			</div>	
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-label-group">
+			<input type="password" class="form-control" id="password"  required [(ngModel)]="model.password" name="password" placeholder="Password" #password="ngModel">
+			<div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+				Password is required
+			</div>
+        </div>
+      </div>	  
+      <div class="col-md-12">
+        <div class="custom-control custom-checkbox mb-3">
+          <input type="checkbox" class="custom-control-input" id="customCheck1">
+          <label class="custom-control-label" for="customCheck1">Remember password</label>
+        </div>
+        <button class="btn" [disabled]="loading" type="submit">Login</button>
+		
+      </div>
+    </div>
+  </form>
+  <h2 class="creative-log">Already Registered?<a href="javascript:" class="heid1" data-action="myModal" (click) ="open(content)">Register
+      here</a></h2>
+</div>
+</ng-template>
+<div class="cs-loader" [hidden] = "globalloader">
+  <div class="cs-loader-inner">
+    <label> ●</label>
+    <label> ●</label>
+    <label> ●</label>
+    <label> ●</label>
+    <label> ●</label>
+    <label> ●</label>
+  </div>
+</div>
+
+<div class="page-body">
+  <router-outlet>
+    <spinner></spinner>
+  </router-outlet>
+</div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer_logo">
+              <img src="../../assets/images/root/logo.svg">
+            </div>
+            <p>Address : 451 Fifth Avenue, 36th SWISS, </p>
+            <ul class="ft-list">
+              <li><a href="#">Phone : +(1200) 445 441 221</a></li>
+              <li><a href="#">Email : creativewithjoy@gmail.com</a></li>
+              <li><a href="#">Skype : doodlelys</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h2 class="ft-title">Links</h2>
+            <ul class="ft-list">
+              <li><a [routerLink]="['/works']">How it works</a></li>
+              <li><a [routerLink]="['/business']">Business Model</a></li>
+              <li><a [routerLink]="['/properties']">Properties</a></li>
+              <li><a [routerLink]="['/about']">About us</a></li>
+              <li><a [routerLink]="['/faq']">FAQ</a></li>
+              <li><a href="javascript:">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h2 class="ft-title">Notes</h2>
+            <ul class="ft-list">
+              <li><a [routerLink]="['/terms']">Terms & Conditions</a></li>
+              <li><a [routerLink]="['/privacy']">Privacy policy</a></li>
+              <li><a [routerLink]="['/legal']">Legal Notice</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h2 class="ft-title">Join our newsletter</h2>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+              <a href="#">Submit</a>
+            </div>
+            <ul class="social_icon">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div class="copy-right">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>© 2018 KreisInvest . All Rights Reserved . </p>
+          </div>
+          <div class="col-md-6">
+            <h2>Any question? Let us help you. Call us: <span>+(1200) 989 169 092</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
