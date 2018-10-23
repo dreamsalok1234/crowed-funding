@@ -10,8 +10,8 @@ export class ContactService {
     constructor(private http: HttpClient, private newhttp: Http) { }
 
     contact(formdata) {   
-       var headers = new Headers({'Content-Type':  'application/json'});
-
+       var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials':true,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'});
+       
        let options = new RequestOptions({ headers: headers });
         return this.newhttp.post('http://devv.website/crowdfund/apis/common/contact', { name: formdata.name, subject: formdata.subject, email: formdata.email, message: formdata.message }, options).map((user : Response)=> {
                 return user.json();
