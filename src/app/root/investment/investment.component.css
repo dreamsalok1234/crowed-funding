@@ -1,0 +1,239 @@
+.investment{
+    padding: 80px 0 150px
+}
+
+.progre {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px
+}
+.progre span {
+    font-size: 55px;
+    margin: 0 60px;
+}
+.progre span b{
+    display: block;
+    color: #727272;
+font-family: "Open Sans";
+font-size: 16px;
+}
+
+.radio_custom {
+    display: flex;
+    margin-bottom: 40px
+}
+
+.radio-custom {
+    opacity: 0;
+    position: absolute;   
+}
+
+.radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.investment .radio_custom .radio-custom-label {
+    position: relative;
+    color: #29333d;
+font-family: Ubuntu;
+font-size: 18px;
+}
+
+.radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #ccc;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+    border: 2px solid #ccc;
+}
+
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+    background: #000;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+    border: 2px solid #000;
+}
+.prop_img_locate {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px
+}
+.heading_loct {
+    flex: 0 0 65%;
+}
+
+.invest_submit{
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 35px 20px;
+    margin: 0 26px;
+    margin-left: 0;
+}
+.invest_img{
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.invest_submit img {
+    width:  100%; height: 100%;
+}
+
+.invest_submit h2 {color: #303030;font-family: "Ubuntu";font-size: 20px;font-weight: 500;padding-top:  22px;}
+
+.invest_submit h3 {color: #727272;font-family: "Open Sans";font-size: 16px;margin-bottom:  0;}
+.invest_submit h3 i{margin-right: 10px}
+.invest_submit h4 {
+    color: #939393;
+    font-family: "Open Sans";
+    font-size: 13px;
+    margin-bottom:  10px;
+}
+.invest_submit p {
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 5px;
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.invest_submit span {
+    color: #262626;
+font-family: "Open Sans";
+font-weight: 600;
+    text-align:  right;
+    float:  right;
+}
+
+.invest_submit .progress-bar {
+    background-color: #29333d;
+    border-radius:  0;
+    border:  0;
+}
+
+
+.invest_submit input[type="submit"]{
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #c4c4c4;
+    display: inline-block;
+    padding: 20px 78px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-shadow: none;
+    border:0;
+    outline: none;
+    cursor: pointer;
+}
+.invest_submit h5{
+    color: #969696;
+font-family: "Open Sans";
+font-size: 14px;
+text-align: center
+}
+.investment form{
+max-width: 710px;
+width: 100%;
+background-color: #fafafa;
+padding: 35px 25px;
+}
+form h2{
+ color: #262626;
+font-family: "Ubuntu";
+font-size: 20px;
+font-weight: 500;
+margin: 0 0 20px
+}
+.investment .form-control {
+    color: #747474;
+    font-family: "Ubuntu Medium";
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: none;
+    height: 65px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    background-color: #ffffff;
+}
+.investment label{
+    color: #727272;
+font-family: Ubuntu;
+font-size: 18px;
+}
+.investment .form-group {
+    margin-bottom: 40px;
+}
+.investment .form-group:last-child{margin-bottom: 0}
+.invest_data {
+    background-color: #fafafa;
+    padding: 15px;
+}
+.invest_submit .invest_data h3{
+    color: #262626;
+    font-family: Ubuntu;
+    font-size: 24px;
+}
+.invest_submit .invest_data  h3 span{
+    color: #727272;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+
+span.details:before {
+   content: '';
+    height: 2px;
+    width: 160px;
+    background: #29333d;
+    position: absolute;
+    top: 43px;
+    right: 70px;
+}
+span.details:after {
+  content: '';
+    height: 2px;
+    width: 155px;
+    background: #dcdcdc;
+    position: absolute;
+    top: 43px;
+    left: 72px;
+}
+span.details {
+    position: relative;
+}
+/* responsive */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+}
+@media only screen and (min-width:768px) and (max-width: 1024px) {
+
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+
+}

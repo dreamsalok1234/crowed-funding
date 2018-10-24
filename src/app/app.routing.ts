@@ -68,6 +68,10 @@ export const AppRoutes: Routes = [
       {
         path: 'change-password',
         loadChildren: './root/change-password/change-password.module#ChangePasswordModule'
+      },
+      {
+        path: 'investment',
+        loadChildren: './root/investment/investment.module#InvestmentModule'
       }
     ]
   },
