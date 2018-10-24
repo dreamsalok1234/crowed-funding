@@ -12,7 +12,7 @@ export class PropertyService {
     getProperty() {
         // remove user from local storage to log user out
         let authToken = localStorage.getItem('userAccessToken');
-        var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials':true,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'});
+        var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials':false,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'});
         headers.append('Authorization', `JWT ${authToken}`);
 
         let options = new RequestOptions({ headers: headers });
@@ -23,7 +23,7 @@ export class PropertyService {
     getPropertyDetails(PropertyId) {
         // remove user from local storage to log user out
         let authToken = localStorage.getItem('userAccessToken');
-        var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials':true,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'});
+        var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials':false,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'});
         headers.append('Authorization', `JWT ${authToken}`);
 
         let options = new RequestOptions({ headers: headers });
@@ -34,7 +34,7 @@ export class PropertyService {
     requestPropertyDocuments(PropertyId) {
         // remove user from local storage to log user out
         let authToken = localStorage.getItem('userAccessToken');
-        var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials':true,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'});
+        var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials':false,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'});
         headers.append('Authorization', `JWT ${authToken}`);
 
         let options = new RequestOptions({ headers: headers });
