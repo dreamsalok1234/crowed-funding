@@ -12,7 +12,7 @@ export class PropertyService {
     getProperty() {
         // remove user from local storage to log user out
         //let authToken = localStorage.getItem('userAccessToken');
-        var headers = new Headers({});
+        var headers = new Headers();
         headers.append("Content-Type", "application/json; charset=UTF-8");
         headers.append("Access-Control-Allow-Origin", "*");
         headers.append("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS");
