@@ -11,9 +11,14 @@ export class PropertyService {
 
     getProperty() {
         // remove user from local storage to log user out
-        let authToken = localStorage.getItem('userAccessToken');
-        var headers = new Headers({'Content-Type':  'application/json','Access-Control-Allow-Origin':'http://18.191.133.127:4200', 'Access-Control-Allow-Credentials':true,'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE','Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept'});
-        headers.append('Authorization', `JWT ${authToken}`);
+        //let authToken = localStorage.getItem('userAccessToken');
+        var headers = new Headers({});
+        headers.append("Content-Type", "application/json; charset=UTF-8");
+        headers.append("Access-Control-Allow-Origin", "*");
+        headers.append("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS");
+        headers.append("Access-Control-Allow-Headers", "Content-Type");
+        headers.append("Access-Control-Request-Headers", "X-Requested-With, accept, content-type");
+        //headers.append('Authorization', `JWT ${authToken}`);
 
         let options = new RequestOptions({ headers: headers });
         return this.newhttp.get('http://devv.website/crowdfund/apis/property/getProperty' ,options).map((data : Response) => {
