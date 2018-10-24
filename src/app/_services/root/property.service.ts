@@ -19,7 +19,7 @@ export class PropertyService {
         headers.append("Access-Control-Allow-Headers", "Content-Type");
         headers.append("Access-Control-Request-Headers", "X-Requested-With, accept, content-type");
         //headers.append('Authorization', `JWT ${authToken}`);
-
+        debugger;
         let options = new RequestOptions({ headers: headers });
         return this.newhttp.get('http://devv.website/crowdfund/apis/property/getProperty' ,options).map((data : Response) => {
                 return data.json();
