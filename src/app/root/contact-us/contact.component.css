@@ -81,7 +81,7 @@
     margin-bottom: 25px;
 }
 
-.form-contact a {
+.form-contact button {
     border-radius: 5px;
     background-image: linear-gradient(134deg, #54e490 0%, #36bf70 100%);
     padding: 18px 166px;
@@ -142,4 +142,100 @@ font-size: 18px;
 	color: #727272 !important;
 font-family: "Open Sans";
 font-size: 18px;
+}
+/* responsive */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+/*********contact***********/
+.contact-form {
+    flex-direction: column;
+}
+
+.contact-left2 {
+    width: 100%;
+    padding: 0;
+}
+
+.form-contact a {
+    width: 100%;
+    padding: 14px 47px;
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+}
+
+.contact-banner h2 {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contact-banner {
+    height: auto;
+}
+
+.contact-form h2 {
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+.max-contact {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact-form p {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.contact-form li {
+    font-size: 14px;
+}
+
+.map iframe {
+    height: auto;
+}
+.form-contact {
+    max-width: 100%;
+}
+div#gallery {
+    display:none !important;
+}
+.form-contact  button{
+    padding: 15px; width: 100%; max-width: 300px; float: none;
+    margin: 0 auto 20px;
+    display: block;
+}
+}
+@media only screen and (min-width:768px) and (max-width: 1024px) {
+    .contact-left2 {
+    padding: 0;
+    padding-right: 20px;
+    width: 100%;
+}
+.map{
+    width: 100%;
+}
+.contact-form{
+    flex-direction: column
+}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+/********contact*************/
+.contact-left2 {
+    padding-left: 50px;
+}
+
+.form-contact a {
+    width: 100%;
+    padding: 14px 0;
+    text-align: center;
+}
+.reqvest-bt8 a {
+    padding: 20px 6px;
+}
 }

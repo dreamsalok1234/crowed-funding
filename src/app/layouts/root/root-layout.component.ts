@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RootMenuItems } from '../../shared/root-menu-items/root-menu-items';
 import { RootauthService } from '../../_services/root/rootauth.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-
+import * as $ from 'jquery';
 
 @Component({
   moduleId: module.id,
@@ -187,9 +187,19 @@ export class RootLayoutComponent implements OnInit {
   ngOnInit() {        
     this.headerOne=(this.router.url=='/home')?'':'abut_header';
 
+    $(document).ready(function () {
+      $('.navbar-light .navbar-toggler').click(function () {
+        $(this).toggleClass('active');
+        $('#navbarSupportedContent').slideToggle(700);  
+      });
+    });
+
   }
   changeHeadeer(url){
     this.headerOne=(url=='home')?'':'abut_header';
   }
 
+
+
+  
 }

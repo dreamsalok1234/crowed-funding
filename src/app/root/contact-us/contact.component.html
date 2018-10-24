@@ -50,7 +50,7 @@
 		  </div>
 		  <div class="form-group">
 			<textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" [(ngModel)]="model.message" #message="ngModel"
-			  maxlength="140" required rows="7"></textarea>
+			  maxlength="140" required rows="7" style="width: 100%; height: 80px;"></textarea>
 			  <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
 				<div [hidden]="!message.hasError('required')">Message is required</div>
 			</div>

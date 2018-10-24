@@ -556,7 +556,19 @@ ul.social_icon {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+.navbar-expand-lg .navbar-toggler {
+    display: block;
+}
 
+
+.navbar-expand-lg .navbar-toggler .icon-bar {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    border-radius: 1px;
+    background: #fff;
+    margin: 5px 0;
+}
 .abut_header a.navbar-brand:after {
     display:none;
 }   
@@ -565,9 +577,17 @@ ul.social_icon {
 }   
 
 .navbar-light .navbar-toggler {
-    color: #36bf70;
-    border-color: #36bf70;
+    border-color: #fff;
+    padding: 0.15em 0.5em;
+    font-size: 15px
 }
+.abut_header .navbar-brand{
+    width: 180px;
+    height: 36px;
+    background-size: 100% 100%;
+    padding: 0;
+}
+.abut_header .navbar-light .navbar-toggler{background-color: #3dc777}
 .banner h2 {
     font-size: 40px;
     padding-top: 20px;
@@ -673,16 +693,6 @@ a.btn.btn-light.signupBtn2 {
     font-size: 15px;
     display: none;
 }
-
-.get_now {
-    text-align:  center;
-}
-
-.get_now a {
-    font-size:  14px;
-    padding: 15px 10px;
-}
-
 .banner .col-md-12 .get_now a:nth-child(2) {
     padding: 10px 11px;
 }
@@ -691,7 +701,14 @@ a.btn.btn-light.signupBtn2 {
     text-align: center;
     margin-bottom: 30px;
 }
+.get_now {
+    text-align:  center;
+}
 
+.get_now a {
+ font-size: 14px;
+    padding: 12px;
+}
 .management {
     padding-top:  50px;
 }
@@ -742,12 +759,12 @@ a.btn.btn-light.signupBtn2 {
 }
 
 .asset_bx h2 {
-    text-align: left;
+    text-align: center;
     font-size: 30px;
 }
 
 .asset_bx p {
-    text-align: left;
+    text-align: center;
     font-size: 15px;
 }
 
@@ -831,6 +848,7 @@ footer .form-group {
 
 .header {
     height:  auto;
+        background-size: auto;
 }
 a.navbar-brand:after{
 display:none;   
@@ -1405,30 +1423,18 @@ div#light {
 
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1024px) {
-a.btn.btn-light.signupBtn2 {
-    margin: 0 !important;
-    margin-bottom: 0 !important;
-    padding: 7px 17px !important;
-    margin-right: 8px !important;
-}
-.btn-light {
-    margin: 0 !important;
-   margin-bottom: 0 !important;
-    padding: 8px 17px !important;
-}   
-.navbar-light .navbar-nav .nav-link {
-    line-height: 25px;
-    padding: 0 4px;
-    font-size: 9px;
-    padding-right: 0px !important;
-}
-.carousel-indicators li img {
-    width: 190px !important;
-}
-}
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar-expand-lg .navbar-toggler {
+    display: block;
+}
+.navbar-expand-lg .navbar-toggler .icon-bar {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    border-radius: 1px;
+    background: #fff;
+    margin: 5px 0;
+}
 .purchase_tx a {
     width: 100%;
     padding: 12px 8px;
@@ -1719,7 +1725,9 @@ a.btn.btn-light.signupBtn2 {
 }
 .navbar-light .navbar-toggler {
     color: #36bf70;
-    border-color: #36bf70;
+    border-color: #fff;
+    font-size: 15px;
+    padding: .15rem .5rem;
 }
 
 /**********business**********/
@@ -1945,6 +1953,39 @@ ol.carousel-indicators {
     padding-right: 50px;
 }
 }
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .navbar-expand-lg .navbar-toggler {
+    display: none!important;
+}
+a.navbar-brand{padding-right: 0}
+a.btn.btn-light.signupBtn2 {
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 7px 17px !important;
+    margin-right: 8px !important;
+}
+.btn-light {
+    margin: 0 !important;
+   margin-bottom: 0 !important;
+    padding: 8px 17px !important;
+}   
+.navbar-light .navbar-nav .nav-link {
+    line-height: 25px;
+    padding: 0 4px;
+    font-size: 12px;
+    padding-right: 0px !important;
+    margin-right: 7px;
+}
+.navbar-light .navbar-nav .nav-item:last-child .nav-link{margin-right: 0}
+.header .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    font-size: 12px
+}
+.carousel-indicators li img {
+    width: 190px !important;
+}
+}
+
 
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -2273,7 +2314,6 @@ ol.carousel-indicators {
     top: 5%;
 }
 } 
-
 
 .cs-loader {
     height: 100%;

@@ -375,3 +375,122 @@ ul.check-icon {
     font-family: Ubuntu;
     font-size: 45px;
 }
+
+/* responsive */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+/********business*******/
+.Business-banner {
+    height: auto;
+    background-image: unset;
+    padding-top: 20px;
+}
+.overview h2 {
+    font-size: 30px;
+    padding-top: 20px;
+}
+.overview p {
+    font-size: 15px;
+}
+.overview {
+    width: 100%;
+    height: auto;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.overview-img {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(../../../assets/images/root/res-vid.png);
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.overview-img h2 {
+    width: auto;
+    height: auto;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Frequently .nav-tabs {
+    width: 100%;
+}
+
+.Frequently a.btn.btn-link.collapsed {
+    font-size: 13px;
+    white-space: normal;
+}
+
+.Frequently .nav-link {
+    font-size: 14px;
+    padding: 13px 20px;
+}
+.Kreis-bg h2 {
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Kreis-bg {
+    padding-top: 25px;
+}
+
+.macro-chart {
+    padding-top: 25px;
+}
+
+.cont-br {
+    padding-top: 25px;
+}
+
+.cont-br h2 {
+    font-size: 25px;
+}
+
+.Frequently {
+    padding-top: 25px;
+}
+
+.title p {
+    font-size: 15px;
+}
+
+.benefit-bg p {
+    font-size: 15px;
+}
+
+.check-icon li {
+    font-size: 13px;
+    line-height: 25px;
+}
+
+ul.check-icon {
+    padding-bottom: 20px;
+}
+
+.benefit-bg {
+    padding-top: 25px;
+    padding-bottom: 0;
+}
+
+.macro-chart h2 {
+    font-size: 25px;
+}
+
+.macro-chart h5 {
+    font-size: 18px;
+}
+.Frequently a.btn.btn-link {
+    font-size: 13px;
+    white-space: normal;
+}
+}

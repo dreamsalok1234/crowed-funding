@@ -144,7 +144,7 @@
 .high-tech-bg .high_tech li {
     width: 31%;
     margin-bottom: 30px;
-    /*height: 634px;*/
+    height: 634px;
 }
 
 .high-tech-bg .high_tech li:nth-child(3) {
@@ -226,8 +226,8 @@ ul.high_tech {
 .high_tech img {
     width:  100%;
 }
-.high_tech h2 {color: #303030;font-family: "Ubuntu";font-size: 19px;font-weight: 500;padding-top:  22px; min-height: 68px}
 
+.high_tech h2 {color: #303030;font-family: "Ubuntu";font-size: 19px;font-weight: 500;padding-top:  22px;}
 
 .high_tech h3 {color: #727272;font-family: "Open Sans";font-size: 18px;margin-bottom:  25px;}
 
@@ -372,4 +372,130 @@ ul.high_tech {
     color: #727272;
     font-family: "Open Sans";
     font-size: 18px;
+}
+
+/* responsive */
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+/*******Properties******/
+.properties-box ul {
+    flex-direction: column;
+    align-items:  stretch;
+}
+
+.properties-box li {
+    width:  100%;
+    margin-bottom:  20px;
+}
+.high-tech-bg .high_tech li {
+    width: 100%;
+}
+.Request-bg {
+    height:  auto;
+    padding-top:  0;
+    padding-bottom:  40px;
+}
+
+.Request-bg h2 {
+    font-size:  30px;
+}
+
+.Request-bg p {
+    font-size:  16px;
+}
+
+.all-propti h2 {
+    font-size:  40px;
+}
+
+.all-propti {
+    padding-top:  20px;
+}
+
+.Properties-banner {
+    height:  auto;
+    padding-bottom:  20px;
+}
+
+.all-propti p {
+    font-size:  15px;
+}
+.high-tech-bg ul.high_tech {
+    margin: 0 auto;
+}
+ul.navbar-nav.ml-auto {
+    display: flex;
+    flex-direction: row;
+}
+.btn-light {
+    padding: 10px 20px;
+}
+a.btn.btn-light.signupBtn2 {
+    padding: 9px 30px;
+    margin: 0px 6px !important;
+    margin-left: 0 !important;
+}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+/********Properties*********/	
+.about_nav a {
+        font-size: 12px;
+    padding: 0px 7px!important;
+}
+a.navbar-brand {
+    padding-right: 20px;
+}
+.properties-box {
+    padding-top: 0;
+}
+.header {
+    padding-bottom: 0;
+}
+.purchase_tx span {
+    font-size: 12px;
+}
+.high-tech-bg .high_tech li {
+    height: 602px;
+}	
+.seo-bx p {
+    font-size: 13px;
+}
+.seo-bx h3 {
+    padding-top: 12px;
+}
+.Request-bg h2 {
+    font-size: 50px;
+}
+.properties-box li {
+    height: 153px;
+    padding: 22px;
+}
+.about-banner {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.overview {
+    width: 500px;
+    height: 500px;
+    left: 14px;
+    padding: 60px;
+}
+
+.Business-banner {
+    height: 650px;
+    padding-top: 80px;
+    background-size: 100% 100%;
+}
+
+.overview-img h2 {
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
 }

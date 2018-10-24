@@ -341,8 +341,237 @@ ul.inve_catagrey {
     font-family: Ubuntu;
     font-size: 45px;
 }
-/* 
-@media only screen and (max-width: 1750px) and (min-width: 1471px){
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+    .left-tabs .tab-slider--tabs, .tabe-review .tab-slider--container{width: 100%;}
+/********how-it-work********/
 .mac-img img {
     width: 100%;
-} */
+    position: relative;
+}
+
+.platform-bg {
+    height: auto;
+    padding-top: 30px;
+    background-position: right;
+}
+
+.left-tabs .nav-tabs .nav-link {
+    font-size: 10px;
+}
+
+.left-tabs .nav-tabs .nav-item.show .nav-link, .left-tabs .nav-tabs .nav-link.active {font-size: 9px;}
+
+.left-tabs h2 {
+    font-size: 23px;
+    margin-top: 0px;
+}
+
+.left-tabs p {
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.platform-bg h2 {
+    font-size: 21px;
+}
+
+.platform-bg h3 {
+    font-size: 17px;
+}
+
+.platform-bg p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.reson_img {
+    width: 100%;
+}
+
+.reason_sem5 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reson_tex {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.how-it-work ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 25px;
+}
+
+.how-it-work li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ul.high_tech {
+    flex-direction:  column;
+}
+
+.invest {
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+.high_tech li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ul.inve_catagrey {
+    flex-direction: column;
+    align-items: stretch;
+}
+.inve_catagrey li {
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.invest_bt {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+}
+.get_now a {
+ font-size: 14px;
+    padding: 12px;
+}
+.mac-img img {
+    width: 100%;
+    position: relative;
+}
+
+.reason_sem5 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reson_img {
+    width: 100%;
+}
+
+.reson_tex {
+    width: 100%;
+    padding: 0
+}
+
+.reasons-bg {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.reasons-bg li {
+    width: 100%;
+    margin: 0;
+}
+
+.platform-bg {height: auto;padding-top: 40px;}
+
+.platform-bg h2 {
+    font-size: 25px;
+}
+
+.platform-bg h3 {
+    font-size: 20px;
+    text-align: left;
+}
+
+.platform-bg p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.platform-bg .get_now {
+    text-align: left;
+}
+
+.reasons-bg h2 {
+    font-size: 25px;
+}
+.customers-bg {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.investment {
+    padding-top: 50px;
+}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+/********how-it-work********/
+.left-tabs .nav-tabs .nav-link {
+    font-size: 14px;
+}
+
+.left-tabs .nav-tabs .nav-item.show .nav-link, .left-tabs .nav-tabs .nav-link.active {
+    font-size: 13px;
+}
+
+.platform-bg {
+    height: auto;
+    padding-top: 40px;
+    background-position: center;
+}
+
+.mac-img img {
+    width: 100%;
+}
+
+.reasons-bg h2 {
+    margin-top: 0px;
+}
+
+.reasons-bg h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.reasons-bg li {
+    margin: 1px 8px;
+}
+.reasons-bg p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1470px) {
+
+/*********how-it-work**********/
+.platform-bg {
+    padding-top: 80px;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.mac-img img {
+    width: 100%;
+}
+
+.reasons-bg li {margin-top: 0;margin-bottom: 0;}
+
+.reasons-bg h3 {
+    font-size: 20px;
+}
+
+.reasons-bg p {
+    font-size: 15px;
+}
+
+.reasons-bg h2 {
+    margin-top: 10px;
+}
+}
