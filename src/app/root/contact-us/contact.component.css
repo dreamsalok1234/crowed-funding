@@ -1,6 +1,5 @@
-
-
 /*********contact-banner*********/
+
 .contact-banner {
     background-image: url('../../../assets/images/root/contact-banner.png');
     height: 320px;
@@ -17,6 +16,7 @@
     font-family: Ubuntu;
     font-size: 60px;
 }
+
 .contact-form h2 {
     padding-top: 60px;
     color: #262626;
@@ -46,10 +46,12 @@
     margin-bottom: 24px;
     display: flex;
 }
+
 .contact-form li:nth-child(2) {
     margin: 0;
     display: flex;
 }
+
 .contact-form li:nth-child(4) {
     margin: 0;
     display: flex;
@@ -66,6 +68,7 @@
     font-weight: 600;
     text-decoration: none;
 }
+
 .form-contact .form-control {
     border: 0;
     border-radius: 0;
@@ -95,6 +98,7 @@
     display: inline-block;
     margin-bottom: 20px;
 }
+
 .contact-form {
     display: flex;
 }
@@ -104,138 +108,163 @@
     padding-right: 40px;
     width: 50%;
 }
+
 .map {
     width: 50%;
 }
+
 .map iframe {
     width: 100%;
 }
+
 .max-contact {
     padding-left: 44px;
 }
+
 .form-contact {
     max-width: 480px;
 }
+
 .form-contact .form-control:focus {
     box-shadow: none;
-	border-bottom: 1px solid #4ddb89;
+    border-bottom: 1px solid #4ddb89;
 }
 
+.form-contact ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #727272 !important;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
 
+.form-contact ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #727272 !important;
+    font-family: "Open Sans";
+    font-size: 18px;
+}
 
-.form-contact ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	color: #727272 !important;
-font-family: "Open Sans";
-font-size: 18px;
+.form-contact :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #727272 !important;
+    font-family: "Open Sans";
+    font-size: 18px;
 }
-.form-contact ::-moz-placeholder { /* Firefox 19+ */
-	color: #727272 !important;
-font-family: "Open Sans";
-font-size: 18px;
+
+.form-contact :-moz-placeholder {
+    /* Firefox 18- */
+    color: #727272 !important;
+    font-family: "Open Sans";
+    font-size: 18px;
 }
-.form-contact :-ms-input-placeholder { /* IE 10+ */
-	color: #727272 !important;
-font-family: "Open Sans";
-font-size: 18px;
-}
-.form-contact :-moz-placeholder { /* Firefox 18- */
-	color: #727272 !important;
-font-family: "Open Sans";
-font-size: 18px;
-}
+
 /* responsive */
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-/*********contact***********/
-.contact-form {
-    flex-direction: column;
+    /*********contact***********/
+    .contact-form {
+        flex-direction: column;
+    }
+    .contact-left2 {
+        width: 100%;
+        padding: 0;
+    }
+    .form-contact a {
+        width: 100%;
+        padding: 14px 47px;
+        text-align: center;
+    }
+    .map {
+        width: 100%;
+    }
+    .contact-banner h2 {
+        font-size: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .contact-banner {
+        height: auto;
+    }
+    .contact-form h2 {
+        font-size: 25px;
+        padding-top: 30px;
+    }
+    .max-contact {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .contact-form p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .contact-form li {
+        font-size: 14px;
+    }
+    .map iframe {
+        height: auto;
+    }
+    .form-contact {
+        max-width: 100%;
+    }
+    div#gallery {
+        display: none !important;
+    }
+    .form-contact button {
+        padding: 15px;
+        width: 100%;
+        max-width: 300px;
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+    }
 }
 
-.contact-left2 {
-    width: 100%;
-    padding: 0;
-}
-
-.form-contact a {
-    width: 100%;
-    padding: 14px 47px;
-    text-align: center;
-}
-
-.map {
-    width: 100%;
-}
-
-.contact-banner h2 {
-    font-size: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.contact-banner {
-    height: auto;
-}
-
-.contact-form h2 {
-    font-size: 25px;
-    padding-top: 30px;
-}
-
-.max-contact {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.contact-form p {
-    font-size: 15px;
-    line-height: 24px;
-}
-
-.contact-form li {
-    font-size: 14px;
-}
-
-.map iframe {
-    height: auto;
-}
-.form-contact {
-    max-width: 100%;
-}
-div#gallery {
-    display:none !important;
-}
-.form-contact  button{
-    padding: 15px; width: 100%; max-width: 300px; float: none;
-    margin: 0 auto 20px;
-    display: block;
-}
-}
 @media only screen and (min-width:768px) and (max-width: 1024px) {
     .contact-left2 {
-    padding: 0;
-    padding-right: 20px;
-    width: 100%;
+        padding: 0;
+        padding-right: 20px;
+        width: 50%;
+    }
+    .map {
+        width: 50%;
+    }
+    .contact-form {
+        flex-direction: row
+    }
+    .contact-form h2 {
+        font-size: 30px;
+    }
+    .contact-form p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .max-contact {
+        padding-left: 25px;
+    }
+    .form-contact button {
+        width: 100%;
+        text-align: center;
+        padding: 18px
+    }
 }
-.map{
-    width: 100%;
-}
-.contact-form{
-    flex-direction: column
-}
-}
+
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-
-/********contact*************/
-.contact-left2 {
-    padding-left: 50px;
-}
-
-.form-contact a {
-    width: 100%;
-    padding: 14px 0;
-    text-align: center;
-}
-.reqvest-bt8 a {
-    padding: 20px 6px;
-}
+    /********contact*************/
+    .contact-left2 {
+        padding-left: 50px;
+    }
+    .form-contact button {
+        width: 100%;
+        text-align: center;
+        padding: 18px
+    }
+    .form-contact a {
+        width: 100%;
+        padding: 14px 0;
+        text-align: center;
+    }
+    .reqvest-bt8 a {
+        padding: 20px 6px;
+    }
+    .contact-form h2{padding-top: 20px}
 }

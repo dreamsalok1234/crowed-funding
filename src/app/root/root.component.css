@@ -1,21 +1,23 @@
-
 /*********management*********/
+
 .management {
-    padding-top:  70px;
+    padding-top: 70px;
 }
 
 .management ul {
-    display:  flex;
+    display: flex;
     justify-content: space-between;
-    align-items:  center;
-    text-align:  center;
-    list-style:  none;
-    padding:  0;
-    margin:  0;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 .management li {
     width: 33%;
 }
+
 .between-chrat .get_now a {
     margin: 0px;
 }
@@ -35,11 +37,13 @@
 
 .management span {
     color: #50df8b;
-      /* Text style for "71.2%" */
+    /* Text style for "71.2%" */
     font-size: 22px;
-    font-weight: 500;  /* Text style for "Since Mar" */
+    font-weight: 500;
+    /* Text style for "Since Mar" */
     font-family: Ubuntu;
 }
+
 .management h4 {
     color: #b1b1b1;
     font-family: "Open Sans";
@@ -50,10 +54,11 @@
 }
 
 /********between-chrat*********/
+
 .between-chrat {
-    padding-top:  100px;
+    padding-top: 100px;
     background-color: #fafafa;
-    padding-bottom:  70px;
+    padding-bottom: 70px;
 }
 
 .between-chrat h2 {
@@ -72,13 +77,12 @@
 
 .between-chrat h3 {
     padding-top: 66px;
-    text-align:  center;
-    
-    
-      /* Text style for "£10,000, £" */
+    text-align: center;
+    /* Text style for "£10,000, £" */
     color: #303030;
     font-family: Ubuntu;
-    font-size: 24px;  /* Text style for "£10,000, £" */
+    font-size: 24px;
+    /* Text style for "£10,000, £" */
 }
 
 .between-chrat span {
@@ -90,20 +94,23 @@
 }
 
 .pi_chart img {
-    width:  100%;
+    width: 100%;
 }
+
 .between-chrat .get_now {
     text-align: center;
     margin-top: 35px;
 }
 
 /*********how-it-work**********/
+
 .how-it-work {
     padding-top: 66px;
     padding-bottom: 86px;
 }
+
 .title {
-    text-align:  center;
+    text-align: center;
 }
 
 .title h2 {
@@ -126,10 +133,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     background-color: #ffffff;
-    width:  25%;
+    width: 25%;
     margin: 0 27px;
-    text-align:  center;
-    margin-left:  0;
+    text-align: center;
+    margin-left: 0;
 }
 
 .how-it-work img {
@@ -155,22 +162,20 @@
     padding-top: 20px;
 }
 
-
-
-
 /***********invest**********/
+
 .invest {
-    background-image:  url('../../assets/images/root/bg_img.jpg');
+    background-image: url('../../assets/images/root/bg_img.jpg');
     height: 892px;
     background-size: cover;
-    background-position:  center;
-    padding-top:  60px;
+    background-position: center;
+    padding-top: 60px;
 }
 
 .invest_bt {
-    display:  flex;
+    display: flex;
     justify-content: space-between;
-    align-items:  center;
+    align-items: center;
 }
 
 .asset_bx h2 {
@@ -184,7 +189,7 @@
     font-family: "Open Sans";
     font-size: 18px;
     max-width: 819px;
-    margin-bottom:  30px;
+    margin-bottom: 30px;
 }
 
 .asset_bt a {
@@ -195,16 +200,16 @@
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
-    display:  inline-block;
+    display: inline-block;
     padding: 16px 22px;
 }
 
 ul.high_tech {
-    padding:  0;
-    margin:  0;
+    padding: 0;
+    margin: 0;
     list-style: none;
-    display:  flex;
-    justify-content:  space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .high_tech li {
@@ -216,22 +221,36 @@ ul.high_tech {
     margin: 0 26px;
     margin-left: 0;
 }
+
 .high_tech li:last-child {
     margin: 0;
 }
+
 .high_tech img {
-    width:  100%;
+    width: 100%;
 }
 
-.high_tech h2 {color: #303030;font-family: "Ubuntu";font-size: 19px;font-weight: 500;padding-top:  22px; min-height: 68px}
+.high_tech h2 {
+    color: #303030;
+    font-family: "Ubuntu";
+    font-size: 19px;
+    font-weight: 500;
+    padding-top: 22px;
+    min-height: 68px
+}
 
-.high_tech h3 {color: #727272;font-family: "Open Sans";font-size: 18px;margin-bottom:  10px;}
+.high_tech h3 {
+    color: #727272;
+    font-family: "Open Sans";
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
 .high_tech h4 {
     color: #939393;
     font-family: "Open Sans";
     font-size: 13px;
-    margin-bottom:  10px;
+    margin-bottom: 10px;
 }
 
 .high_tech span {
@@ -239,30 +258,32 @@ ul.high_tech {
     font-family: "Open Sans";
     font-size: 13px;
     font-weight: 600;
-    text-align:  right;
-    float:  right;
+    text-align: right;
+    float: right;
 }
 
 .high_tech .progress-bar {
     background-color: #29333d;
-    border-radius:  0;
-    border:  0;
+    border-radius: 0;
+    border: 0;
 }
 
 .purchase_tx {
-    padding-top:  20px;
+    padding-top: 20px;
 }
 
 .purchase_tx p {
     font-size: 16px;
-    line-height: 30px;  /* Text style for "Total purc" */
-      /* Text style for ",  ," */
-      /* Text style for "CHF 13'840" */
+    line-height: 30px;
+    /* Text style for "Total purc" */
+    /* Text style for ",  ," */
+    /* Text style for "CHF 13'840" */
     color: #939393;
     font-family: "Open Sans";
     font-weight: 600;
-    margin-bottom:  0;
+    margin-bottom: 0;
 }
+
 /* .high_tech .purchase_tx p:nth-child(1) span {
     padding-right: 20px;
 }
@@ -286,6 +307,7 @@ ul.high_tech {
     font-family: "Open Sans";
     font-weight: 600;
 }
+
 .purchase_tx a {
     color: #ffffff;
     font-family: "Ubuntu";
@@ -299,6 +321,7 @@ ul.high_tech {
     text-decoration: none;
     margin-top: 20px;
 }
+
 .high_tech .progress {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -311,23 +334,26 @@ ul.high_tech {
 }
 
 /********investment********/
+
 .investment {
     padding-top: 80px;
     padding-bottom: 73px;
 }
+
 .title p {
     color: #727272;
     font-family: "Open Sans";
     font-size: 18px;
 }
+
 ul.inve_catagrey {
-    padding:  0;
-    margin:  0;
-    list-style:  none;
-    display:  flex;
-    justify-content:  center;
-    align-items:  center;
-    padding-top:  50px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
 }
 
 .inve_catagrey li {
@@ -366,26 +392,28 @@ ul.inve_catagrey {
 }
 
 .inve_catagrey li:last-child {
-    margin:  0;
+    margin: 0;
 }
+
 /**********customers-bg********/
+
 .customers-bg {
     background-color: #fafafa;
-    padding-top:  94px;
-    padding-bottom:  96px;
+    padding-top: 94px;
+    padding-bottom: 96px;
 }
 
 .customers-bg .title {
-    padding-bottom:  55px;
+    padding-bottom: 55px;
 }
 
 .rosinate-bx {
     box-shadow: 0 8px 17px rgba(0, 0, 0, 0.05);
     background-color: #ffffff;
-    display:  flex;
+    display: flex;
     margin-bottom: 30px;
-    justify-content:  center;
-    align-items:  center;
+    justify-content: center;
+    align-items: center;
 }
 
 .seo-bx {
@@ -397,14 +425,14 @@ ul.inve_catagrey {
     color: #727272;
     font-family: "Open Sans";
     font-size: 15px;
-    margin-bottom:  0;
+    margin-bottom: 0;
 }
 
 .seo-bx h3 {
     font-family: "Ubuntu";
     font-size: 14px;
     font-weight: 500;
-    margin:  0;
+    margin: 0;
     padding-top: 16px;
 }
 
@@ -414,340 +442,314 @@ ul.inve_catagrey {
     font-size: 12px;
 }
 
-
-@media(min-width: 320px) and (max-width: 767px){
-  
-.between-chrat h3 {
-    padding-top: 34px;
-}
-.between-chrat .get_now {
-    padding-bottom: 30px;
-}
-.how-it-work ul li h2 {
-    border-bottom: none;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-.management ul {
-    flex-direction:  column;
-}
-
-.management li {
-    width: 100%;
-    border-bottom: 1px solid #f1f1f1;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-.how-it-work ul {
-    flex-direction: column;
-    align-items: stretch;
-    padding-top: 25px;
-}
-
-.how-it-work li {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-ul.high_tech {
-    flex-direction:  column;
-}
-
-.invest {
-    height: auto;
-    padding-bottom: 20px;
-    padding-top: 30px;
-}
-.high_tech li {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-ul.inve_catagrey {
-    flex-direction: column;
-    align-items: stretch;
-}
-.inve_catagrey li {
-    width: 100%;
-    margin-bottom: 20px;
-    height: auto;
-}
-
-.invest_bt {
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    align-items: flex-start;
-}
-
-.get_now {
-    text-align:  center;
-}
-
-.get_now a {
- font-size: 14px;
-    padding: 12px 5px;
-}
-.management {
-    padding-top:  50px;
-}
-
-.management h2 {
-    font-size:  30px;
-}
-
-.management h3 {
-    font-size:  18px;
-}
-
-.management span {
-    font-size: 16px;
-}
-
-.management h4 {
-    padding-top:  20px;
-}
-
-.between-chrat {
-    padding-top: 20px;
-    padding-bottom:  50px;
-}
-
-.between-chrat h2 {
-    font-size: 20px;
-    text-align: left;
-    line-height: 26px;
-}
-.between-chrat p {
-    font-size: 15px;
-    text-align: left;
-    line-height: 24px;
-}
-
-.between-chrat {
-    padding-bottom:  0px;
-}
-
-.title h2 {
-    font-size: 25px;
-}
-
-.how-it-work {
-    padding-top: 25px;
-    padding-bottom: 50px;
-}
-
-.asset_bx h2 {
-    text-align: left;
-    font-size: 30px;
-}
-
-.asset_bx p {
-    text-align: left;
-    font-size: 15px;
-}
-
-.asset_bt a {
-    padding: 12px 22px;
-    margin-bottom:  20px;
-    font-size: 16px;
-}
-
-.purchase_tx a {
-    padding: 10px 47px;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    font-size: 15px;
-}
-.customers-bg .title p {
-    display: none;
-}
-.purchase_tx p {
-    font-size: 12px;
-}
-.purchase_tx span {
-    font-size: 13px;
-}
-.investment {
-    padding-top:  50px;
+@media(min-width: 320px) and (max-width: 767px) {
+    .between-chrat h3 {
+        padding-top: 34px;
+    }
+    .between-chrat .get_now {
+        padding-bottom: 30px;
+    }
+    .how-it-work ul li h2 {
+        border-bottom: none;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .management ul {
+        flex-direction: column;
+    }
+    .management li {
+        width: 100%;
+        border-bottom: 1px solid #f1f1f1;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    .how-it-work ul {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 25px;
+    }
+    .how-it-work li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    ul.high_tech {
+        flex-direction: column;
+    }
+    .invest {
+        height: auto;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+    .high_tech li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    ul.inve_catagrey {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .inve_catagrey li {
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .invest_bt {
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        align-items: flex-start;
+    }
+    .get_now {
+        text-align: center;
+    }
+    .get_now a {
+        font-size: 14px;
+        padding: 12px 5px;
+    }
+    .management {
+        padding-top: 50px;
+    }
+    .management h2 {
+        font-size: 30px;
+    }
+    .management h3 {
+        font-size: 18px;
+    }
+    .management span {
+        font-size: 16px;
+    }
+    .management h4 {
+        padding-top: 20px;
+    }
+    .between-chrat {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    .between-chrat h2 {
+        font-size: 20px;
+        text-align: left;
+        line-height: 26px;
+    }
+    .between-chrat p {
+        font-size: 15px;
+        text-align: left;
+        line-height: 24px;
+    }
+    .between-chrat {
+        padding-bottom: 0px;
+    }
+    .title h2 {
+        font-size: 25px;
+    }
+    .how-it-work {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+    .asset_bx h2 {
+        text-align: left;
+        font-size: 30px;
+    }
+    .asset_bx p {
+        text-align: left;
+        font-size: 15px;
+    }
+    .asset_bt a {
+        padding: 12px 22px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .purchase_tx a {
+        padding: 10px 47px;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 15px;
+    }
+    .customers-bg .title p {
+        display: none;
+    }
+    .purchase_tx p {
+        font-size: 12px;
+    }
+    .purchase_tx span {
+        font-size: 13px;
+    }
+    .investment {
+        padding-top: 50px;
+    }
+    .customers-bg {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .asset_bx h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+    .asset_bx p {
+        text-align: center;
+        font-size: 15px;
+    }
+    .asset_bt a {
+        padding: 12px 22px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .invest_bt {
+        align-items: center
+    }
 }
 
-.customers-bg {
-    padding-top:  50px;
-    padding-bottom:  50px;
-}
-
-.asset_bx h2 {
-    text-align: center;
-    font-size: 30px;
-}
-
-.asset_bx p {
-    text-align: center;
-    font-size: 15px;
-}
-
-.asset_bt a {
-    padding: 12px 22px;
-    margin-bottom:  20px;
-    font-size: 16px;
-}
-.invest_bt{align-items: center}
-}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .navbar-expand-lg .navbar-toggler {
-    display: block;
-}
-.purchase_tx a {
-    width: 100%;
-    padding: 12px 8px;
-    font-size: 14px;
-    text-align: center;
-}
-.abut_header a.navbar-brand:after {
-    display:none;
-}
-.high_tech li {
-    margin: 0 4px;
-}
-
-footer .form-group a {
-    padding: 10px 16px;
-}
-
-footer .form-group input#email {
-    width:  133px;
-}
-
-.invest {
-    height:  auto;
-    padding-bottom:  50px;
-}
-
-.purchase_tx p {
-    font-size: 8px; 
-    line-height: 20px;
-}
-
-.purchase_tx span {
-    font-size: 10px;
-     line-height: 20px;
-}
-.high_tech li{margin: 0}
-.high_tech h2 {
-    font-size:  17px;
-}
-
-.high_tech h3 {
-    font-size: 15px;
-}
-
-.high_tech span {
-    font-size: 9px;
-}
-.high_tech h4 {
-    font-size: 10px;
-}
-.asset_bx h2 {
-    font-size:  30px;
-}
-
-.asset_bx p {
-    font-size: 15px;
-    max-width: 510px;
-}
-
-.asset_bt a {
-    padding: 16px 15px;
-    font-size:  14px;
-}
-
-.management span {
-    font-size:  18px;
-}
-
-.management h3 {
-    font-size:  13px;
-}
-
-.management h2 {
-    font-size:  30px;
-}
-
-.between-chrat h2 {
-    font-size:  20px;
-    line-height:  26px;
-}
-
-.between-chrat p {
-    font-size: 14px;
-    line-height:  26px;
-}
-
-.between-chrat {
-    padding-top:  50px;
-    padding-bottom:  50px;
-}
-
-.how-it-work {
-    padding-top:  50px;
-    padding-bottom:  50px;
-}
-
-.how-it-work ul li h2 {
-    font-size:  15px;
-    line-height:  20px;
-}
-
-.how-it-work img {
-    width: 42%;
-}
-
-.inve_catagrey li {
-    height: 287px;
-}
-
-.inve_catagrey p {
-    font-size: 12px;
-}
-
-.inve_catagrey img {
-    width: 30%;
-}
-
-.inve_catagrey h2 {
-    font-size: 16px;
-}
-
-.customers-bg {
-    padding-top:  50px;
-}
-
-.title h2 {
-    font-size:  30px;
+        display: block;
+    }
+    .purchase_tx a {
+        width: 100%;
+        padding: 12px 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .abut_header a.navbar-brand:after {
+        display: none;
+    }
+    .high_tech li {
+        margin: 0 4px;
+    }
+    footer .form-group a {
+        padding: 10px 16px;
+    }
+    footer .form-group input#email {
+        width: 133px;
+    }
+    .invest {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .purchase_tx p {
+        font-size: 8px;
+        line-height: 20px;
+    }
+    .purchase_tx span {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .high_tech li {
+        margin: 0
+    }
+    .high_tech h2 {
+        font-size: 17px;
+    }
+    .high_tech h3 {
+        font-size: 15px;
+    }
+    .high_tech span {
+        font-size: 9px;
+    }
+    .high_tech h4 {
+        font-size: 10px;
+    }
+    .asset_bx h2 {
+        font-size: 30px;
+    }
+    .asset_bx p {
+        font-size: 15px;
+        max-width: 510px;
+    }
+    .asset_bt a {
+        padding: 16px 15px;
+        font-size: 14px;
+    }
+    .management span {
+        font-size: 18px;
+    }
+    .management h3 {
+        font-size: 13px;
+    }
+    .management h2 {
+        font-size: 30px;
+    }
+    .between-chrat h2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .between-chrat p {
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .between-chrat {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .how-it-work {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .how-it-work ul li h2 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .how-it-work img {
+        width: 42%;
+    }
+    .inve_catagrey li {
+        height: 287px;
+    }
+    .inve_catagrey p {
+        font-size: 12px;
+    }
+    .inve_catagrey img {
+        width: 30%;
+    }
+    .inve_catagrey h2 {
+        font-size: 16px;
+    }
+    .customers-bg {
+        padding-top: 50px;
+    }
+    .title h2 {
+        font-size: 30px;
+    }
+    .title p {
+        font-size: 15px;
+    }
+    .seo-bx p {
+        font-size: 10px;
+    }
+    .seo-bx h3 {
+        padding-top: 12px;
+    }
+    .how-it-work li {
+        width: 24%;
+        margin: 0;
+    }
+    .how-it-work li p {
+        font-size: 12px
+    }
 }
 
-.title p {
-    font-size:  15px;
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .purchase_tx a {
+        width: 100%;
+        padding: 18px 10px;
+        text-align: center;
+    }
+    .purchase_tx p {
+        font-size: 14px;
+    }
+    .purchase_tx span {
+        font-size: 12px;
+    }
+    .inve_catagrey p {
+        font-size: 15px
+    }
+    .asset_bx {
+        max-width: 700px;
+    }
 }
 
-.seo-bx p {
-    font-size: 10px;
-}
-
-.seo-bx h3 {
-    padding-top:  12px;
-}
-.how-it-work li{
-    width: 24%;
-    margin: 0;
-}
-.how-it-work li p{
-    font-size: 12px 
-}
-}
 @media only screen and (min-width: 1201px) and (max-width: 1470px) {
-    .how-it-work li{width: 24%; margin: 0;}
+    .how-it-work li {
+        width: 24%;
+        margin: 0;
+    }
 }
