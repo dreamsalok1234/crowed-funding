@@ -94,9 +94,11 @@
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
-    width: 480px;
+    max-width: 480px;
+    width: 100%;
     display: inline-block;
     margin-bottom: 20px;
+    text-align: center
 }
 
 .contact-form {
@@ -266,5 +268,13 @@
     .reqvest-bt8 a {
         padding: 20px 6px;
     }
-    .contact-form h2{padding-top: 20px}
+    .contact-form h2 {
+        padding-top: 20px
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1399px) {
+    .contact-left2 {
+        padding-left: 0
+    }
 }

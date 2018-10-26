@@ -553,6 +553,63 @@ ngx-gallery {
         flex-direction: column;
         align-items: stretch;
     }
+    .man-video {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .video-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .video-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .summary_icon li {
+        font-size: 12px;
+    }
+    .descri_left p {
+        font-size: 15px;
+        text-align: justify;
+    }
+    .descri_left h3 {
+        font-size: 18px
+    }
+    .pros-mont {
+        padding: 15px;
+    }
+    .pros-mont label {
+        font-size: 25px;
+    }
+    .pros-mont h4 {
+        margin-bottom: 0
+    }
+    .pros-mont h2 {
+        font-size: 10px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .pros-mont span {
+        font-size: 10px;
+    }
+    .pros-mont h6 {
+        font-size: 12px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .pros-mont h6 span {
+        font-size: 10px
+    }
+    .document-bg h3 {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .investment {
+        padding: 20px 0;
+    }
+    .title h2 {
+        font-size: 25px;
+    }
 }
 
 @media(max-width: 1024px) and (min-width: 768px) {

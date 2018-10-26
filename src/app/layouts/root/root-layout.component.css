@@ -2051,7 +2051,13 @@ ul.social_icon {
     .navbar-light .navbar-nav .nav-link {
         padding-right: 4px !important;
     }
-    .overview {
+    .abut_header .navbar-brand {
+        width: 290px;
+    }
+    .header.abut_header .btn.btn-light{
+        padding: 10px 20px
+    }
+     .overview {
         width: 600px;
         height: 500px;
         left: 14px;
