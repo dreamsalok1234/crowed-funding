@@ -515,6 +515,8 @@ ul.team_list {
     }
     .tabing p {
         text-align: center;
+        font-size: 14px;
+        line-height: 20px;
     }
     h2.ft-title:before {
         margin: 0 auto;

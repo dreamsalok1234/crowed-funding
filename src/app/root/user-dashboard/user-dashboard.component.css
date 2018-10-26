@@ -266,3 +266,107 @@ h2.user_meta b {
     line-height: 26px;
     text-align: right
 }
+
+@media(min-width: 320px) and (max-width: 767px) {
+    .tabe-review {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    h2.user_meta {
+        flex-direction: column;
+        margin-bottom: 20px
+    }
+    h2.user_meta strong {
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+    }
+    h2.user_meta b {
+        text-align: center;
+        width: 100%;
+        font-size: 15px
+    }
+    .left-tabs {
+        flex-direction: column;
+    }
+    .tab-slider--nav, .tabe-review .tab-slider--container {
+        width: 100%
+    }
+    .left-tabs .high_tech li {
+        width: 100%
+    }
+    .left-tabs .tab-slider--body h2 {
+        font-size: 25px
+    }
+    .left-tabs .high_tech h2 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .left-tabs .high_tech li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .purchase_tx p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .purchase_tx p span {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .left-tabs .high_tech h3 {
+        font-size: 14px
+    }
+    .purchase_tx a {
+        padding: 10px 47px;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 15px;
+    }
+    .left-tabs .tab-slider--trigger:first-child {
+        padding-top: 0
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+    .tabe-review {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .left-tabs .tab-slider--body h2 {
+        font-size: 25px
+    }
+    .left-tabs .high_tech h2 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .left-tabs .high_tech li, .left-tabs .high_tech li:last-child {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .purchase_tx p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .purchase_tx p span {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .left-tabs .high_tech h3 {
+        font-size: 14px
+    }
+    .purchase_tx a {
+        padding: 10px 15px;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 15px;
+    }
+    .my_invest h4 b {
+        font-size: 20px;
+    }
+    .my_invest h4 span{
+        font-size: 15px
+    }
+}

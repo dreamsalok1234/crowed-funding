@@ -264,8 +264,122 @@ span.details {
 
 /* responsive */
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .investment {
+        padding: 30px 0 50px;
+    }
+    .progre {
+        display: none
+    }
+    .radio_custom {
+        display: flex;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .investment .radio_custom .radio-custom-label {
+        font-size: 15px;
+    }
+    .investment label {
+        font-size: 12px
+    }
+    .investment .form-group {
+        margin-bottom: 10px;
+    }
+    .investment .form-control {
+        font-size: 15px;
+        height: 40px;
+    }
+    .invest_submit h2 {
+        font-size: 14px;
+        padding-top: 0;
+    }
+    .invest_submit h3 {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .purchase_tx p {
+        font-size: 12px;
+    }
+    .purchase_tx span {
+        font-size: 10px;
+    }
+    .invest_img {
+        width: 75px;
+        height: 75px;
+    }
+    .invest_submit .invest_data h3 span {
+        font-size: 10px
+    }
+    .invest_submit input[type="submit"] {
+        padding: 10px 70px;
+        margin-top: 0
+    }
+    .investment form {
+        margin-bottom: 20px;
+        padding: 15px
+    }
+}
 
-@media only screen and (min-width:768px) and (max-width: 1024px) {}
+@media only screen and (min-width:768px) and (max-width: 1024px) {
+    .investment {
+        padding: 30px 0 50px;
+    }
+    .progre {
+        display: none
+    }
+    .radio_custom {
+        display: flex;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .investment .radio_custom .radio-custom-label {
+        font-size: 15px;
+    }
+    .investment label {
+        font-size: 12px
+    }
+    .investment .form-group {
+        margin-bottom: 10px;
+    }
+    .investment .form-control {
+        font-size: 15px;
+        height: 40px;
+    }
+    .invest_submit h2 {
+        font-size: 14px;
+        padding-top: 0;
+    }
+    .invest_submit h3 {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .purchase_tx p {
+        font-size: 10px;
+    }
+    .purchase_tx span {
+        font-size: 10px;
+    }
+    .invest_img {
+        width: 75px;
+        height: 75px;
+    }
+    .invest_submit .invest_data h3 span {
+        font-size: 10px
+    }
+    .invest_submit input[type="submit"] {
+        padding: 10px 70px;
+        margin-top: 0
+    }
+    .investment form {
+        margin-bottom: 20px;
+        padding: 15px
+    }
+    .invest_submit .invest_data h3 {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {}

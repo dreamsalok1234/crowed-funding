@@ -145,6 +145,13 @@ export class RootLayoutComponent implements OnInit {
         $(this).toggleClass('active');
         $('#navbarSupportedContent').slideToggle(700);  
       });
+      if ($(window).width() <1024) {
+        $('.navbar-collapse ul li a').click(function () {
+          $(this).toggleClass('active');
+          $('#navbarSupportedContent').slideToggle();
+        });
+      }	
+     
     });
 
   }

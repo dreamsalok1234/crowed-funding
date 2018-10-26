@@ -573,3 +573,49 @@ ul.check-icon {
         font-size: 22px;
     }
 }
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .overview {
+        width: 500px;
+        height: 500px;
+        left: 14px;
+        padding: 60px;
+    }
+    .Business-banner {
+        height: 650px;
+        padding-top: 80px;
+        background-size: 100% 100%;
+    }
+    .overview-img h2 {
+        width: auto;
+        height: auto;
+        font-size: 40px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .form-contact a {
+        width: 100%;
+        padding: 18px 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1470px) and (min-width: 1201px) {
+    .Business-banner {
+        height: 650px;
+        padding-top: 80px;
+        background-size: 100% 100%;
+    }
+    .overview {
+        width: 600px;
+        height: 500px;
+        left: 14px;
+        padding: 60px;
+    }
+    .overview-img h2 {
+        font-size: 60px;
+        width: auto;
+        height: auto;
+        font-size: 57px;
+    }
+}

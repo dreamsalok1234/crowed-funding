@@ -416,6 +416,7 @@ ul.high_tech {
     }
     .high-tech-bg .high_tech li {
         width: 100%;
+        height: auto;
     }
     .Request-bg {
         height: auto;
@@ -455,6 +456,13 @@ ul.high_tech {
         padding: 9px 30px;
         margin: 0px 6px !important;
         margin-left: 0 !important;
+    }
+    .purchase_tx a {
+        padding: 10px 47px;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 15px;
     }
 }
 
