@@ -17,29 +17,12 @@ export class PropertiesComponent implements OnInit {
      this.rootLayoutComponent.headerOne = 'abut_header';
   }
   getPropertyList() {
-  		this.propertyService.getProperty().subscribe(
-	      data => {
-	      	 this.rootLayoutComponent.globalloader = true;
-	         try {
-	            this.responseItem  = data;
-	          }
-	          catch (error) {
-	            this.responseItem  = "Something Wrong";
-	          }          
-	          if( typeof(this.responseItem) == 'object') 
-	          	    this.propertyList = data.data;
-
-	      },
-	      error => {
-	          this.rootLayoutComponent.globalloader = true;
-	          try {
-	            this.responseItem  = JSON.parse(error._body);
-	          }
-	          catch (error) {
-	            this.responseItem  = "Something Wrong";
-	          }          
-	          
-	          this.loading = false;
-	    });
+  		var objectType = this;
+  		this.propertyService.getProperty(function(err, response){
+	        objectType.rootLayoutComponent.globalloader = true;
+	        
+	        if( response.statusCode == 200 ) 
+	            objectType.propertyList = response.data.data;
+	    });    
   }
 }

@@ -195,12 +195,12 @@
           <div class="col-md-2">
             <h2 class="ft-title">Links</h2>
             <ul class="ft-list">
-              <li><a [routerLink]="['/works']">How it works</a></li>
-              <li><a [routerLink]="['/business']">Business Model</a></li>
-              <li><a [routerLink]="['/properties']">Properties</a></li>
-              <li><a [routerLink]="['/about']">About us</a></li>
-              <li><a [routerLink]="['/faq']">FAQ</a></li>
-              <li><a href="javascript:">Careers</a></li>
+              <li><a [routerLink]="['/works']" (click)="changeHeadeer('/works')">How it works</a></li>
+              <li><a [routerLink]="['/business']" (click)="changeHeadeer('/business')">Business Model</a></li>
+              <li><a [routerLink]="['/properties']" (click)="changeHeadeer('/properties')">Properties</a></li>
+              <li><a [routerLink]="['/about']" (click)="changeHeadeer('/about')">About us</a></li>
+              <li><a [routerLink]="['/faq']" (click)="changeHeadeer('/faq')">FAQ</a></li>
+              <li><a href="javascript:" (click)="changeHeadeer('/careers')">Careers</a></li>
             </ul>
           </div>
           <div class="col-md-2">

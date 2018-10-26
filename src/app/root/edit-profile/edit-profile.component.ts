@@ -21,6 +21,7 @@ export class EditProfileComponent implements OnInit {
   	 	 this.router.navigate(['/']);
 
   	 }
+     this.rootLayout.headerOne = 'abut_header';
   	 this.getProfile();
 
   }
@@ -31,37 +32,19 @@ export class EditProfileComponent implements OnInit {
   }
 
   updateProfile() {
-  	this.rootLayout.globalloader = false;
-  	this.rootauthService.updateProfile(this.model).subscribe(
-      data => {        
-      	
-      	 this.rootLayout.globalloader = true;
-         try {
-            this.responseItem  = data;
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object') {             
-            this.toastr.success(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-            localStorage.setItem('profile', JSON.stringify(data.data));
-            
-          }
-      },
-      error => {
-      	
-          this.rootLayout.globalloader = true;
-          try {
-            this.responseItem  = JSON.parse(error._body);
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object')             
-            this.toastr.error(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});          
-          else 
-            this.toastr.error(this.responseItem,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-    });
+    this.rootLayout.globalloader = false;
+    var objectType = this;
+    this.rootauthService.updateProfile(this.model,function(err, response){
+        this.rootLayout.globalloader = true;
+        if( err )
+          objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        if( response.statusCode == 200 ) {
+           this.toastr.success(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+            localStorage.setItem('profile', JSON.stringify(response.data.data));
+        }
+        else 
+          objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+    })
   }
 
 

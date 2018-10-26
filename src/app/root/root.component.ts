@@ -21,32 +21,12 @@ export class RootComponent implements OnInit {
   	this.getProperty();
   }
   getProperty() {
+    var objectType = this;
+    this.propertyService.getProperty(function(err, response) {
+      if( response.statusCode == 200 ) 
+          objectType.propertyList = response.data.data;
+    })
     
-  	this.propertyService.getProperty().subscribe(
-      data => {
-      		
-         try {
-            this.responseItem  = data;
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object') 
-          	    this.propertyList = data.data;
-
-      },
-      error => {
-          
-          try {
-            this.responseItem  = JSON.parse(error._body);
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          
-          this.loading = false;
-    });
-    this.loading = false;
   }
 
 }

@@ -22,39 +22,22 @@ export class ChangePasswordComponent implements OnInit {
 		this.router.navigate(['/']);
 
   	}
+    this.rootLayout.headerOne = 'abut_header';
   }
   changePassword() {
-  	this.rootLayout.globalloader = false;
-  	this.rootauthService.changePassword(this.model).subscribe(
-      data => {        
-      		debugger;
-      	 this.rootLayout.globalloader = true;
-         try {
-            this.responseItem  = data;
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object') {             
-            this.toastr.success(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-            this.router.navigate(['/']);
-            
-          }
-      },
-      error => {
-      	debugger;
-          this.rootLayout.globalloader = true;
-          try {
-            this.responseItem  = JSON.parse(error._body);
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object')             
-            this.toastr.error(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});          
-          else 
-            this.toastr.error(this.responseItem,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-    });
+    this.rootLayout.globalloader = false;
+    var objectType = this;
+    this.rootauthService.changePassword(this.model,function(err, response){
+        this.rootLayout.globalloader = true;
+        if( err )
+          objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        if( response.statusCode == 200 ) {
+            objectType.toastr.success(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+            objectType.router.navigate(['/']);
+        }
+        else 
+          objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+    })   
   }
 
 }

@@ -79,32 +79,19 @@ examples: Example[];
   BindPropertyDetails(projectSlug : string) {
     var projectData = projectSlug.split('/');
     var propertySlug = projectData[projectData.length - 1];
-    this.propertyService.getPropertyDetails(propertySlug).subscribe(
-      data => {
-          this.rootLayout.globalloader = true;
-         try {
-            this.responseItem  = data;
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object') 
-                this.propertyDeatils = data.data;
-          this.propertyItem = true;
-          this.propertyId = this.propertyDeatils.propertyId;  
-      },
-      error => {
-          this.rootLayout.globalloader = true;
-          try {
-            this.responseItem  = JSON.parse(error._body);
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          
-          this.loading = false;
-    });
-    this.loading = false;
+    var objectType = this;
+    this.propertyService.getPropertyDetails(propertySlug, function(err, response){
+        objectType.rootLayout.globalloader = true;
+        if( err )
+          objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        if( response.statusCode == 200 ) {
+            objectType.propertyDeatils = response.data.data;
+            objectType.propertyItem = true;
+            objectType.propertyId = objectType.propertyDeatils.propertyId;  
+        }
+        else 
+          objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+    })
   }
 
   getUrlTitle(title: string) {
@@ -173,29 +160,18 @@ examples: Example[];
 
   RequestDocement() {
     this.rootLayout.globalloader = false;
+    var objectType = this;
     if(localStorage.getItem('userAccessToken') !='' && localStorage.getItem('userAccessToken') != undefined) {
-      this.propertyService.requestPropertyDocuments(this.propertyId).subscribe(
-        data => {
-           this.rootLayout.globalloader = true;
-           this.toastr.success(data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});  
-        },
-        error => {
+      this.propertyService.requestPropertyDocuments(this.propertyId,function(err, response){
+        this.rootLayout.globalloader = true;
+        if( err )
+          objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        if( response.statusCode == 200 ) 
+            objectType.toastr.success(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
+        else 
+          objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
 
-            this.rootLayout.globalloader = true;
-            var errorData : any;
-            try {
-              errorData  = JSON.parse(error._body);
-            }
-            catch (error) {
-              errorData.message  = "Something Wrong";
-            }   
-            if( error.status == 401 ) {
-              localStorage.clear();
-              this.rootLayout.SignUpArea = false;
-              this.rootLayout.profileArea = true;
-            }         
-            this.toastr.error(errorData.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-      });
+      })
     }
     else {
       this.rootLayout.globalloader = true;

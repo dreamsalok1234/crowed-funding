@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RootMenuItems } from '../../shared/root-menu-items/root-menu-items';
 import { RootauthService } from '../../_services/root/rootauth.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+
 import * as $ from 'jquery';
 
 @Component({
@@ -59,116 +60,68 @@ export class RootLayoutComponent implements OnInit {
     });
   }
   signUp() {
-
-    this.authenticationService.signUpService(this.model).subscribe(
-      data => {        
-         try {
-            this.responseItem  = data;
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object') {             
-            this.toastr.success(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-            this.router.navigate(['/']);
-            this.signupModel.close();
-          }
-      },
-      error => {
-          
-          try {
-            this.responseItem  = JSON.parse(error._body);
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object')             
-            this.toastr.error(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});          
-          else 
-            this.toastr.error(this.responseItem,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-          this.loading = false;
+    var objectType = this;
+    this.authenticationService.signUpService(this.model, function(err, response){
+      if( err )
+          objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+      if( response.statusCode == 200 ) {
+          objectType.toastr.success(objectType.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+          objectType.router.navigate(['/']);
+          objectType.signupModel.close();
+      }
+      else 
+        objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
     });
     this.loading = false;
   }
 
   loginForm() {
     
-    this.authenticationService.login(this.model).subscribe(
-      data  => {  
-                  
-         try {
-            this.responseItem  = data;
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object')  {           
-            this.toastr.success(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+    var objectType = this;
+    this.authenticationService.login(this.model, function(err, response){
+        if( err )
+          objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        if( response.statusCode == 200 ) {
+            debugger;
+            objectType.responseItem = response.data;
+            objectType.toastr.success(objectType.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
             localStorage.clear();
-            localStorage.setItem('userAccessToken', this.responseItem.token);
+            localStorage.setItem('userAccessToken', objectType.responseItem.token);
             localStorage.setItem('role', 'user');
-            localStorage.setItem('profile', JSON.stringify(this.responseItem.profile));
-            this.userName = this.responseItem.profile.fullName
-            this.router.navigate(['/']);
-            this.profileArea = false;
-            this.SignUpArea = true;
-            this.model = {};
-            this.loginModel.close();
-          }
-      },
-      error => {
-          
-          try {
-            this.responseItem  = JSON.parse(error._body);
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object')             
-            this.toastr.error(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});          
-          else 
-            this.toastr.error(this.responseItem,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-          this.loading = false;
+            localStorage.setItem('profile', JSON.stringify(objectType.responseItem.profile));
+            objectType.userName = objectType.responseItem.profile.fullName
+            objectType.router.navigate(['/']);
+            objectType.profileArea = false;
+            objectType.SignUpArea = true;
+            objectType.model = {};
+            objectType.loginModel.close();
+        }
+        else 
+          objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        
     });
-    this.loading = false;
+      
   }
 
   logout() {
-    
-    this.authenticationService.logout().subscribe(
-      data => {  
-              
-         try {
-            this.responseItem  = data;
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object')  { 
+
+    var objectType = this;
+    this.authenticationService.logout(function(err, response){
+        if( err )
+          objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        if( response.statusCode == 200 ) {
             localStorage.removeItem('userAccessToken');
             localStorage.removeItem('role');
             localStorage.removeItem('profile');
-            this.router.navigate(['/']);
-            this.profileArea = true;
-            this.SignUpArea = false;
-            this.userName = '';
-            this.toastr.success("Successfully Logout",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-          }
-      },
-      error => {
-          
-          try {
-            this.responseItem  = JSON.parse(error._body);
-          }
-          catch (error) {
-            this.responseItem  = "Something Wrong";
-          }          
-          if( typeof(this.responseItem) == 'object')             
-            this.toastr.error(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});          
-          else 
-            this.toastr.error(this.responseItem,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-          this.loading = false;
-    });
+            objectType.router.navigate(['/']);
+            objectType.profileArea = true;
+            objectType.SignUpArea = false;
+            objectType.userName = '';
+            objectType.toastr.success(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        }
+        else 
+          objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+    })
     this.loading = false;
   }
 

@@ -18,6 +18,7 @@ import { ScrollModule } from './scroll/scroll.module';
 import { LocationStrategy, PathLocationStrategy} from '@angular/common';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import { EqualValidator } from './_directives/equal.validate';
+import { GlobalService } from './_services/global.service';
 import { BsDropdownModule } from 'ngx-bootstrap';
 
 @NgModule({
@@ -46,7 +47,7 @@ import { BsDropdownModule } from 'ngx-bootstrap';
   ],
   exports: [ScrollModule],
   providers: [  
-      { provide: LocationStrategy, useClass: PathLocationStrategy },
+      { provide: LocationStrategy, useClass: PathLocationStrategy },GlobalService,
   ],
   bootstrap: [AppComponent]
 })
