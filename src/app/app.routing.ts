@@ -72,6 +72,10 @@ export const AppRoutes: Routes = [
       {
         path: 'user-dashboard',
         loadChildren: './root/user-dashboard/user-dashboard.module#UserDashboardModule'
+      },
+      {
+        path: 'investment',
+        loadChildren: './root/investment/investment.module#InvestmentModule'
       }
     ]
   },
