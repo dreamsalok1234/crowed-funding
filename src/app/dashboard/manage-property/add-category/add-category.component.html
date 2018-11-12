@@ -1,80 +1,75 @@
-<div class="row">
-    <div class="col-sm-12">
-        <div class="tab-slider--nav">
-            <ul class="tab-slider--tabs">
-                <li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">Franch</li>
-                <li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">English</li>
-                <li class="tab-slider--trigger" [class.active]="viewMode == 'tab3'" rel="tab3" (click)="viewMode ='tab3'">German</li>
-                <li class="tab-slider--trigger" [class.active]="viewMode == 'tab4'" rel="tab4" (click)="viewMode ='tab4'">Greek</li>
-            </ul>
-        </div>
-        <div class="tab-slider--container" [ngSwitch]="viewMode">
-            <div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
-                <h2>Franch</h2>
-                <!-- Category Name card start -->
-                <app-card [title]="'Category Name'">
-                    <form>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Simple Input</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </form>
-                </app-card>
-            </div>
-            <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
-                <h2>English</h2>
-                <!-- Category Name card start -->
-                <app-card [title]="'Category Name'">
-
-                    <form>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Simple Input</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </form>
-                </app-card>
-            </div>
-            <div id="tab3" class="tab-slider--body" *ngSwitchCase="'tab3'">
-                <h2>German</h2>
-                <!-- Category Name card start -->
-                <app-card [title]="'Category Name'">
-
-                    <form>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Simple Input</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </form>
-                </app-card>
-            </div>
-            <div id="tab4" class="tab-slider--body" *ngSwitchCase="'tab4'">
-                <h2>Greek</h2>
-                <!-- Category Name card start -->
-                <app-card [title]="'Category Name'">
-
-                    <form>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Simple Input</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </form>
-                </app-card>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-sm-2 col-form-label">Upload File</label>
-    <div class="col-sm-10">
-        <input type="file" class="form-control">
-    </div>
-    <button class="btn btn-inverse btn-round">Save Category</button>
-</div>
+<form role="form" name="form" (ngSubmit)="addCategory()" #f="ngForm" novalidate>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="tab-slider--nav">
+				<ul class="tab-slider--tabs">
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">English</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">Franch</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab3'" rel="tab3" (click)="viewMode ='tab3'">German</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab4'" rel="tab4" (click)="viewMode ='tab4'">Greek</li>
+				</ul>
+			</div>
+			<div class="tab-slider--container" [ngSwitch]="viewMode">
+				<div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+					<h2>English</h2>
+					<label class="error-msg" [hidden]="errorMsg">All (*) field are Required!</label>
+					<!-- Category Name card start -->
+					<app-card [title]="'Category Name'">
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Category Name<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Category Name" id="catname" name="catname" [(ngModel)]="model.catname"  #catname="ngModel" required>
+								<div [hidden]="catname.valid || catname.pristine" class="alert alert-danger">
+									<div [hidden]="!catname.hasError('required')">Category Name is required</div>
+								</div>
+							</div>
+						</div>						
+					</app-card>
+				</div>
+				<div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+					<h2>Franch</h2>
+					<!-- Category Name card start -->
+					<app-card [title]="'Category Name'">
+						
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Category Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Category Name" [(ngModel)]="model.fcatname" #fcatname="ngModel" name="fcatname">
+							</div>
+						</div>
+					</app-card>
+				</div>
+				<div id="tab3" class="tab-slider--body" *ngSwitchCase="'tab3'">
+					<h2>German</h2>
+					<!-- Category Name card start -->
+					<app-card [title]="'Category Name'">
+						
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Category Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Category Name" [(ngModel)]="model.grecatname" #grecatname="ngModel" name="grecatname">
+							</div>
+						</div>
+						
+					</app-card>
+				</div>
+				<div id="tab4" class="tab-slider--body" *ngSwitchCase="'tab4'">
+					<h2>Greek</h2>
+					<!-- Category Name card start -->
+					<app-card [title]="'Category Name'">						
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Category Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Category Name" [(ngModel)]="model.gcatname" #gcatname="ngModel" name="gcatname">
+							</div>
+						</div>
+						
+					</app-card>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">		
+		<button class="btn btn-inverse btn-round" type="submit" id="submit" name="submit">Save Category</button>
+	</div>
+</form>

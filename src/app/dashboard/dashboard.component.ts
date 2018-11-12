@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 declare const $: any;
 declare var Morris: any;
 
@@ -9,9 +10,11 @@ declare var Morris: any;
 
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    if( (localStorage.getItem("role") != 'admin'))
+        this.router.navigate(['/']);
     setTimeout(() => {
       $('.resource-barchart1').sparkline([5, 6, 9, 7, 8, 4, 6], {
         type: 'bar',

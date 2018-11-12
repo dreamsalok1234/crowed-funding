@@ -12,6 +12,7 @@ import { GallaryListComponent } from './gallary-list/gallary-list.component';
 import { PropertyListComponent } from './property-list/property-list.component';
 import { PropertySummaryListComponent } from './property-summary-list/property-summary-list.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { PropertyService } from '../../_services/admin/property.service';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { AddCategoryComponent } from './add-category/add-category.component';
     PropertySummaryListComponent,
     AddCategoryComponent
 
-  ]
+  ],
+  providers: [PropertyService]
 })
 export class ManagePropertyModule { }

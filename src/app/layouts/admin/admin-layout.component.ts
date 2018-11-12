@@ -55,7 +55,10 @@ export class AdminLayoutComponent implements OnInit {
 
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+      if( (localStorage.getItem("role") != 'admin'))
+        this.router.navigate(['/']);
+  }
 
   onClickedOutside(e: Event) {
     if (this.windowWidth < 768 && this.toggleOn && this.verticalNavType !== 'offcanvas') {
@@ -113,6 +116,10 @@ export class AdminLayoutComponent implements OnInit {
     this.isCollapsedMobile = this.isCollapsedMobile === 'yes-block' ? 'no-block' : 'yes-block';
   }
   logout() {
+    localStorage.clear();
+    this.router.navigate(['/authentication/login']);
+  }
+  handleUserSession(redirect = '', enablePopup = false) {
     localStorage.clear();
     this.router.navigate(['/authentication/login']);
   }
