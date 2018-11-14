@@ -35,15 +35,18 @@ export class EditProfileComponent implements OnInit {
     this.rootLayout.globalloader = false;
     var objectType = this;
     this.rootauthService.updateProfile(this.model,function(err, response){
-        this.rootLayout.globalloader = true;
+        objectType.rootLayout.globalloader = true;
         if( err )
           objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
         if( response.statusCode == 200 ) {
-           this.toastr.success(this.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+           objectType.toastr.success(objectType.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
             localStorage.setItem('profile', JSON.stringify(response.data.data));
         }
-        else 
+        else {
           objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+          if( response.statusCode == 401 )
+            objectType.rootLayout.handleUserSession('/');
+        }
     })
   }
 

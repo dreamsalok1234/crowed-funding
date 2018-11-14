@@ -204,7 +204,6 @@ const MENUITEMS = [
 @Injectable()
 export class MenuItems {
   getAll(): Menu[] {
-    debugger;
     return MENUITEMS;
   }
 

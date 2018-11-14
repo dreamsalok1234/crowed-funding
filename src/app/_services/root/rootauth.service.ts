@@ -45,6 +45,7 @@ export class RootauthService {
     login(formdata, callback) {   
        return this.globalService.callPostApi('auth/login',{email : formdata.email, password: formdata.password}).subscribe(
           data  => {  
+              
               try {
                 this.responseItem.data  = data;
               }
@@ -54,7 +55,8 @@ export class RootauthService {
               } 
               return callback(null, this.responseItem);             
           },
-          error => {              
+          error => { 
+                         
               try {                 
                 this.responseItem.data  = JSON.parse(error._body);
               }

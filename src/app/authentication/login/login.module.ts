@@ -7,7 +7,7 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LoginRoutes} from './login.routing';
 import {SharedModule} from '../../shared/shared.module';
-import { AlertService } from '../../_services/index';
+import { AuthenticationService } from '../../_services/admin/authentication.service';
 import { AlertComponent } from '../../_directives/index';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { AlertComponent } from '../../_directives/index';
         
     ],
     declarations: [WithSocialComponent, AlertComponent],
-    providers: [AlertService]
+    providers: [AuthenticationService]
 })
 
 export class LoginModule {}

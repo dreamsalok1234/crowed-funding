@@ -13,6 +13,7 @@ import { PropertyListComponent } from './property-list/property-list.component';
 import { PropertySummaryListComponent } from './property-summary-list/property-summary-list.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { PropertyService } from '../../_services/admin/property.service';
+import { CommonService } from '../../_services/admin/common.service';
 
 @NgModule({
   imports: [
@@ -32,6 +33,6 @@ import { PropertyService } from '../../_services/admin/property.service';
     AddCategoryComponent
 
   ],
-  providers: [PropertyService]
+  providers: [PropertyService,CommonService]
 })
 export class ManagePropertyModule { }

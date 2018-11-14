@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class AppComponent {
   constructor(private router: Router) {
   	//if( localStorage.getItem('userAccessToken') == '' || localStorage.getItem('userAccessToken') == undefined )
-  		this.router.navigate([window.location.pathname]);
+  	this.router.navigate([window.location.pathname]);
   }
 
  	

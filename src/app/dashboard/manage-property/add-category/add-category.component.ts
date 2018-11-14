@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation, ElementRef, AfterViewInit, ViewContainerRef } from '@angular/core';
 import { state, style, transition, animate, trigger, AUTO_STYLE } from '@angular/animations';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { PropertyService } from '../../../_services/admin/property.service';
@@ -13,7 +14,7 @@ export class AddCategoryComponent implements OnInit {
   viewMode = 'tab1';
   model:any = {catname: '', fcatname: '', grecatname: '', gcatname: ''};
   errorMsg = true;
-  constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef) { 
+  constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router) { 
 	this.toastr.setRootViewContainerRef(vcr);
   }
 	

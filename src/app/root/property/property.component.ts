@@ -163,13 +163,16 @@ examples: Example[];
     var objectType = this;
     if(localStorage.getItem('userAccessToken') !='' && localStorage.getItem('userAccessToken') != undefined) {
       this.propertyService.requestPropertyDocuments(this.propertyId,function(err, response){
-        this.rootLayout.globalloader = true;
+        objectType.rootLayout.globalloader = true;
         if( err )
           objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
         if( response.statusCode == 200 ) 
             objectType.toastr.success(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
-        else 
+        else { 
           objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+          if( response.statusCode == 401 )
+            objectType.rootLayout.handleUserSession('', true);
+        }
 
       })
     }

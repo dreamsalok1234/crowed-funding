@@ -27,8 +27,8 @@ export class RootLayoutComponent implements OnInit {
   responseItem: any;
   userName : string;
   globalloader : boolean = true;
-  SignUpArea = ( (localStorage.getItem('userAccessToken') == '' || localStorage.getItem('userAccessToken') == undefined) || (localStorage.getItem('role') != 'user' || localStorage.getItem('role') == undefined)) ? false : true;
-  profileArea = ( localStorage.getItem('userAccessToken') != '' && localStorage.getItem('userAccessToken') != undefined &&  localStorage.getItem('role') == 'user' && localStorage.getItem('role') != undefined) ? false : true;
+  SignUpArea = ( (localStorage.getItem('userAccessToken') == '' || localStorage.getItem('userAccessToken') == undefined) ) ? false : true;
+  profileArea = ( localStorage.getItem('userAccessToken') != '' && localStorage.getItem('userAccessToken') != undefined) ? false : true;
   constructor(public navItems: RootMenuItems, public toastr: ToastsManager, private authenticationService: RootauthService, private router: Router, private modalService: NgbModal, vcr: ViewContainerRef ) {
       this.toastr.setRootViewContainerRef(vcr);
       var profileData : any;
@@ -139,7 +139,6 @@ export class RootLayoutComponent implements OnInit {
 
   ngOnInit() {        
     this.headerOne=(this.router.url=='/home')?'':'abut_header';
-
     $(document).ready(function () {
       $('.navbar-light .navbar-toggler').click(function () {
         $(this).toggleClass('active');
@@ -159,7 +158,18 @@ export class RootLayoutComponent implements OnInit {
     this.headerOne=(url=='home')?'':'abut_header';
   }
 
-
+  handleUserSession(redirect = '', enablePopup = false) {
+    localStorage.removeItem('userAccessToken');
+    localStorage.removeItem('role');
+    localStorage.removeItem('profile');
+    this.profileArea = true;
+    this.SignUpArea = false;
+    this.userName = '';
+    if( enablePopup )
+      document.getElementById('signupBtn2').click();
+    if( redirect != '' )      
+      this.router.navigate([redirect]);
+  }
 
   
 }
