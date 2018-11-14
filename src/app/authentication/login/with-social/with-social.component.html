@@ -11,11 +11,11 @@
             </div>
             <div class="auth-box">
               <div class="row m-b-20">
-                <div class="col-md-3">
-                  <h3 class="text-center txt-primary">Sign In</h3>
+                <div class="col-md-12">
+                  <h3 class="text-center txt-primary">Admin Login</h3>
                 </div>
-                <div class="col-md-9">
-                  <!-- <p class="text-inverse m-t-25 text-left">Don't have an account? <a [routerLink]="['/authentication/registration/with-bg-image']"> Register </a> here for free!</p -->>
+                <div class="col-md-12">
+                  <!-- <p class="text-inverse m-t-25 text-left">Don't have an account? <a [routerLink]="['/authentication/registration/with-bg-image']"> Register </a> here for free!</p -->
                 </div>
               </div>
               <!-- <p class="text-inverse b-b-default text-left p-b-5">Sign in easily with your social account:</p>
@@ -27,15 +27,15 @@
                   <button class="btn btn-twitter m-b-20"><i class="icofont icofont-social-twitter"></i>Sign in with twitter</button>
                 </div>
               </div> -->
-              <p class="text-inverse b-b-default text-left p-b-5">Sign in with your regular account</p>
-              <div class="form-group">
+              <!-- <p class="text-inverse b-b-default text-left p-b-5">Sign in with your regular account</p> -->
+              <div class="input-group">
                 <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-				<div *ngIf="f.submitted && !username.valid" class="help-block error" style="color: red;">Username is required</div>
+				<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
                 <span class="md-line"></span>
               </div>
-              <div class="form-group">
+              <div class="input-group">
                 <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" placeholder="password" required />
-				<div *ngIf="f.submitted && !password.valid" class="help-block error" style="color: red;">Password is required</div>
+				<div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
                 <span class="md-line"></span>
               </div>
               <div class="row m-t-25 text-left">
@@ -54,7 +54,7 @@
               </div>
               <div class="row m-t-30">
                 <div class="col-md-12">
-                  <button type="submit" [disabled]="loading" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" >LOGIN</button>
+                  <button type="button" [disabled]="loading" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" (click)="login()">LOGIN</button>
                   <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                 </div>
               </div>

@@ -11,7 +11,7 @@ import { PropertyService } from '../../../_services/admin/property.service';
   styleUrls: ['./add-category.component.css']
 })
 export class AddCategoryComponent implements OnInit {
-  viewMode = 'tab1';
+	viewMode = 'tab1';
   model:any = {catname: '', fcatname: '', grecatname: '', gcatname: ''};
   errorMsg = true;
   constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router) { 

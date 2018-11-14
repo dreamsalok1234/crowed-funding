@@ -25,6 +25,7 @@ export class WithSocialComponent implements OnInit {
         this.loading = true;
         var objectType = this;
         this.authenticationService.login(this.model, function(err, response){
+          debugger;
             objectType.loading = false;
             if( err )
               objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
