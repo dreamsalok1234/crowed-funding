@@ -28,7 +28,6 @@ export class CategoryListComponent implements OnInit {
   	this.showloading = true;
 	var objectType = this;
 	this.propertyService.getCategoryList(function(err, response){ 
-
 		objectType.showloading = false;
 		if( err )
 		  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});

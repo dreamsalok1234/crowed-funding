@@ -14,6 +14,7 @@ export class AddCategoryComponent implements OnInit {
 	viewMode = 'tab1';
   model:any = {catname: '', fcatname: '', grecatname: '', gcatname: ''};
   errorMsg = true;
+  showloading = false;
   constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router) { 
 	this.toastr.setRootViewContainerRef(vcr);
   }
@@ -26,9 +27,10 @@ export class AddCategoryComponent implements OnInit {
 	  return ;
 	}
 	this.errorMsg = true;
+	this.showloading = true;
 	var objectType = this;
 	this.propertyService.addCategory(this.model, function(err, response){    	
-		
+		objectType.showloading = false;
 		if( err )
 		  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
 		if( response.statusCode == 200 ) {
