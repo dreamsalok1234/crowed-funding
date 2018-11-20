@@ -2,12 +2,13 @@ import { Routes } from '@angular/router';
 import { ConditionListComponent } from './condition-list/condition-list.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { DocumentListComponent } from './document-list/document-list.component';
+
 import { FileRequestComponent } from './file-request/file-request.component';
 import { GallaryListComponent } from './gallary-list/gallary-list.component';
 import { PropertyListComponent } from './property-list/property-list.component';
 import { PropertySummaryListComponent } from './property-summary-list/property-summary-list.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
-
+import { ManagePropertyComponent } from './manage-property.component';
 export const ManagePropertyRoutes: Routes = [
   {
     path: '',
@@ -15,6 +16,7 @@ export const ManagePropertyRoutes: Routes = [
       breadcrumb: 'Property',
       status: false
     },
+    component: ManagePropertyComponent,
     children: [
       {
         path: 'categorylist',
@@ -22,7 +24,8 @@ export const ManagePropertyRoutes: Routes = [
         data: {
           breadcrumb: 'Category List',
           status: true
-        }
+        }/*,
+        loadChildren: './category-list/category-list.module#CategoryListModule'*/
       },
       {
         path: 'conditionlist',
@@ -75,7 +78,8 @@ export const ManagePropertyRoutes: Routes = [
         data: {
           breadcrumb: 'Add Category',
           status: true
-        }
+        }/*,
+        loadChildren: './add-category/add-category.module#AddCategoryModule'*/
       }
     ]
   }

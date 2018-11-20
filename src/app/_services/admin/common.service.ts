@@ -25,7 +25,7 @@ export class CommonService {
           },
           error => {              
               try {                 
-                this.responseItem.data  = JSON.parse(error._body);
+                this.responseItem.data  = JSON.parse(error.error);
               }
               catch (err) {
                 this.responseItem.data  = { message: "Something Wrong", status: false };
@@ -50,7 +50,7 @@ export class CommonService {
           },
           error => {              
               try {                 
-                this.responseItem.data  = JSON.parse(error._body);
+                this.responseItem.data  = JSON.parse(error.error);
               }
               catch (err) {
                 this.responseItem.data  = { message: "Something Wrong", status: false };
@@ -75,7 +75,7 @@ export class CommonService {
           },
           error => {              
               try {                 
-                this.responseItem.data  = JSON.parse(error._body);
+                this.responseItem.data  = JSON.parse(error.error);
               }
               catch (err) {
                 this.responseItem.data  = { message: "Something Wrong", status: false };

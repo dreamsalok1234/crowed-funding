@@ -92,31 +92,31 @@ export const AppRoutes: Routes = [
       loadChildren: './dashboard/dashboard.module#DashboardModule'
     },
     {
-      path: 'manage-user',
+      path: 'dashboard/manage-user',
       loadChildren: './dashboard/manage-user/manage-user.module#ManageUserModule',
     },
     {
-      path: 'manage-contact',
+      path: 'dashboard/manage-contact',
       loadChildren: './dashboard/manage-contact/manage-contact.module#ManageContactModule',
     },
     {
-      path: 'manage-mortgage',
+      path: 'dashboard/manage-mortgage',
       loadChildren: './dashboard/manage-mortgage/manage-mortgage.module#ManageMortgageModule',
     },
     {
-      path: 'manage-property',
+      path: 'dashboard/manage-property',
       loadChildren: './dashboard/manage-property/manage-property.module#ManagePropertyModule',
     },
     {
-      path: 'manage-role',
+      path: 'dashboard/manage-role',
       loadChildren: './dashboard/manage-role/manage-role.module#ManageRoleModule',
     },
     {
-      path: 'manage-transaction',
+      path: 'dashboard/manage-transaction',
       loadChildren: './dashboard/manage-transaction/manage-transaction.module#ManageTransactionModule',
     },
     {
-      path: 'my-profile',
+      path: 'dashboard/my-profile',
       loadChildren: './dashboard/my-profile/my-profile.module#MyProfileModule'
     }
   ]

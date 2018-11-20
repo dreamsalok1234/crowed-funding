@@ -34,7 +34,7 @@ export class PropertyService {
           },
           error => {              
               try {                 
-                this.responseItem.data  = JSON.parse(error._body);
+                this.responseItem.data  = JSON.parse(error.error);
               }
               catch (err) {
                 this.responseItem.data  = { message: "Something Wrong", status: false };
@@ -67,7 +67,7 @@ export class PropertyService {
           },
           error => {              
               try {                 
-                this.responseItem.data  = JSON.parse(error._body);
+                this.responseItem.data  = JSON.parse(error.error);
               }
               catch (err) {
                 this.responseItem.data  = { message: "Something Wrong", status: false };
@@ -100,7 +100,7 @@ export class PropertyService {
           },
           error => {              
               try {                 
-                this.responseItem.data  = JSON.parse(error._body);
+                this.responseItem.data  = JSON.parse(error.error);
               }
               catch (err) {
                 this.responseItem.data  = { message: "Something Wrong", status: false };

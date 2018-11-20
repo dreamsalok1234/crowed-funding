@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation, ElementRef, AfterViewInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation, ElementRef, AfterViewInit, ViewContainerRef, Output, EventEmitter } from '@angular/core';
 import { state, style, transition, animate, trigger, AUTO_STYLE } from '@angular/animations';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
@@ -16,7 +16,9 @@ export class CategoryListComponent implements OnInit {
   errorMsg = true;
   categoryList: any;
   showloading = false;
+  public categoryItem :  any;
   categoryId = 0;
+  @Output() messageEvent = new EventEmitter<string>();
   constructor(private propertyService: PropertyService, private commonService: CommonService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router) { 
 	this.toastr.setRootViewContainerRef(vcr);
   }
@@ -79,7 +81,8 @@ export class CategoryListComponent implements OnInit {
   }
 
   EditCategory(catId, rowIndex) {
-  	//this.router.navigate('/dashboard/manage-property/categorylist');
+  	this.messageEvent.emit(this.categoryList[rowIndex]);
+  	this.router.navigate(['/dashboard/manage-property/addcategory']);
   }
   
 }

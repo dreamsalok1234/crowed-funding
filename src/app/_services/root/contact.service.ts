@@ -31,7 +31,7 @@ export class ContactService {
           },
           error => {              
               try {                 
-                this.responseItem.data  = JSON.parse(error._body);
+                this.responseItem.data  = JSON.parse(error.error);
               }
               catch (err) {
                 this.responseItem.data  = { message: "Something Wrong", status: false };

@@ -86,10 +86,10 @@ export class RootLayoutComponent implements OnInit {
             objectType.responseItem = response.data;
             objectType.toastr.success(objectType.responseItem.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
             localStorage.clear();
-            localStorage.setItem('userAccessToken', objectType.responseItem.token);
+            localStorage.setItem('userAccessToken', objectType.responseItem.data.token);
             localStorage.setItem('role', 'user');
-            localStorage.setItem('profile', JSON.stringify(objectType.responseItem.profile));
-            objectType.userName = objectType.responseItem.profile.fullName
+            localStorage.setItem('profile', JSON.stringify(objectType.responseItem.data.profile));
+            objectType.userName = objectType.responseItem.data.profile.fullName
             objectType.router.navigate(['/']);
             objectType.profileArea = false;
             objectType.SignUpArea = true;
@@ -109,18 +109,14 @@ export class RootLayoutComponent implements OnInit {
     this.authenticationService.logout(function(err, response){
         if( err )
           objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-        if( response.statusCode == 200 ) {
-            localStorage.removeItem('userAccessToken');
-            localStorage.removeItem('role');
-            localStorage.removeItem('profile');
-            objectType.router.navigate(['/']);
-            objectType.profileArea = true;
-            objectType.SignUpArea = false;
-            objectType.userName = '';
-            objectType.toastr.success(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-        }
-        else 
-          objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+        localStorage.removeItem('userAccessToken');
+        localStorage.removeItem('role');
+        localStorage.removeItem('profile');
+        objectType.router.navigate(['/']);
+        objectType.profileArea = true;
+        objectType.SignUpArea = false;
+        objectType.userName = '';
+        objectType.toastr.success(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
     })
     this.loading = false;
   }
