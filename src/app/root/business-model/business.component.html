@@ -80,45 +80,46 @@
       </div>
     </div>
     <div class="col-md-12">
-  <div class="tab-slider--nav">
+  <!-- <div class="tab-slider--nav">
     <ul class="tab-slider--tabs">
       <li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">Burt</li>
       <li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">Olly</li>
       <li class="tab-slider--trigger" [class.active]="viewMode == 'tab3'" rel="tab3" (click)="viewMode ='tab3'">Wonder</li>
     </ul>
-  </div>
+  </div> -->
   <div class="tab-slider--container" [ngSwitch]="viewMode">
     <div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
       <accordion>
-        <accordion-group heading=" 1.1. What exactly is the role of KreisInvest?" [isOpen]="isFirstOpen">
-          <p> This content is straight in the template.</p>
+        <accordion-group heading="1. What exactly is the role of KreisInvest?" [isOpen]="isFirstOpen">
+          <p>In order to supply and manage the projects, ensuring the highest quality of return for its investors.</p>
         </accordion-group>
-        <accordion-group heading="1.2. Is KreisInvest under the supervision of FINMA?">
-          <p>Some content</p>
+        <accordion-group heading="2. Is KreisInvest under the supervision of FINMA?">
+          <p>Currently, FINMA are not regulating the crowd funding market place.</p>
         </accordion-group>
-        <accordion-group heading="1.3. How does the acquisition of co-ownership through KreisInvest work?">
-          <p>Some content</p>
+        <accordion-group heading="3. How does the acquisition of co-ownership through KreisInvest work?">
+          <p>Each buyer is recognised on the title as a co-owner of the real estate,
+             giving them the same position as a direct full
+          owner only with a smaller piece of the real estate</p>
+        </accordion-group>       
+        <accordion-group heading="5 Why do I have to register with KreisInvest in order to acquire a co-ownership share?">
+          <p>As KI is managing the whole process each investor must be registered with ourselves</p>
         </accordion-group>
-        <accordion-group heading="1.4. What information and documents can be found on KreisInvest?">
-          <p>Some content</p>
+        <accordion-group heading="6. How does KreisInvest make money?">
+          <p>From fees charged as disclosed</p>
         </accordion-group>
-        <accordion-group heading="1.5 Why do I have to register with KreisInvest in order to acquire a co-ownership share?">
-          <p>Some content</p>
-        </accordion-group>
-        <accordion-group heading="1.6. How does KreisInvest make money?">
-          <p>Some content</p>
-        </accordion-group>
-        <accordion-group heading=" 1.7. What is the difference betweeen KreisInvest and a property fund or property company?">
-          <p>Some content</p>
+        <accordion-group heading="7. What is the difference betweeen KreisInvest and a property fund or property company?">
+          <p>There are many similarities between this model and the listed property funds, however due to a more streamlined
+          approach and the investors direct ownership of real estate with marginal fees the overall return is stronger (maybe
+          some comps)</p>
         </accordion-group>
       </accordion>
     </div>
-    <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+    <!-- <div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
       <h3>Onlay</h3>
     </div>
     <div id="tab3" class="tab-slider--body" *ngSwitchCase="'tab3'">
       <h3>Wonder</h3>
-    </div>
+    </div> -->
   </div>
     </div>
   </div>

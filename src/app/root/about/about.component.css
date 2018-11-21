@@ -35,7 +35,7 @@ a.btn.btn-light.signupBtn2.about-bt {
     height: 626px;
     background-position: center;
     background-size: cover;
-    padding-top: 184px;
+    padding-top: 80px;
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ a.btn.btn-light.signupBtn2.about-bt {
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 18px;
-    line-height: 24px;
+    line-height: 25px;
     padding: 26px;
     padding-bottom: 0;
 }

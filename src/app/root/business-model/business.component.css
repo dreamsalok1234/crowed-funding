@@ -375,7 +375,7 @@
     color: #727272;
     font-size: 18px;
     margin-bottom: 36px;
-	text-align: justify;
+    text-align: justify;
 }
 
 .benefit-bg span {
@@ -611,12 +611,36 @@ ul.check-icon {
         width: 600px;
         height: 500px;
         left: 14px;
-        padding: 60px;
+        padding: 20px;
     }
     .overview-img h2 {
         font-size: 60px;
         width: auto;
         height: auto;
         font-size: 57px;
+    }
+}
+
+@media only screen and (min-width: 1471px) and (max-width: 1750px) {
+    .overview {
+        width: 600px!important;
+        height: 500px!important;
+        left: 14px!important;
+        padding: 20px!important;
+    }
+    .overview p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .overview-img h2 {
+        width: auto!important;
+        height: auto!important;
+        font-size: 35px!important;
+    }
+    .overview-img {
+        position: absolute;
+        left: 117px;
+        top: 50%;
+        transform: translate(-10%, 30%);
     }
 }

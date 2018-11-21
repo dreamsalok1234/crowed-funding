@@ -414,9 +414,9 @@ a.navbar-brand:after {
 .banner h3 {
     color: #ffffff;
     font-family: Ubuntu;
-    font-size: 50px;
-    line-height: 60px;
-    margin-bottom: 30px;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 15px;
 }
 
 .banner p {
@@ -424,7 +424,7 @@ a.navbar-brand:after {
     font-family: "Open Sans";
     font-size: 18px;
     line-height: 24px;
-    max-width: 733px;
+    max-width: 810px;
     margin-bottom: 35px;
 }
 
@@ -2054,10 +2054,10 @@ ul.social_icon {
     .abut_header .navbar-brand {
         width: 290px;
     }
-    .header.abut_header .btn.btn-light{
+    .header.abut_header .btn.btn-light {
         padding: 10px 20px
     }
-     .overview {
+    .overview {
         width: 600px;
         height: 500px;
         left: 14px;
@@ -2104,22 +2104,10 @@ ul.social_icon {
 }
 
 @media only screen and (min-width: 1471px) and (max-width: 1750px) {
-    .overview {
-        width: 600px!important;
-        height: 500px!important;
-        left: 14px!important;
-        padding: 60px!important;
-    }
     .Business-banner {
         height: 650px!important;
         padding-top: 80px!important;
         background-size: 100% 100%!important;
-    }
-    .overview-img h2 {
-        font-size: 60px!important;
-        width: auto!important;
-        height: auto!important;
-        font-size: 57px!important;
     }
     .navbar-light .navbar-nav .nav-link, .header .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
         font-size: 15px;

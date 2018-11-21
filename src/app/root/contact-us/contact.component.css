@@ -18,7 +18,7 @@
 }
 
 .contact-form h2 {
-    padding-top: 60px;
+    padding-top: 25px;
     color: #262626;
     font-family: Ubuntu;
     font-size: 40px;
@@ -29,7 +29,7 @@
     font-family: "Open Sans";
     font-size: 18px;
     line-height: 28px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 
 .contact-form ul {
@@ -81,13 +81,13 @@
 }
 
 .form-contact .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .form-contact button {
     border-radius: 5px;
     background-image: linear-gradient(134deg, #54e490 0%, #36bf70 100%);
-    padding: 18px 166px;
+    padding: 15px 100px;
     border: none;
     color: #ffffff;
     font-family: "Ubuntu";

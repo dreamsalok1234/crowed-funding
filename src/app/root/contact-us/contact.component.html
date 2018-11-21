@@ -47,7 +47,21 @@
 			<div [hidden]="subject.valid || subject.pristine" class="alert alert-danger">
 				<div [hidden]="!subject.hasError('required')">Subject is required</div>
 			</div>
-		  </div>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="address" name="address" placeholder="Address" [(ngModel)]="model.address"
+				 #address="ngModel" required>
+				<div [hidden]="address.valid || address.pristine" class="alert alert-danger">
+					<div [hidden]="!address.hasError('required')">Address is required</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" [(ngModel)]="model.phone"
+				 #phone="ngModel" required>
+				<div [hidden]="phone.valid || phone.pristine" class="alert alert-danger">
+					<div [hidden]="!phone.hasError('required')">Phone number is required</div>
+				</div>
+			</div>
 		  <div class="form-group">
 			<textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" [(ngModel)]="model.message" #message="ngModel"
 			  maxlength="140" required rows="7" style="width: 100%; height: 80px;"></textarea>
