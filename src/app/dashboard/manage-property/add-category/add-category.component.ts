@@ -1,10 +1,10 @@
-import { Component, ViewChild, AfterViewInit, ViewEncapsulation, ElementRef,  ViewContainerRef, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ViewEncapsulation, ElementRef,  ViewContainerRef } from '@angular/core';
 import { state, style, transition, animate, trigger, AUTO_STYLE } from '@angular/animations';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { PropertyService } from '../../../_services/admin/property.service';
-import { ManagePropertyComponent } from "../manage-property.component";
+import { CategoryListComponent } from "../category-list/category-list.component";
 
 @Component({
   selector: 'app-addcat',
@@ -16,8 +16,8 @@ export class AddCategoryComponent implements OnInit {
   model:any = {catname: '', fcatname: '', grecatname: '', gcatname: ''};
   errorMsg = true;
   showloading = false;
-  //@ViewChild(CategoryListComponent) categoryList;
-  constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router, public categoryList: ManagePropertyComponent) { 
+ // @ViewChild(CategoryListComponent) categoryList;
+  constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router) { 
 	this.toastr.setRootViewContainerRef(vcr);
   }
 	
