@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { MortgageListComponent } from './mortgage-list/mortgage-list.component';
+import { AddMortageComponent } from './add-mortage/add-mortage.component';
 
 export const ManageMortgageRoutes: Routes = [
   {
@@ -16,7 +17,23 @@ export const ManageMortgageRoutes: Routes = [
           breadcrumb: 'Mortgage List',
           status: true
         }
-      }
+      },
+      {
+        path: 'addmortage',
+        component: AddMortageComponent,
+        data: {
+          breadcrumb: 'Add Mortage',
+          status: true
+        }
+      },
+      {
+        path: 'editmortgage',
+        component: AddMortageComponent,
+        data: {
+          breadcrumb: 'Edit Mortage',
+          status: true
+        }
+      },
     ]
   }
 ];

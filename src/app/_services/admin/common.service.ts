@@ -62,8 +62,9 @@ export class CommonService {
     }
     updateItemStatus(formdata, callback) {
         
-        return this.globalService.callPostApi('common/activeDeactiveRecord',{ tab: formdata.tab, id: formdata.catId, status: "'"+formdata.status+"'"}, true).subscribe(
+        return this.globalService.callPostApi('common/activeDeactiveRecord',{ tab: formdata.tab, id: formdata.catId, status: parseInt(formdata.status)}, true).subscribe(
           data  => {  
+              debugger;
               try {
                 this.responseItem.data  = data;
               }

@@ -1,0 +1,396 @@
+<form role="form" name="form" (ngSubmit)="addProperty()" #f="ngForm" novalidate>
+	<div class="row">
+		<div class="col-sm-12">
+			<label class="error-msg" [hidden]="errorMsg">All (*) field are Required!</label>
+			<div class="tab-slider--nav">
+				<ul class="tab-slider--tabs">
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">English</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">Franch</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab3'" rel="tab3" (click)="viewMode ='tab3'">German</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab4'" rel="tab4" (click)="viewMode ='tab4'">Greek</li>
+				</ul>
+			</div>
+			<div class="tab-slider--container" [ngSwitch]="viewMode">
+				<div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+					<h2>English</h2>
+					
+					<!-- Property Name card start -->
+					<app-card [title]="''">
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Property Name<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Property Name" id="name" name="name" [(ngModel)]="model.name"  #name="ngModel" required>
+								<div [hidden]="name.valid || name.pristine"  class="alert alert-danger">
+									<div [hidden]="!name.hasError('required')">Property Name is required</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Short Description<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Short Description" id="shortDesc" name="shortDesc" [(ngModel)]="model.shortDesc"  #shortDesc="ngModel" required></textarea>
+								<div [hidden]="shortDesc.valid || shortDesc.pristine" class="alert alert-danger">
+									<div [hidden]="!shortDesc.hasError('required')">Short Description is required</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Benefits<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Benefits" id="benefitsDesc" name="benefitsDesc" [(ngModel)]="model.benefitsDesc"  #benefitsDesc="ngModel" required></textarea>
+								<div [hidden]="benefitsDesc.valid || benefitsDesc.pristine" class="alert alert-danger">
+									<div [hidden]="!benefitsDesc.hasError('required')">Benefits is required</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Description<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Description" id="desc" name="desc" [(ngModel)]="model.desc"  #desc="ngModel" required></textarea>
+								<div [hidden]="desc.valid || desc.pristine" class="alert alert-danger">
+									<div [hidden]="!desc.hasError('required')">Description is required</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Distribution Frequency<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Distribution Frequency" id="distributionFreq" name="distributionFreq" [(ngModel)]="model.distributionFreq"  #distributionFreq="ngModel" >
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Additional Security<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Additional Security" id="additionalSecurity" name="additionalSecurity" [(ngModel)]="model.additionalSecurity"  #additionalSecurity="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Unit Rooms Offers<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Unit Rooms Offers" id="unitRoomOffer" name="unitRoomOffer" [(ngModel)]="model.unitRoomOffer"  #unitRoomOffer="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Plot Area<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Plot Area" id="plotArea" name="plotArea" [(ngModel)]="model.plotArea"  #plotArea="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Location<span class="required">*</span></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Location" id="location" name="location" [(ngModel)]="model.location"  #location="ngModel" >
+							</div>
+						</div>					
+					</app-card>
+				</div>
+				<div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+					<h2>Franch</h2>
+					<!-- Property Name card start -->
+					<app-card [title]="''">
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Property Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Property Name" id="nameFr" name="nameFr" [(ngModel)]="model.nameFr"  #nameFr="ngModel" >
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Short Description</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Short Description" id="shortDescFr" name="shortDescFr" [(ngModel)]="model.shortDescFr"  #shortDescFr="ngModel" ></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Benefits</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Benefits" id="benefitsDescFr" name="benefitsDescFr" [(ngModel)]="model.benefitsDescFr"  #benefitsDescFr="ngModel" ></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Description</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Description" id="descFr" name="descFr" [(ngModel)]="model.descFr"  #descFr="ngModel"></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Distribution Frequency</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Distribution Frequency" id="distributionFreqFr" name="distributionFreqFr" [(ngModel)]="model.distributionFreqFr"  #distributionFreqFr="ngModel" >
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Additional Security</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Additional Security" id="additionalSecurityFr" name="additionalSecurityFr" [(ngModel)]="model.additionalSecurityFr"  #additionalSecurityFr="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Unit Rooms Offers</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Unit Rooms Offers" id="unitRoomOfferFr" name="unitRoomOfferFr" [(ngModel)]="model.unitRoomOfferFr"  #unitRoomOfferFr="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Plot Area</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Plot Area" id="plotAreaFr" name="plotAreaFr" [(ngModel)]="model.plotAreaFr"  #plotAreaFr="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Location</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Location" id="locationFr" name="locationFr" [(ngModel)]="model.locationFr"  #locationFr="ngModel" >
+							</div>
+						</div>					
+					</app-card>
+				</div>
+				<div id="tab3" class="tab-slider--body" *ngSwitchCase="'tab3'">
+					<h2>German</h2>
+					<!-- Property Name card start -->
+					<app-card [title]="''">
+						
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Property Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Property Name" id="nameGr" name="nameGr" [(ngModel)]="model.nameGr"  #nameGr="ngModel" >
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Short Description</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Short Description" id="shortDescGr" name="shortDescGr" [(ngModel)]="model.shortDescGr"  #shortDescGr="ngModel" ></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Benefits</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Benefits" id="benefitsDescGr" name="benefitsDescGr" [(ngModel)]="model.benefitsDescGr"  #benefitsDescGr="ngModel" ></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Description</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Description" id="descGr" name="descGr" [(ngModel)]="model.descGr"  #descGr="ngModel"></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Distribution Frequency</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Distribution Frequency" id="distributionFreqGr" name="distributionFreqGr" [(ngModel)]="model.distributionFreqGr"  #distributionFreqGr="ngModel" >
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Additional Security</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Additional Security" id="additionalSecurityGr" name="additionalSecurityGr" [(ngModel)]="model.additionalSecurityGr"  #additionalSecurityGr="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Unit Rooms Offers</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Unit Rooms Offers" id="unitRoomOfferGr" name="unitRoomOfferGr" [(ngModel)]="model.unitRoomOfferGr"  #unitRoomOfferGr="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Plot Area</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Plot Area" id="plotAreaGr" name="plotAreaGr" [(ngModel)]="model.plotAreaGr"  #plotAreaGr="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Location</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Location" id="locationGr" name="locationGr" [(ngModel)]="model.locationGr"  #locationGr="ngModel" >
+							</div>
+						</div>
+						
+					</app-card>
+				</div>
+				<div id="tab4" class="tab-slider--body" *ngSwitchCase="'tab4'">
+					<h2>Greek</h2>
+					<!-- Property Name card start -->
+					<app-card [title]="''">						
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Property Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Property Name" id="nameIt" name="nameIt" [(ngModel)]="model.nameIt"  #nameIt="ngModel" >
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Short Description</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Short Description" id="shortDescIt" name="shortDescIt" [(ngModel)]="model.shortDescIt"  #shortDescIt="ngModel" ></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Benefits</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Benefits" id="benefitsDescIt" name="benefitsDescIt" [(ngModel)]="model.benefitsDescIt"  #benefitsDescGr="ngModel" ></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Description</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" placeholder="Description" id="descIt" name="descIt" [(ngModel)]="model.descIt"  #descIt="ngModel"></textarea>
+								
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Distribution Frequency</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Distribution Frequency" id="distributionFreqIt" name="distributionFreqIt" [(ngModel)]="model.distributionFreqIt"  #distributionFreqIt="ngModel" >
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Additional Security</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Additional Security" id="additionalSecurityIt" name="additionalSecurityIt" [(ngModel)]="model.additionalSecurityIt"  #additionalSecurityIt="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Unit Rooms Offers</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Unit Rooms Offers" id="unitRoomOfferIt" name="unitRoomOfferIt" [(ngModel)]="model.unitRoomOfferIt"  #unitRoomOfferIt="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Plot Area</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Plot Area" id="plotAreaIt" name="plotAreaIt" [(ngModel)]="model.plotAreaIt"  #plotAreaIt="ngModel" >
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Location</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Location" id="locationIt" name="locationIt" [(ngModel)]="model.locationIt"  #locationIt="ngModel" >
+							</div>
+						</div>
+						
+					</app-card>
+				</div>
+			</div>
+			<div class="withoutTab">
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Category Name<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<select name="categoryId"  id="categoryId" [(ngModel)]="model.categoryId" #categoryId="ngModel" class="form-control" required>
+							<option value="" ng-selected="selected">Choose Category </option>
+							<option value="cat.categoryId" *ngFor="let cat of categoryListItem; let i = index" [attr.data-index]="i">{{cat.name}}</option>
+						</select>						
+						<div [hidden]="categoryId.valid || categoryId.pristine" class="alert alert-danger">
+							<div [hidden]="!categoryId.hasError('required')">Category is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Condition Name<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<select name="conditionId" [(ngModel)]="model.conditionId" id="conditionId" #conditionId="ngModel"  class="form-control" required>
+							<option value="" ng-selected="selected">Choose Condition </option>
+							<option value="cond.conditionId" *ngFor="let cond of conditionListItem; let i = index" [attr.data-index]="i">{{cond.condition}}</option>
+						</select>						
+						<div [hidden]="conditionId.valid || conditionId.pristine" class="alert alert-danger">
+							<div [hidden]="!conditionId.hasError('required')">Condition is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Choose Mortgage</label>
+					<div class="col-sm-10">
+						<select name="mortgageId" [(ngModel)]="model.mortgageId" id="mortgageId" #mortgageId="ngModel"  class="form-control" >
+							<option value="" ng-selected="selected">Choose Condition </option>
+							<option value="mort.mortgageId" *ngFor="let mort of mortgageListItem; let i = index" [attr.data-index]="i">CHF{{mort.mortgageAmount}} with interest per year {{mort.mortgageInterestPer}} </option>
+						</select>						
+						
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Purchase Price<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Purchase Price" id="purchasePrice" name="purchasePrice" [(ngModel)]="model.purchasePrice"  #purchasePrice="ngModel" required>
+						<div [hidden]="purchasePrice.valid || purchasePrice.pristine" class="alert alert-danger">
+							<div [hidden]="!purchasePrice.hasError('required')">Purchase price is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Max Investment Price<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Max Investment Price" id="maxInvestPrice" name="maxInvestPrice" [(ngModel)]="model.maxInvestPrice"  #maxInvestPrice="ngModel" required>
+						<div [hidden]="maxInvestPrice.valid || maxInvestPrice.pristine" class="alert alert-danger">
+							<div [hidden]="!maxInvestPrice.hasError('required')">Max Investment Price is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Min Investment Price<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Min Investment Price" id="minInvestPrice" name="minInvestPrice" [(ngModel)]="model.minInvestPrice"  #minInvestPrice="ngModel" required>
+						<div [hidden]="minInvestPrice.valid || minInvestPrice.pristine" class="alert alert-danger">
+							<div [hidden]="!minInvestPrice.hasError('required')">Min Investment Price is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Return Equity Per<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Return Equity Per" id="returnEquityPer" name="returnEquityPer" [(ngModel)]="model.returnEquityPer"  #returnEquityPer="ngModel" required>
+						<div [hidden]="returnEquityPer.valid || returnEquityPer.pristine" class="alert alert-danger">
+							<div [hidden]="!returnEquityPer.hasError('required')">Return Equity Per is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Construction Year<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Construction Year" id="constructionYear" name="constructionYear" [(ngModel)]="model.constructionYear"  #constructionYear="ngModel" required>
+						<div [hidden]="constructionYear.valid || constructionYear.pristine" class="alert alert-danger">
+							<div [hidden]="!constructionYear.hasError('required')">Construction Year is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Media Type<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<input type="radio"  name="mediaType" [(ngModel)]="model.mediaType"  #mediaType="ngModel" value="youtube" checked="checked"> Youtube
+						<input type="radio"  name="mediaType" [(ngModel)]="model.mediaType"  #mediaType="ngModel" value="vimeo"> Vimeo
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Media Url<span class="required">*</span></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Media Url" id="mediaUrl" name="mediaUrl" [(ngModel)]="model.mediaUrl"  #mediaUrl="ngModel" required>
+						<div [hidden]="mediaUrl.valid || mediaUrl.pristine" class="alert alert-danger">
+							<div [hidden]="!mediaUrl.hasError('required')">Media Url is required</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">		
+		<button class="btn btn-inverse btn-round" type="submit" id="submit" name="submit">{{actionBtn}}</button>
+	</div>
+</form>
+
+<div class="loader" *ngIf="showloading">
+	<div class="item-1"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-2"><span style="background: #2c3e50;"></span></div>
+	<div class="item-3"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-4"><span style="background: #2c3e50;"></span></div>
+	<div class="item-5"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-6"><span style="background: #2c3e50;"></span></div>
+	<div class="item-7"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-8"><span style="background: #2c3e50;"></span></div>
+</div>

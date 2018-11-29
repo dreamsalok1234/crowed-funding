@@ -5,6 +5,9 @@ import { ManageMortgageComponent } from './manage-mortgage.component';
 import { ManageMortgageRoutes } from './manage-mortgage.routing';
 import { SharedModule } from '../../shared/shared.module';
 import { MortgageListComponent } from './mortgage-list/mortgage-list.component';
+import { AddMortageComponent } from './add-mortage/add-mortage.component';
+import { PropertyService } from '../../_services/admin/property.service';
+import { CommonService } from '../../_services/admin/common.service';
 
 @NgModule({
   imports: [
@@ -14,7 +17,9 @@ import { MortgageListComponent } from './mortgage-list/mortgage-list.component';
   ],
   declarations: [
     ManageMortgageComponent,
-    MortgageListComponent
-  ]
+    MortgageListComponent,
+    AddMortageComponent
+  ],
+  providers: [PropertyService,CommonService]
 })
 export class ManageMortgageModule { }

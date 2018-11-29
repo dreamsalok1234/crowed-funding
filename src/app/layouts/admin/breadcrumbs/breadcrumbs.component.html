@@ -1,6 +1,6 @@
 <div class="page-header">
   <div class="page-header-title">
-    <span *ngFor="let breadcrumb of breadcrumbs; let last = last"><h4 *ngIf="last">{{ breadcrumb.label }}</h4></span>
+    <span *ngFor="let breadcrumb of breadcrumbs; let last = last"><h4 *ngIf="last">{{ breadcrumb.title || breadcrumb.label  }}</h4></span>
   </div>
   <div class="page-header-breadcrumb">
     <ul class="breadcrumb-title">
@@ -10,7 +10,7 @@
         </a>
       </li>
       <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs">
-        <a [ngClass]="breadcrumb.status === false ? 'not-active': ''" [routerLink]="breadcrumb.url">{{breadcrumb.label}}</a>
+        <a [ngClass]="breadcrumb.status === false ? 'not-active': ''" [routerLink]="breadcrumb.url">{{breadcrumb.title || breadcrumb.label}}</a>
       </li>
     </ul>
   </div>

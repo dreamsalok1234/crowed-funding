@@ -4,21 +4,21 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { PropertyService } from '../../../_services/admin/property.service';
-import { CategoryListComponent } from "../category-list/category-list.component";
+import { MortgageListComponent } from "../mortgage-list/mortgage-list.component";
 
 @Component({
   selector: 'app-addcat',
-  templateUrl: './add-category.component.html',
-  styleUrls: ['./add-category.component.css'],
-  providers: [CategoryListComponent]
+  templateUrl: './add-mortage.component.html',
+  styleUrls: ['./add-mortage.component.css'],
+  providers: [MortgageListComponent]
 })
-export class AddCategoryComponent implements OnInit {
+export class AddMortageComponent implements OnInit {
   viewMode = 'tab1';
-  model:any = {catname: '', fcatname: '', grecatname: '', gcatname: '', categoryId: 0};
+  model:any = {mnumber: '', mamount: '', minvestyear: '', mduration: '', mortgageId: 0};
   errorMsg = true;
   showloading = false;
   editItemData : any;
-  actionBtn = 'Save Category';
+  actionBtn = 'Save Mortgage';
  // @ViewChild(CategoryListComponent) categoryList;
   constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router, private activeRoute: ActivatedRoute) { 
 	this.toastr.setRootViewContainerRef(vcr);
@@ -26,23 +26,22 @@ export class AddCategoryComponent implements OnInit {
 	
   ngOnInit() {
 
-  	if(this.activeRoute.snapshot.routeConfig.path !== 'editcategory')
-  		localStorage.removeItem('categoryInfo');
-  	if(localStorage.getItem('categoryInfo') != undefined &&  localStorage.getItem('categoryInfo') != '' &&  localStorage.getItem('categoryInfo') != null) {
-  		this.editItemData = JSON.parse(localStorage.getItem('categoryInfo'));
-  		this.model.catname = this.editItemData.name;
-  		this.model.fcatname = this.editItemData.nameFr;
-  		this.model.grecatname = this.editItemData.nameGr;
-  		this.model.categoryId = this.editItemData.categoryId;
-  		this.model.gcatname = this.editItemData.nameIt;
-  		//localStorage.removeItem('categoryInfo');
-  		this.actionBtn = 'Update Category';
+  	if(this.activeRoute.snapshot.routeConfig.path !== 'editmortgage')
+  		localStorage.removeItem('mortgageInfo');
+  	if(localStorage.getItem('mortgageInfo') != undefined &&  localStorage.getItem('mortgageInfo') != '' &&  localStorage.getItem('mortgageInfo') != null) {
+  		this.editItemData = JSON.parse(localStorage.getItem('mortgageInfo'));
+  		this.model.mnumber = this.editItemData.mortgageNumber;
+  		this.model.mamount = this.editItemData.mortgageAmount;
+  		this.model.minvestyear = this.editItemData.mortgageInterestPer;
+  		this.model.mduration = this.editItemData.mortgageYear;
+  		this.model.mortgageId = this.editItemData.mortgageId;
+  		this.actionBtn = 'Update Mortgage';
   	}
-  	else if(this.activeRoute.snapshot.routeConfig.path == 'editcategory')
-  		this.router.navigate(['/dashboard/manage-property/addcategory']);
+  	else if(this.activeRoute.snapshot.routeConfig.path == 'editmortgage')
+  		this.router.navigate(['/dashboard/manage-mortgage/addmortage']);
   }
-  addCategory () {
-	if( this.model.catname == '') {
+  addMortgage () {
+	if( this.model.mamount == '' || this.model.minvestyear == '' || this.model.mduration == '') {
 	  this.errorMsg = false;
 	  return ;
 	}
@@ -50,8 +49,8 @@ export class AddCategoryComponent implements OnInit {
 	this.showloading = true;
 	var objectType = this;
 	debugger;
-	if( this.model.categoryId > 0 ) 
-		this.propertyService.updateCategory(this.model, function(err, response){    	
+	if( this.model.mortgageId > 0 ) 
+		this.propertyService.updateMortgage(this.model, function(err, response){    	
 			objectType.showloading = false;
 			if( err )
 			  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
@@ -64,7 +63,7 @@ export class AddCategoryComponent implements OnInit {
 			  objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
 		});
 	else	
-		this.propertyService.addCategory(this.model, function(err, response){    	
+		this.propertyService.addMortgage(this.model, function(err, response){    	
 			objectType.showloading = false;
 			if( err )
 			  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});

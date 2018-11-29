@@ -14,12 +14,19 @@ export class GlobalService {
     callGetApi(apiname, accessToken = false) {
 
         
-        const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        if(accessToken) {
+            let authToken = localStorage.getItem('userAccessToken');
+            var headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': `JWT ${authToken}` });
+        }
+        else
+            var headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded'});
+        /*const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
         if(accessToken) {
             let authToken = localStorage.getItem('userAccessToken');
             headers.append('Authorization', `JWT ${authToken}`); 
 
-        }
+        }*/
+        
         return this.http.get(this.apiUrl+apiname, { headers }).map((user : Response) => {
             return user;
         });
@@ -42,12 +49,19 @@ export class GlobalService {
         Object.keys(parameter).forEach(function (key) {
              httpParams = httpParams.append(key, parameter[key]);
         });
-        const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
         if(accessToken) {
+            let authToken = localStorage.getItem('userAccessToken');
+            var headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': `JWT ${authToken}` });
+        }
+        else
+            var headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded'});
+        /*if(accessToken) {
+            debugger;
             let authToken = localStorage.getItem('userAccessToken');
             headers.append('Authorization', `JWT ${authToken}`); 
 
-        }
+        }*/
+        
         return this.http.post(this.apiUrl+apiname, httpParams, { headers }).map((user : Response) => {
             return user;
         });

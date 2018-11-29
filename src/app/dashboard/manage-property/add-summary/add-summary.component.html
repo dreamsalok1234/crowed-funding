@@ -1,0 +1,101 @@
+<form role="form" name="form" [formGroup]="summaryForm" (ngSubmit)="addPropertySummary()" #f="ngForm" novalidate>
+	<div class="row">
+		<div class="col-sm-12">
+			<label class="error-msg" [hidden]="errorMsg">All (*) field are Required!</label>
+			<div class="tab-slider--nav">
+				<ul class="tab-slider--tabs">
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">English</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">Franch</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab3'" rel="tab3" (click)="viewMode ='tab3'">German</li>
+					<li class="tab-slider--trigger" [class.active]="viewMode == 'tab4'" rel="tab4" (click)="viewMode ='tab4'">Greek</li>
+				</ul>
+			</div>
+			<div class="tab-slider--container" [ngSwitch]="viewMode">
+				<div id="tab1" class="tab-slider--body" *ngSwitchCase="'tab1'">
+					<h2>English</h2>
+					
+					<!-- Summary card start -->
+					<app-card [title]="''">
+            <div formArrayName="itemRows">
+               <div *ngFor="let itemrow of summaryForm.controls.itemRows.controls; let i=index"  [formGroupName]="i">
+                  <div class="form-group">
+                    <label>Summary</label>
+                    <input formControlName="itemname" class="form-control">
+                  </div>
+                  <button *ngIf="summaryForm.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></button>
+               </div>
+            </div>		
+					</app-card>
+				</div>
+				<div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">
+					<h2>Franch</h2>
+					<!-- Summary card start -->
+					<app-card [title]="''">
+						<div formArrayName="itemRows">
+               <div *ngFor="let itemrow of summaryForm.controls.itemRows.controls; let i=index"  [formGroupName]="i">
+                  <div class="form-group">
+                    <label>Summary</label>
+                    <input formControlName="itemnameFr" class="form-control">
+                  </div>
+                  <button *ngIf="summaryForm.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></button>
+               </div>
+            </div>
+											
+					</app-card>
+				</div>
+				<div id="tab3" class="tab-slider--body" *ngSwitchCase="'tab3'">
+					<h2>German</h2>
+					<!-- Summary card start -->
+					<app-card [title]="''">
+						
+						<div formArrayName="itemRows">
+               <div *ngFor="let itemrow of summaryForm.controls.itemRows.controls; let i=index"  [formGroupName]="i">
+                  <div class="form-group">
+                    <label>Summary</label>
+                    <input formControlName="itemnameGr" class="form-control">
+                  </div>
+                  <button *ngIf="summaryForm.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></button>
+               </div>
+            </div>
+						
+						
+					</app-card>
+				</div>
+				<div id="tab4" class="tab-slider--body" *ngSwitchCase="'tab4'">
+					<h2>Greek</h2>
+					<!-- Summary card start -->
+					<app-card [title]="''">						
+						<div formArrayName="itemRows">
+               <div *ngFor="let itemrow of summaryForm.controls.itemRows.controls; let i=index"  [formGroupName]="i">
+                  <div class="form-group">
+                    <label>Summary</label>
+                    <input formControlName="itemnameIt" class="form-control">
+                  </div>
+                  <button *ngIf="summaryForm.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></button>
+               </div>
+            </div>
+						
+						
+					</app-card>
+				</div>
+			</div>
+			<div class="addMoreData"><a href="javascript:" (click)="addNewRow()" class="pull-right">Add More</a></div>
+			
+		</div>
+	</div>
+	<div class="form-group row">		
+		<button class="btn btn-inverse btn-round" type="submit" id="submit" name="submit">{{actionBtn}}</button>
+		<button class="btn btn-inverse btn-round" type="submit" id="submit" name="submit" *ngIf="nextStepStatus == 'Yes'">{{actionNextBtn}}</button>
+	</div>
+</form>
+
+<div class="loader" *ngIf="showloading">
+	<div class="item-1"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-2"><span style="background: #2c3e50;"></span></div>
+	<div class="item-3"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-4"><span style="background: #2c3e50;"></span></div>
+	<div class="item-5"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-6"><span style="background: #2c3e50;"></span></div>
+	<div class="item-7"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-8"><span style="background: #2c3e50;"></span></div>
+</div>

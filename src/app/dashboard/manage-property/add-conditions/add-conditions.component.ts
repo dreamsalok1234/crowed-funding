@@ -8,17 +8,17 @@ import { CategoryListComponent } from "../category-list/category-list.component"
 
 @Component({
   selector: 'app-addcat',
-  templateUrl: './add-category.component.html',
-  styleUrls: ['./add-category.component.css'],
+  templateUrl: './add-conditions.component.html',
+  styleUrls: ['./add-conditions.component.css'],
   providers: [CategoryListComponent]
 })
-export class AddCategoryComponent implements OnInit {
+export class AddConditionsComponent implements OnInit {
   viewMode = 'tab1';
   model:any = {catname: '', fcatname: '', grecatname: '', gcatname: '', categoryId: 0};
   errorMsg = true;
   showloading = false;
   editItemData : any;
-  actionBtn = 'Save Category';
+  actionBtn = 'Save Condition';
  // @ViewChild(CategoryListComponent) categoryList;
   constructor(private propertyService: PropertyService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router, private activeRoute: ActivatedRoute) { 
 	this.toastr.setRootViewContainerRef(vcr);
@@ -26,22 +26,22 @@ export class AddCategoryComponent implements OnInit {
 	
   ngOnInit() {
 
-  	if(this.activeRoute.snapshot.routeConfig.path !== 'editcategory')
+  	if(this.activeRoute.snapshot.routeConfig.path !== 'editconditions')
   		localStorage.removeItem('categoryInfo');
-  	if(localStorage.getItem('categoryInfo') != undefined &&  localStorage.getItem('categoryInfo') != '' &&  localStorage.getItem('categoryInfo') != null) {
-  		this.editItemData = JSON.parse(localStorage.getItem('categoryInfo'));
-  		this.model.catname = this.editItemData.name;
-  		this.model.fcatname = this.editItemData.nameFr;
-  		this.model.grecatname = this.editItemData.nameGr;
-  		this.model.categoryId = this.editItemData.categoryId;
-  		this.model.gcatname = this.editItemData.nameIt;
+  	if(localStorage.getItem('conditionInfo') != undefined &&  localStorage.getItem('conditionInfo') != '' &&  localStorage.getItem('conditionInfo') != null) {
+  		this.editItemData = JSON.parse(localStorage.getItem('conditionInfo'));
+  		this.model.catname = this.editItemData.condition;
+  		this.model.fcatname = this.editItemData.conditionFr;
+  		this.model.grecatname = this.editItemData.conditionGr;
+  		this.model.categoryId = this.editItemData.conditionId;
+  		this.model.gcatname = this.editItemData.conditionIt;
   		//localStorage.removeItem('categoryInfo');
-  		this.actionBtn = 'Update Category';
+  		this.actionBtn = 'Update Condition';
   	}
-  	else if(this.activeRoute.snapshot.routeConfig.path == 'editcategory')
-  		this.router.navigate(['/dashboard/manage-property/addcategory']);
+  	else if(this.activeRoute.snapshot.routeConfig.path == 'editconditions')
+  		this.router.navigate(['/dashboard/manage-property/addconditions']);
   }
-  addCategory () {
+  addCondition () {
 	if( this.model.catname == '') {
 	  this.errorMsg = false;
 	  return ;
@@ -51,7 +51,8 @@ export class AddCategoryComponent implements OnInit {
 	var objectType = this;
 	debugger;
 	if( this.model.categoryId > 0 ) 
-		this.propertyService.updateCategory(this.model, function(err, response){    	
+		this.propertyService.updateConditions(this.model, function(err, response){    
+			debugger;	
 			objectType.showloading = false;
 			if( err )
 			  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
@@ -64,7 +65,7 @@ export class AddCategoryComponent implements OnInit {
 			  objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
 		});
 	else	
-		this.propertyService.addCategory(this.model, function(err, response){    	
+		this.propertyService.addConditions(this.model, function(err, response){    	
 			objectType.showloading = false;
 			if( err )
 			  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
@@ -76,5 +77,5 @@ export class AddCategoryComponent implements OnInit {
 			  objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
 		});
   }
- 
+  
 }

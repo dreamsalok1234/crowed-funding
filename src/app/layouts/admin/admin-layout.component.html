@@ -73,7 +73,7 @@
               <li class="user-profile header-notification">
                 <a [routerLink]="['/']">
                   <img src="assets/images/user.png" alt="User-Profile-Image">
-                  <span>Hemant Rawat</span>
+                  <span>{{profileName}}</span>
                   <i class="ti-angle-down"></i>
                 </a>
                 <ul class="show-notification profile-notification">
@@ -111,8 +111,8 @@
               <div class="main-menu-header">
                 <img class="img-40" src="assets/images/user.png" alt="User-Profile-Image">
                 <div class="user-details">
-                  <span>Hemant Rawat</span>
-                  <span id="more-details" (click)="toggleOpenedSidebar()">UX Designer<i class="ti-angle-down"></i></span>
+                  <span>{{profileName}}</span>
+                  <span id="more-details" (click)="toggleOpenedSidebar()">{{userRole}}<i class="ti-angle-down"></i></span>
                 </div>
               </div>
 

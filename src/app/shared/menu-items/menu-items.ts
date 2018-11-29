@@ -87,6 +87,10 @@ const MENUITEMS = [
           {
             state: 'mortgagelist',
             name: 'Mortgage List'
+          },
+          {
+            state: 'addmortage',
+            name: 'Add Mortgage'
           }
         ]
       },
@@ -107,11 +111,17 @@ const MENUITEMS = [
           },
           {
             state: 'addcategory',
-            name: 'Add Category'
-          },
+            name: 'Add Category',
+            title: 'Category'
+          },          
           {
             state: 'conditionlist',
             name: 'Condtion List'
+          },
+          {
+            state: 'addconditions',
+            name: 'Add Conditions',
+            title: 'Conditions'
           },
           {
             state: 'documentlist',

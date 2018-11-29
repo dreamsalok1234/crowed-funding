@@ -1,0 +1,57 @@
+<form role="form" name="form" (ngSubmit)="addMortgage()" #f="ngForm" novalidate>
+	<div class="row">
+		<div class="col-sm-12">		
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Mortgage Number<span class="required">*</span></label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Mortgage Number" id="mnumber" name="mnumber" [(ngModel)]="model.mnumber"  #mnumber="ngModel" required>
+					<div [hidden]="mnumber.valid || mnumber.pristine" class="alert alert-danger">
+						<div [hidden]="!mnumber.hasError('required')">Mortgage Number is required</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Mortgage Amount<span class="required">*</span></label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Mortgage Amount" id="mamount" name="mamount" [(ngModel)]="model.mamount"  #mamount="ngModel" required>
+					<div [hidden]="mamount.valid || mamount.pristine" class="alert alert-danger">
+						<div [hidden]="!mamount.hasError('required')">Mortgage Amount is required</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Mortgage Interest Year<span class="required">*</span></label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Mortgage Interest Year" id="minvestyear" name="minvestyear" [(ngModel)]="model.minvestyear"  #minvestyear="ngModel" required>
+					<div [hidden]="minvestyear.valid || minvestyear.pristine" class="alert alert-danger">
+						<div [hidden]="!minvestyear.hasError('required')">Mortgage Interest Year is required</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Mortgage Duration<span class="required">*</span></label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Mortgage Duration" id="mduration" name="mduration" [(ngModel)]="model.mduration"  #mduration="ngModel" required>
+					<div [hidden]="mduration.valid || mduration.pristine" class="alert alert-danger">
+						<div [hidden]="!mduration.hasError('required')">Duration is required</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="form-group row">		
+		<button class="btn btn-inverse btn-round" type="submit" id="submit" name="submit">{{actionBtn}}</button>
+	</div>
+</form>
+
+<div class="loader" *ngIf="showloading">
+	<div class="item-1"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-2"><span style="background: #2c3e50;"></span></div>
+	<div class="item-3"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-4"><span style="background: #2c3e50;"></span></div>
+	<div class="item-5"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-6"><span style="background: #2c3e50;"></span></div>
+	<div class="item-7"><span style="background: #1ABC9C;"></span></div>
+	<div class="item-8"><span style="background: #2c3e50;"></span></div>
+</div>

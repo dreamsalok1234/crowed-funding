@@ -44,7 +44,8 @@ export class AdminLayoutComponent implements OnInit {
   isCollapsedSideBar = 'no-block';
   toggleOn = true;
   windowWidth: number;
-
+  profileName = 'Admin';
+  userRole = '';
   public htmlButton: string;
 
   constructor(public menuItems: MenuItems, private router: Router) {
@@ -57,7 +58,12 @@ export class AdminLayoutComponent implements OnInit {
 
   ngOnInit() { 
       if( (localStorage.getItem("role") != 'admin'))
-        this.router.navigate(['/']);
+        this.router.navigate(['/authentication/login']);
+      else {
+        let userProfile = JSON.parse(localStorage.getItem("profile"));
+        this.profileName = userProfile.fullName;
+        this.userRole = localStorage.getItem("role");
+      }
   }
 
   onClickedOutside(e: Event) {

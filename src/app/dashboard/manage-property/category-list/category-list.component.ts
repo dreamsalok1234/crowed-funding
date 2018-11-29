@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation, ElementRef, AfterViewInit, ViewContainerRef, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation, ElementRef, AfterViewInit, ViewContainerRef, Output } from '@angular/core';
 import { state, style, transition, animate, trigger, AUTO_STYLE } from '@angular/animations';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
@@ -18,7 +18,7 @@ export class CategoryListComponent implements OnInit {
   showloading = false;
   public categoryItem :  any;
   categoryId = 0;
-  @Output() messageEvent = new EventEmitter<string>();
+  //@Output() messageEvent = new EventEmitter<string>();
   constructor(private propertyService: PropertyService, private commonService: CommonService, private toastr: ToastsManager, vcr: ViewContainerRef, private router: Router) { 
 	this.toastr.setRootViewContainerRef(vcr);
   }
@@ -28,17 +28,18 @@ export class CategoryListComponent implements OnInit {
 
   listCategory () {
   	this.showloading = true;
-	var objectType = this;
-	this.propertyService.getCategoryList(function(err, response){ 
-		objectType.showloading = false;
-		if( err )
-		  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
-		if( response.statusCode == 200 ) {
-			objectType.categoryList = response.data.data;
-		}
-		else 
-		  objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
-	})
+  	var objectType = this;
+  	this.propertyService.getCategoryList(function(err, response){ 
+  		debugger;
+  		objectType.showloading = false;
+  		if( err )
+  		  objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+  		if( response.statusCode == 200 ) {
+  			objectType.categoryList = response.data.data;
+  		}
+  		else 
+  		  objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
+  	})
   }
 
   DeleteCategory(catId, rowIndex) {
@@ -81,8 +82,9 @@ export class CategoryListComponent implements OnInit {
   }
 
   EditCategory(catId, rowIndex) {
-  	this.messageEvent.emit(this.categoryList[rowIndex]);
-  	this.router.navigate(['/dashboard/manage-property/addcategory']);
+  	localStorage.setItem("categoryInfo", JSON.stringify(this.categoryList[rowIndex]));
+  	//this.messageEvent.emit(this.categoryList[rowIndex]);
+  	this.router.navigate(['/dashboard/manage-property/editcategory']);
   }
   
 }

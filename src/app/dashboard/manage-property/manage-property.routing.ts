@@ -8,6 +8,11 @@ import { GallaryListComponent } from './gallary-list/gallary-list.component';
 import { PropertyListComponent } from './property-list/property-list.component';
 import { PropertySummaryListComponent } from './property-summary-list/property-summary-list.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddConditionsComponent } from './add-conditions/add-conditions.component';
+import { AddPropertyComponent } from './add-property/add-property.component';
+import { AddSummaryComponent } from './add-summary/add-summary.component';
+import { UploadFileComponent } from './uploadfile/uploadfile.component';
+import { UploadImageComponent } from './uploadimage/uploadimage.component';
 import { ManagePropertyComponent } from './manage-property.component';
 export const ManagePropertyRoutes: Routes = [
   {
@@ -78,9 +83,74 @@ export const ManagePropertyRoutes: Routes = [
         data: {
           breadcrumb: 'Add Category',
           status: true
-        }/*,
+        },
+      /*,
         loadChildren: './add-category/add-category.module#AddCategoryModule'*/
-      }
+      },
+      {
+        path: 'editcategory',
+        component: AddCategoryComponent,
+        data: {
+          breadcrumb: 'Edit Category',
+          status: true
+        }
+      },
+      {
+        path: 'addconditions',
+        component: AddConditionsComponent,
+        data: {
+          breadcrumb: 'Add Conditions',
+          status: true
+        }
+      },
+      {
+        path: 'editconditions',
+        component: AddConditionsComponent,
+        data: {
+          breadcrumb: 'Edit Conditions',
+          status: true
+        }
+      },
+      {
+        path: 'addproperty',
+        component: AddPropertyComponent,
+        data: {
+          breadcrumb: 'Add Property',
+          status: true
+        }
+      },
+      {
+        path: 'editproperty',
+        component: AddPropertyComponent,
+        data: {
+          breadcrumb: 'Edit Property',
+          status: true
+        }
+      },
+      {
+        path: 'addsummary',
+        component: AddSummaryComponent,
+        data: {
+          breadcrumb: 'Summary',
+          status: true
+        }
+      },
+      {
+        path: 'upload-property-document',
+        component: UploadFileComponent,
+        data: {
+          breadcrumb: 'Upload Property Documents',
+          status: true
+        }
+      },
+      {
+        path: 'upload-property-image',
+        component: UploadImageComponent,
+        data: {
+          breadcrumb: 'Upload Image',
+          status: true
+        }
+      },
     ]
   }
 ];
