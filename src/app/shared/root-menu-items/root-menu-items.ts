@@ -38,11 +38,11 @@ const MENUITEMS = [
     name: 'About us',
     type: 'link',
   },
-  {
+/*  {
     state: 'works',
     name: 'How It Works',
     type: 'link',
-  },
+  },*/
   {
     state: 'contact',
     name: 'Contact Us',

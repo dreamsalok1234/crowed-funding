@@ -34,7 +34,12 @@
     font-family: Ubuntu;
     font-size: 20px;
 }
-
+.management h3.slider-bottom {
+    text-align: center;
+    color: #303030 !important;
+    font-size: 24px !important;
+    padding-bottom: 30px;
+}
 .management span {
     color: #50df8b;
     /* Text style for "71.2%" */
@@ -338,7 +343,7 @@ ul.high_tech {
 /********investment********/
 
 .investment {
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     padding-bottom: 73px;
 }
 
@@ -383,7 +388,7 @@ ul.inve_catagrey {
 .inve_catagrey p {
     color: #727272;
     font-family: "Open Sans";
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 12px;
 }
 
