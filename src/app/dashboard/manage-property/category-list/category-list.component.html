@@ -2,45 +2,57 @@
   <div class="col-sm-12">
     <!-- Contextual classes table starts -->
     <app-card [title]="''" [classHeader]="true" [blockClass]="'table-border-style'">
-	  
+
       <div class="table-responsive">
         <table class="table">
           <thead>
             <tr>
-              <th>#</th>              
+              <th>#</th>
               <th>English</th>
-			  <th>Franch</th>
+              <th>Franch</th>
               <th>German</th>
               <th>Greek</th>
-			  <th>Action</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-			<tr *ngIf="showloading"><td colspan="6"><div class="loader" *ngIf="!loaderIn">
-      <div class="item-1"><span style="background: #1ABC9C;"></span></div>
-      <div class="item-2"><span style="background: #2c3e50;"></span></div>
-      <div class="item-3"><span style="background: #1ABC9C;"></span></div>
-      <div class="item-4"><span style="background: #2c3e50;"></span></div>
-      <div class="item-5"><span style="background: #1ABC9C;"></span></div>
-      <div class="item-6"><span style="background: #2c3e50;"></span></div>
-      <div class="item-7"><span style="background: #1ABC9C;"></span></div>
-      <div class="item-8"><span style="background: #2c3e50;"></span></div>
-    </div></td></tr>
+            <tr *ngIf="showloading">
+              <td colspan="6">
+                <div class="loader" *ngIf="!loaderIn">
+                  <div class="item-1"><span style="background: #1ABC9C;"></span></div>
+                  <div class="item-2"><span style="background: #2c3e50;"></span></div>
+                  <div class="item-3"><span style="background: #1ABC9C;"></span></div>
+                  <div class="item-4"><span style="background: #2c3e50;"></span></div>
+                  <div class="item-5"><span style="background: #1ABC9C;"></span></div>
+                  <div class="item-6"><span style="background: #2c3e50;"></span></div>
+                  <div class="item-7"><span style="background: #1ABC9C;"></span></div>
+                  <div class="item-8"><span style="background: #2c3e50;"></span></div>
+                </div>
+              </td>
+            </tr>
             <tr *ngFor="let cat of categoryList; let i = index" [attr.data-index]="i">
               <th scope="row">{{i + 1}}</th>
               <td>{{cat.name}}</td>
               <td>{{cat.nameFr}}</td>
               <td>{{cat.nameIt}}</td>
               <td>{{cat.nameGr}}</td>
-			  <td><a class="btn btn-info btn-mini b-none" href="javascript:" (click)="ChangeCategoryStatus(cat.categoryId, i)"><i [ngClass]=" cat.status == 0 ? 'fa fa-check-circle' : 'fa fa-times-circle'"></i></a> <a class="btn btn-info btn-mini b-none" href="javascript:" (click)="EditCategory(cat.categoryId, i)"><i class="fa fa-pencil"></i></a> <a class="btn btn-info btn-mini b-none" href="javascript:" (click)="DeleteCategory(cat.categoryId, i)"><i class="fa fa-times"></i></a></td>
-			  
+              <td><a class="btn btn-info btn-mini b-none" href="javascript:" (click)="ChangeCategoryStatus(cat.categoryId, i)">
+                  <i [ngClass]=" cat.status == 0 ? 'fa fa-check-circle' : 'fa fa-times-circle'"></i>
+                </a>
+                <a class="btn btn-info btn-mini b-none" href="javascript:" (click)="EditCategory(cat.categoryId, i)">
+                  <i class="fa fa-pencil"></i>
+                </a>
+                <a class="btn btn-info btn-mini b-none" href="javascript:" (click)="DeleteCategory(cat.categoryId, i)">
+                  <i class="fa fa-times"></i></a>
+              </td>
+
             </tr>
-            
+
           </tbody>
         </table>
       </div>
     </app-card>
     <!-- Contextual classes table ends -->
-    
+
   </div>
 </div>

@@ -1,6 +1,30 @@
-
-<app-card [title]="'contact'">
-  <h1>
-    contact list works!
-  </h1>
-</app-card>
+<div class="row">
+  <div class="col-sm-12">
+    <!-- Contextual classes table starts -->
+    <app-card [title]="'Contact List'" [classHeader]="true" [blockClass]="'table-border-style'">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-active" *ngFor=" let contact of contactList; let i = index" [attr.data-index]="i">
+              <th scope="row">{{i+1}}</th>
+              <td>{{contact.name | uppercase}}</td>
+              <td>{{contact.email}}</td>
+              <td>{{contact.subject}}</td>
+              <td>{{contact.message}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+    <!-- Contextual classes table ends -->
+  </div>
+</div>
