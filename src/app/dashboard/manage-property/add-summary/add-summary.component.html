@@ -16,15 +16,15 @@
 					
 					<!-- Summary card start -->
 					<app-card [title]="''">
-            <div formArrayName="itemRows">
-               <div *ngFor="let itemrow of summaryForm.controls.itemRows.controls; let i=index"  [formGroupName]="i">
-                  <div class="form-group">
-                    <label>Summary</label>
-                    <input formControlName="itemname" class="form-control">
-                  </div>
-                  <button *ngIf="summaryForm.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></button>
-               </div>
-            </div>		
+			            <div formArrayName="itemRows">
+			               <div *ngFor="let itemrow of summaryForm.controls.itemRows.controls; let i=index"  [formGroupName]="i">
+			                  <div class="form-group">
+			                    <label>Summary</label>
+			                    <input formControlName="itemname" class="form-control">
+			                  </div>
+			                  <button *ngIf="summaryForm.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></button>
+			               </div>
+			            </div>		
 					</app-card>
 				</div>
 				<div id="tab2" class="tab-slider--body" *ngSwitchCase="'tab2'">

@@ -286,7 +286,7 @@
 					<div class="col-sm-10">
 						<select name="categoryId"  id="categoryId" [(ngModel)]="model.categoryId" #categoryId="ngModel" class="form-control" required>
 							<option value="" ng-selected="selected">Choose Category </option>
-							<option value="cat.categoryId" *ngFor="let cat of categoryListItem; let i = index" [attr.data-index]="i">{{cat.name}}</option>
+							<option value="{{cat.categoryId}}" *ngFor="let cat of categoryListItem; let i = index" [attr.data-index]="i">{{cat.name}}</option>
 						</select>						
 						<div [hidden]="categoryId.valid || categoryId.pristine" class="alert alert-danger">
 							<div [hidden]="!categoryId.hasError('required')">Category is required</div>
@@ -298,7 +298,7 @@
 					<div class="col-sm-10">
 						<select name="conditionId" [(ngModel)]="model.conditionId" id="conditionId" #conditionId="ngModel"  class="form-control" required>
 							<option value="" ng-selected="selected">Choose Condition </option>
-							<option value="cond.conditionId" *ngFor="let cond of conditionListItem; let i = index" [attr.data-index]="i">{{cond.condition}}</option>
+							<option value="{{cond.conditionId}}" *ngFor="let cond of conditionListItem; let i = index" [attr.data-index]="i">{{cond.condition}}</option>
 						</select>						
 						<div [hidden]="conditionId.valid || conditionId.pristine" class="alert alert-danger">
 							<div [hidden]="!conditionId.hasError('required')">Condition is required</div>
@@ -310,7 +310,7 @@
 					<div class="col-sm-10">
 						<select name="mortgageId" [(ngModel)]="model.mortgageId" id="mortgageId" #mortgageId="ngModel"  class="form-control" >
 							<option value="" ng-selected="selected">Choose Condition </option>
-							<option value="mort.mortgageId" *ngFor="let mort of mortgageListItem; let i = index" [attr.data-index]="i">CHF{{mort.mortgageAmount}} with interest per year {{mort.mortgageInterestPer}} </option>
+							<option value="{{mort.mortgageId}}" *ngFor="let mort of mortgageListItem; let i = index" [attr.data-index]="i">CHF{{mort.mortgageAmount}} with interest per year {{mort.mortgageInterestPer}} </option>
 						</select>						
 						
 					</div>

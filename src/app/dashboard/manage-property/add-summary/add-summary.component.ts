@@ -46,9 +46,10 @@ export class AddSummaryComponent implements OnInit {
       this.editItemData = localStorage.getItem('propertyId');
       this.nextStepStatus = (localStorage.getItem('nextStep') != undefined) ? localStorage.getItem('nextStep') : '';
       this.getPropertySummary(localStorage.getItem('propertyId'));
-      this.summaryForm = this._fb.group({
+      /*this.summaryForm = this._fb.group({
         itemRows: this._fb.array([this.initItemRows()]) // here
-      });
+      });*/
+      
       
     }
     else 
@@ -62,6 +63,15 @@ export class AddSummaryComponent implements OnInit {
           itemnameFr: [''],
           itemnameGr: [''],
           itemnameIt: ['']
+      });
+  }
+  setItemRowsData(itemsData) {
+      return this._fb.group({
+          // list all your form controls here, which belongs to your form array
+          itemname: [itemsData.summeryDesc],
+          itemnameFr: [itemsData.summeryDescFr],
+          itemnameGr: [itemsData.summeryDescGr],
+          itemnameIt: [itemsData.summeryDescIt]
       });
   }
   addNewRow() {
@@ -82,16 +92,28 @@ export class AddSummaryComponent implements OnInit {
   getPropertySummary(propertyId) {
     let objectType = this;
     this.propertyService.getPropertySummary(propertyId,function(err, response){  
+	
     objectType.showloading = false;
     if( err )
       objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
     if( response.statusCode == 200 ) {
-
+      if(response.data.data["summaryList"].length > 0 ) 
+        for (let i = 0; i < response.data.data["summaryList"].length; i++ ) {
+          // control refers to your formarray
+          const controls = <FormArray>objectType.summaryForm.controls['itemRows'];
+          // add new formgroup
+          controls.push(objectType.setItemRowsData(response.data.data["summaryList"][i]));
+          
+        }      
+      else
+          objectType.addNewRow();
       
       
     }
-    else 
+    else  {
       objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
+      objectType.addNewRow();
+    }
   });
 
   }
@@ -112,9 +134,20 @@ export class AddSummaryComponent implements OnInit {
         this.model.summeryDescFr = JSON.stringify(this.model.summeryDescFr);
         this.model.summeryDescGr = JSON.stringify(this.model.summeryDescGr);
         this.model.summeryDescIt =JSON.stringify(this.model.summeryDescIt);
-        debugger;
+        
         this.propertyService.addSummery(this.model, function(err, response){
-            debugger;
+            objectType.showloading = false;
+          if( err )
+            objectType.toastr.error("Something Going Wrong",null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+          if( response.statusCode == 200 ) {
+            objectType.toastr.success(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true});
+            objectType.model = {catname: '', fcatname: '', grecatname: '', gcatname: ''};
+            
+            if( objectType.nextStepStatus == 'Yes')
+                objectType.router.navigate(['/dashboard/manage-property/upload-property-image']);
+          }
+          else 
+            objectType.toastr.error(response.data.message,null,{autoDismiss: true, maxOpened: 1,preventDuplicates: true}); 
         });
     }
     else
