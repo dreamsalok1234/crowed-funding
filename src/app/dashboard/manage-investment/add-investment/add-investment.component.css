@@ -1,0 +1,200 @@
+.tab-slider--nav {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.tab-slider--tabs {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+    background: #fff;
+    height: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.tab-slider--tabs:after {
+    content: "";
+    width: 50%;
+    /*background: #345F90;*/
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    border-radius: 35px;
+}
+
+.tab-slider--tabs.slide:after {
+    left: 50%;
+}
+
+.tab-slider--trigger {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    color: #345F90;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 11px 20px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-transition: color 250ms ease-in-out;
+    transition: color 250ms ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 100%;
+}
+
+.tab-slider--trigger.active {
+    color: #fff;
+    background: #345F90
+}
+
+.tab-slider--body {
+    margin-bottom: 20px;
+}
+
+/* loader css*/
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: #cccccc80;
+    z-index: 1;
+    font-size: 32px;
+    margin: 0
+}
+
+.loader div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    will-change: transform;
+}
+
+.loader div span {
+    display: block;
+    width: 1em;
+    height: 0.35em;
+    border-radius: 0.9em;
+    opacity: 0.7;
+}
+
+.loader .item-1 {
+    margin-left: 11.313708496px;
+    margin-top: -11.313708496px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-1 span {
+    transform: rotate(45deg) translateZ(0);
+}
+
+.loader .item-2 {
+    margin-left: 0px;
+    margin-top: -16px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-2 span {
+    transform: rotate(180deg) translateZ(0);
+}
+
+.loader .item-3 {
+    margin-left: -11.313708496px;
+    margin-top: -11.313708496px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-3 span {
+    transform: rotate(135deg) translateZ(0);
+}
+
+.loader .item-4 {
+    margin-left: -16px;
+    margin-top: 0px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-4 span {
+    transform: rotate(270deg) translateZ(0);
+}
+
+.loader .item-5 {
+    margin-left: -11.313708496px;
+    margin-top: 11.313708496px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-5 span {
+    transform: rotate(225deg) translateZ(0);
+}
+
+.loader .item-6 {
+    margin-left: 0px;
+    margin-top: 16px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-6 span {
+    transform: rotate(360deg) translateZ(0);
+}
+
+.loader .item-7 {
+    margin-left: 11.313708496px;
+    margin-top: 11.313708496px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-7 span {
+    transform: rotate(315deg) translateZ(0);
+}
+
+.loader .item-8 {
+    margin-left: 16px;
+    margin-top: 0px;
+    animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.loader .item-8 span {
+    transform: rotate(450deg) translateZ(0);
+}
+
+@keyframes spin_full {
+    0% {
+        transform: rotate(0deg) translateZ(0);
+    }
+    100% {
+        transform: rotate(360deg) translateZ(0);
+    }
+}
+
+ul.suggest_list {
+    background: #2c3e50;
+    color: #fff;
+}
+
+ul.suggest_list li {
+    border-bottom: 1px solid #fff;
+    padding: 5px 15px;
+    color: #1abc9c;
+    text-transform: capitalize;
+}

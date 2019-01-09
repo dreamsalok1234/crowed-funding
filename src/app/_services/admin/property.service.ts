@@ -36,6 +36,33 @@ export class PropertyService {
               
         });
     }
+
+  searchPropertyList(keywords, callback) {
+    return this.globalService.callGetApi('property/searchProperty?search=' + keywords, true).subscribe(
+      data => {
+        try {
+          this.responseItem.data = data;
+        }
+        catch (error) {
+          this.responseItem.data = { message: "Something Went Wrong", status: false };
+          this.responseItem.statusCode = 403;
+        }
+        return callback(null, this.responseItem);
+      },
+      error => {
+        try {
+          this.responseItem.data = JSON.parse(error.error);
+        }
+        catch (err) {
+          this.responseItem.data = { message: "Something Went Wrong", status: false };
+        }
+        this.responseItem.statusCode = error.status;
+        return callback(null, this.responseItem);
+
+      });
+  }
+
+
     addCategory(formdata, callback) {
         
         return this.globalService.callPostApi('property/addUpdatePropertyCategory',{ name: formdata.catname, nameFr: formdata.fcatname, nameGr: formdata.grecatname, nameIt: formdata.gcatname}, true).subscribe(

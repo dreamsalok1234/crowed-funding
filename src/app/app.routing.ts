@@ -108,6 +108,10 @@ export const AppRoutes: Routes = [
       loadChildren: './dashboard/manage-property/manage-property.module#ManagePropertyModule',
     },
     {
+      path: 'dashboard/manage-investment',
+      loadChildren: './dashboard/manage-investment/manage-investment.module#ManageInvestmentModule',
+    },
+    {
       path: 'dashboard/manage-role',
       loadChildren: './dashboard/manage-role/manage-role.module#ManageRoleModule',
     },

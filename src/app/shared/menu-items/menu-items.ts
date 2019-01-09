@@ -146,6 +146,27 @@ const MENUITEMS = [
         ]
       },
     ]
+  },
+  {
+    label: 'Investment',
+    main: [
+      {
+        state: 'manage-investment',
+        name: 'Manage Investment',
+        type: 'sub',
+        icon: 'ti-credit-card',
+        children: [
+          {
+            state: 'investmentlist',
+            name: 'Investment List'
+          },
+          {
+            state: 'addinvestment',
+            name: 'Add Investment'
+          }
+        ]
+      },
+    ]
   }, 
   {
     label: 'Transaction',

@@ -21,6 +21,7 @@ import { EqualValidator } from './_directives/equal.validate';
 import { GlobalService } from './_services/global.service';
 import { BsDropdownModule } from 'ngx-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
